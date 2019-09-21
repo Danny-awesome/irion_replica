@@ -1,4 +1,6 @@
-  <!DOCTYPE html>
+<?php require_once 'scripts/loginUser.php'; ?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +56,7 @@
         <!-- ad -->
       </div>
       <div class="col-md-4 login-form">
-        <form action="" id="loginform">
+        <form action="login.php" method="post" id="loginform">
           <div class="login-icon  d-flex justify-content-center">
             <a href="index.html"><img src="images/Irion-login.png" alt="irion's logo"></a>
           </div>
@@ -65,7 +67,7 @@
             <input type="password"  id="login-pwd" placeholder="Password" required>
           </div>
           <div class="form-group d-flex justify-content-center ">
-            <input type="button"  id="login-btn" class="loginbtn" value="login" required>
+            <input type="submit"  id="login-btn" class="loginbtn" value="login" name="login_btn" required>
           </div>
            <p class="d-flex justify-content-center">
              <a href="forgotPassword.php" class="fg-pwd">forgot password?</a>
