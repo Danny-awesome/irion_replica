@@ -1,3 +1,5 @@
+<?php require_once 'scripts/_register.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,33 +55,40 @@
           <!-- ad -->
         </div>
         <div class="col-md-4 signup-form">
-          <form action="" id="signupform">
+          <form action="signup.php" method="post" >
             <div class="signup-icon  d-flex justify-content-center">
               <a href="index.html"><img src="images/Irion-login.png" alt="irion's logo"></a>
             </div>
+            <?php if(count($errors) > 0): ?>
+                <div class="alert alert-danger">
+                    <?php foreach ($errors as $error): ?>
+                    <li><?php echo $error; ?></li>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif;?>
             <div class="form-group d-flex justify-content-center ">
-                <input type="text"  id="signup-surname" placeholder="Surname" >
+                <input type="text"  id="signup-surname" name="lastname" value="<?php echo $lastname?>" placeholder="Surname" >
             </div>
             <div class="form-group d-flex justify-content-center ">
-                <input type="text"  id="signup-firstName" placeholder="FirstName" >
+                <input type="text"  id="signup-firstName" name="firstname" value="<?php echo $firstname?>" placeholder="FirstName" >
             </div>
             <div class="form-group d-flex justify-content-center ">
-                <input type="text"  id="signup-username" placeholder="Username" >
+                <input type="text"  id="signup-username" name="username" value="<?php echo $username?>" placeholder="Username" >
             </div>
             <div class="form-group d-flex justify-content-center ">
-                <input type="email"  id="signup-email" placeholder="email" >
+                <input type="email"  id="signup-email" name="email" value="<?php echo $email?>" placeholder="email" >
             </div>
               <div class="form-group d-flex justify-content-center ">
-                <input type="password"  id="signup-pwd" placeholder="Password" >
+                <input type="password"  id="signup-pwd" name="pword" placeholder="Password" >
               </div>
               <div class="form-group d-flex justify-content-center ">
-                <input type="password"  id="signup-re-pwd" placeholder="Retype password">
+                <input type="password"  id="signup-re-pwd" name="cpword" placeholder="Retype password">
               </div>
               <div class="form-group d-flex justify-content-center ">
-                <input type="number"  id="signup-telNo" placeholder="Phone Number">
+                <input type="number"  id="signup-telNo" name="phone" value="<?php echo $phone?>" placeholder="Phone Number">
               </div>
              <div class="d-flex justify-content-center">
-                <input type="button" class="sign-up-btn" value="sign up" >
+                <input type="submit" class="sign-up-btn" name="register-btn" value="sign up">
               </div>  
           
           </form>
