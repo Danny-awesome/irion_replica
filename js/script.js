@@ -2,7 +2,7 @@
 $(document).ready(function(){
     $(".submit-message").click(homePageMsg);
     // $(".sign-up-btn").click(signUpForm);
-    $(".loginbtn").click(loginForm);
+    // $(".loginbtn").click(loginForm);
     $(".recoverbtn").click(retrievepwd);
     $(".changepwdbtn").click(changepassword);
 });

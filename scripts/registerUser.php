@@ -1,5 +1,6 @@
 <?php
-require_once '../config/dbConnect.php';
+// require_once 'config/default.php';
+require_once 'config/dbConnect.php';
 
 $errors = array();
 
