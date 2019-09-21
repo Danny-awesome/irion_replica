@@ -1,4 +1,4 @@
-<?php require_once 'scripts/_register.php' ?>
+<?php include_once 'scripts/registerUser.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
