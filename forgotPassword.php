@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
     <body class="body">
 
    <!-- navbar links -->
-   <nav class="navbar navbar-expand-md irionNavBar fixed-top">
+   <nav class="navbar navbar-expand-md irionNavBar fixed-top navbar-default navbar-custom"">
       <a class="navbar-brand" href="#"><img class="irion-logo" src="images/irion-logo.png" alt="irion logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -34,22 +35,22 @@
           </li>    
           <li class="nav-item">
             <a class="nav-link" href="contactus.php">Contact Us</a>
-          </li>    
-         <div class="dropdown">
-              <a class="dropbtn">My Account
-                <i class="fa fa-caret-down"></i>
-              </a>
-              <div class="dropdown-content">
-                <a href="login.php">LOGIN</a>
-                <a href="signup.php">SIGN UP</a>
-              </div>
+          </li>   
+          <div class="dropdown">
+            <a class="dropbtn">My Account
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="login.php">LOGIN</a>
+              <a href="signup.php">SIGN UP</a>
             </div>
+          </div>
         </ul>
       </div>  
     </nav>
 
-
-   <div class="row recover-card">
+    <!-- recover password page/form  -->
+    <div class="row recover-card">
       <div class="col-md-4 a">
         <!-- ad -->
       </div>
@@ -65,13 +66,12 @@
             <input type="email" id="recover-email" placeholder="TallySmith@gmail.com" required>
           </div>
           <div class="form-group d-flex justify-content-center ">
-            <input type="button"  id="recover-btn" class="recoverbtn" value="Recover Account" required>
+            <input type="button"  id="recover-btn" class="recoverbtn" value="Recover Account">
           </div>
         </form>
       </div>
       <div class="col-md-4 b">
         <!-- ad -->
       </div>
-      <script src="js/script.js"></script>
     </body>
 </html>

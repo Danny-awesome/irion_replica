@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="This content provides you the ability to grow your money safely online by referal">
-    <meta name="keywords" content="online,money,finance,growth">
-    <meta name="author" content="Irion global"> 
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="css/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="This content provides you the ability to grow your money safely online by referal">
+      <meta name="keywords"  content="online,money,finance,growth">
+      <meta name="author" content="Irion global"> 
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="css/bootstrap/js/bootstrap.min.js"></script>
+      <script src="js/script.js"></script>
+      <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="css/style.css">
   </head>
-    <body class="body">
+  <body class="body">
 
    <!-- navbar links -->
    <nav class="navbar navbar-expand-md irionNavBar fixed-top">
@@ -48,7 +49,6 @@
       </div>  
     </nav>
 
-
    <div class="row changepwd-card">
       <div class="col-md-4 a">
         <!-- ad -->
@@ -61,7 +61,7 @@
           </div>
           <p class  ="recover-notice d-flex justify-content-center">
             copy and paste new password from your mail    
-        </p>
+          </p>
           <div class="form-group d-flex justify-content-center">
             <input type="password" id="change-pwd" placeholder="password" required>
           </div>
@@ -73,6 +73,5 @@
       <div class="col-md-4 b">
         <!-- ad -->
       </div>
-      <script src="js/script.js"></script>
     </body>
 </html>

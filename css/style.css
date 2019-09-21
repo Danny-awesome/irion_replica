@@ -54,9 +54,7 @@ body{
     margin-left: 30px;
     text-transform: uppercase;
 }
-.nav-links li a:hover{
-	color: #4d0000;
-}
+
 .irionNavBar{
     padding-top: 0px !important;
     padding-bottom: 0px !important;
@@ -511,20 +509,20 @@ a{
 	padding: 20px;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #f2f2f2;
+	/* color: #f2f2f2; */
 	background: #00001a;
 	font-size: 17px;
 }
 .submit-message{
 	background:  #000d1a;
-	color: 	 #f2f2f2;
+	/* color: 	 #f2f2f2; */
 	font-size: 14px;
 	margin-left: 30px;
 	margin-bottom: 20px; 
 	/* width:100px; */
 }
 .submit-message:hover{
-	color: #e6e6ff;
+	/* color: #e6e6ff; */
 	background:  #00264d;
 }
 @media (max-width:1100px) and (min-width:767px){
@@ -532,7 +530,7 @@ a{
 	.message-us button{
 		background:  #000d1a;
 		height: 37px;
-		color: 	 #f2f2f2;
+		/* color: 	 #f2f2f2; */
 		font-weight: bold;
 		font-size: 12px;
 		margin-left: 20px;
@@ -562,9 +560,8 @@ a{
 	margin: 25px;
   }
   .choose_us_card:hover {
-	background:#330000;
+	background:	 #f2f2f2;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
-	color:  #f2f2f2;
   }
   
   .card_container {
@@ -703,7 +700,6 @@ a{
 #change-pwd-btn,
 .sign-up-btn{
     background-color:#660000;;
-    color: #e6e6e6;
     font-weight: bold;
     font-size: 18px;
 }
@@ -719,43 +715,11 @@ a{
 	margin-top: -11px;
 }
 
-/* slider */
-#payment-method{
-	text-align: center;
-	padding: 60px;
-	display: none;
-   }
-   
-   .payment-method-items .items{
-	   padding: 20px;
-	   margin: 3px;
-	   background: #266;
-   }
-   
-   .payment-method-items .items:hover{
-	   background: #330000;
-   }
-   .payment-method-items div img{
-	   width: 70px;
-   }
-   .pm-title{
-	   margin-top: 40px !important;
-	   color: #1a0000;
-   }
-   .items h6{
-	   color: white;
-   }
-   .payment-body{
-	   background-image: url("images/team.jpg");
-	   background-repeat: no-repeat;
-	   background-position: center;
-   }
-   /* retrieve password */
+/*forgotpassword.php style */
    .recover-notice{
 	   color:  #8c8c8c;
 	   font-size: 11px;
    }
-   .navbar-custom {
-    color: #FFFFFF;
-    background-color: #CC3333;
+   #recover-btn{
+    color:#f2f2f2;
 }

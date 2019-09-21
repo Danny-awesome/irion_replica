@@ -1,15 +1,15 @@
 /* The side navigation menu */
 .sidenav {
-	height: 100%; /* 100% Full-height */
-	width: 0; /* 0 width - change this with JavaScript */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Stay on top */
-	top: 0; /* Stay at the top */
+	height: 100%;
+	width: 0; 
+	position: fixed; 
+	z-index: 1;
+	top: 0; 
 	left: 0;
-	background-color: #00061a; /* Black*/
-	overflow-x: hidden; /* Disable horizontal scroll */
-	padding-top: 60px; /* Place content 60px from the top */
-	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	background-color: #00061a;
+	overflow-x: hidden;
+	padding-top: 60px; 
+	transition: 0.5s; 
   }
   
   /* The navigation menu links */
@@ -21,8 +21,6 @@
 	display: block;
 	transition: 0.3s;
   }
-  
-  /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
 	color: #f1f1f1;
   }
@@ -31,7 +29,6 @@
   .sidenav .closebtn {
   position: absolute;
   color: white;
-	/* top: 0; */
 	right: 25px;
 	font-size: 36px;
   margin-left: 50px;
