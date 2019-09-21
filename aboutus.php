@@ -9,13 +9,13 @@
     <meta name="keywords" content="online,money,finance,growth">
     <meta name="author" content="Irion global"> 
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="aboutus.css"> 
+  
     <link rel="stylesheet" href="css/style.css">
   </head>
-<body >
-
+<body>
    <!-- navbar links -->
    <nav class="navbar navbar-expand-md irionNavBar fixed-top navbar-default navbar-custom"">
       <a class="navbar-brand" href="#"><img class="irion-logo" src="images/irion-logo.png" alt="irion logo"></a>
@@ -49,7 +49,7 @@
       </div>  
     </nav>
     
-<div class="row">
+<div class="row ">
     <div class="col-md-12 about-us-notes">
       <div class="row">
         <div class="col-md-3"></div>
@@ -80,7 +80,7 @@
       </p>
       <div class="row">
           <div class="col-md-4"></div>
-          <h5 class="col-md-4 how-irion-works text-center">How does Irion Work?</h5>
+          <h5 class="col-md-4 text-center">How does Irion Work?</h5>
           <div class="col-md-4"></div>
       </div>
         <div class="col-md-12">
@@ -97,11 +97,11 @@
   <div class="row lower-choose">
     <h2 class="col-md-12 text-center">Why Choose Us?</h2>
 </div>
-<div class="row choose-irion ">
-  <div class="col-md-4 cards">
+<div class="row">
+  <div class="col-md-4 animated slideInLeft">
     <div class="choose_us_card">
       <div class="d-flex justify-content-center ">
-          <img src="images/graph.png" alt="Avatar">
+          <img src="images/graph.png" alt="graph">
       </div>
       <div class="card_container text-center ">
           <h4><b>Growth Insured</b></h4> 
@@ -126,7 +126,7 @@
       </div>
     </div>
 
-    <div class="col-md-4 cards ">
+    <div class="col-md-4 cards  animated slideInRight">
         <div class="choose_us_card">
           <div class="d-flex justify-content-center ">
               <img src="images/card3.png" alt="Avatar">

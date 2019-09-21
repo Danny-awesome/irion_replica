@@ -12,6 +12,8 @@
         <script src="js/script.js"></script>
     </head>
   <body>
+  <div class="preloader ">
+     </div>
     <header class="container-fluid">
       <ul class="cb-slideshow">
         <!-- slideshow captions -->
