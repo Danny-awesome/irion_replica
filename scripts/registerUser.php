@@ -1,5 +1,4 @@
 <?php
-// require_once 'config/default.php';
 require_once 'config/dbConnect.php';
 
 $errors = array();
@@ -79,7 +78,7 @@ if (isset($_POST['register-btn'])) {
 
             $_SESSION['message'] = "You are logged in!";
             $_SESSION['alert-class'] = "alert-success";
-            header('location: loginUser.php');
+            header('location: login.php');
             exit();
         } else {
             $errors['db_error'] = "DATABASE_ERROR: failed to register";
