@@ -1,7 +1,10 @@
 <?php 
 require_once "scripts/registerUser.php";
 require_once "scripts/logoutUser.php";
-
+if(!isset($_SESSION['id'])){
+    header('location: login.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
