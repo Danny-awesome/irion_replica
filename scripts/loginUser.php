@@ -32,16 +32,18 @@ if (isset($_POST['login-submit-btn'])) {
         $errors['login-error'] = "Incorrect Login Details";
     }
     if(password_verify($pword , $user['user_password'])){
-        $user_id = $conn->insert_id;
-            $_SESSION['id'] = $user_id;
-            $_SESSION['username'] = $username;
-            $_SESSION['email'] = $email;
-            $_SESSION['verified'] = $verified;
-
+        $_SESSION['id'] = $user['user_id'];
+        $_SESSION['username'] = $user['user_username'];
+        $_SESSION['email'] = $user['user_email'];
+        $_SESSION['verified'] = $user['verified'];
+        if ($_SESSION['verified'] === 1) {
+            header('location: profileB.php');
+        } else {
             $_SESSION['message'] = "Success,Logged in!";
             $_SESSION['alert-class'] = "alert-success";
             header('location: checkVerified.php');
-            exit();
+        }
+        exit();
     }else{
         $errors['login-error'] = "Incorrect Login Details!";
     }

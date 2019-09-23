@@ -2,6 +2,7 @@
 session_start();
 
 require_once 'config/dbConnect.php';
+require_once 'emailVerify.php';
 
 $errors = array();
 $lastname = "";
@@ -11,6 +12,7 @@ $email = "";
 $phone = "";
 $pword = "";
 $cpword = "";
+$verified = "";
 
 if (isset($_POST['register-btn'])) {
     $lastname = $_POST['lastname'];
@@ -78,6 +80,8 @@ if (isset($_POST['register-btn'])) {
             $_SESSION['email'] = $email;
             $_SESSION['verified'] = $verified;
 
+            sendVerificationMail($email, $token);
+
             $_SESSION['message'] = "Success,Logged in!";
             $_SESSION['alert-class'] = "alert-success";
             header('location: checkVerified.php');
@@ -86,5 +90,30 @@ if (isset($_POST['register-btn'])) {
             $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
         }
     }
+
+    
 }
+
+function verifyUser($token)
+    {
+        global $conn;
+        $query = "SELECT * FROM users WHERE token='$token' LIMIT 1";
+        $result = mysqli_query($conn, $query);
+
+        if (mysqli_num_rows($result) > 0) {
+            $user = mysqli_fetch_assoc($result);
+            $update_user_verified_status = "UPDATE users SET verified=1 WHERE token='$token'";
+            if (mysqli_query($conn, $update_user_verified_status)) {
+                $_SESSION['id'] = $user['user_id'];
+                $_SESSION['username'] = $user['user_username'];
+                $_SESSION['email'] = $user['user_email'];
+                $_SESSION['verified'] = 1;
+
+                $_SESSION['message'] = "Hey, We are happy to tell you that your email has been successfully verified!";
+                $_SESSION['alert-class'] = "alert-success";
+                header('location: checkVerified.php');
+                exit();
+            }
+        }
+    }
 ?>
