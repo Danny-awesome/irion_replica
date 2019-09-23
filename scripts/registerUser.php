@@ -1,8 +1,9 @@
 <?php
+session_start();
+
 require_once 'config/dbConnect.php';
 
 $errors = array();
-
 $lastname = "";
 $firstname = "";
 $username = "";
@@ -47,13 +48,14 @@ if (isset($_POST['register-btn'])) {
     }
 
     // validate for duplicates
-    $emailQuery = "SELECT * FROM users WHERE user_email=? LIMIT 1";
-    $stmt = $conn->prepare($emailQuery);
-    $stmt->bind_param('s', $emailQuery);
+    $emailCheckQuery = "SELECT * FROM users WHERE user_email=? LIMIT 1";
+    $stmt = $conn->prepare($emailCheckQuery);
+    $stmt->bind_param('s', $email);
     $stmt->execute();
     $result = $stmt->get_result();
     $user_count = $result->num_rows;
     $stmt->close();
+
     if ($user_count > 0) {
         $errors['email'] = "Email already exists";
     }
@@ -66,7 +68,7 @@ if (isset($_POST['register-btn'])) {
 
         $insert_query = "INSERT INTO users (username, user_firstname,user_lastname,user_password, user_email, user_phone, verified, token) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($insert_query);
-        $stmt->bind_param('ssssssbs', $username, $lastname, $firstname, $pword, $email, $phone, $verified, $token);
+        $stmt->bind_param('ssssssbs', $username, $firstname, $lastname, $pword, $email, $phone, $verified, $token);
 
         if ($stmt->execute()) {
             // login user
@@ -74,16 +76,15 @@ if (isset($_POST['register-btn'])) {
             $_SESSION['id'] = $user_id;
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
-            $_SESSION['verfied'] = $verified;
+            $_SESSION['verified'] = $verified;
 
-            $_SESSION['message'] = "You are logged in!";
+            $_SESSION['message'] = "Success,Logged in!";
             $_SESSION['alert-class'] = "alert-success";
-            header('location: login.php');
+            header('location: checkVerified.php');
             exit();
         } else {
-            $errors['db_error'] = "DATABASE_ERROR: failed to register";
+            $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
         }
     }
 }
-
 ?>
