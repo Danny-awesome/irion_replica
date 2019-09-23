@@ -70,7 +70,7 @@
                     </div>
                 <?php endif; ?>
                 <div class="form-group d-flex justify-content-center">
-                    <input type="email" id="login-email" placeholder="TallySmith@gmail.com" name="email" value="<?php echo $email ?>">
+                    <input type="text" id="login-email" placeholder="TallySmith@gmail.com" name="email" value="<?php echo $email ?>">
                 </div>
                 <div class="form-group d-flex justify-content-center ">
                     <input type="password" id="login-pwd" placeholder="Password" name="pword" value="<?php echo $pword ?>">

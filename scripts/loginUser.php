@@ -29,7 +29,7 @@ if (isset($_POST['login-submit-btn'])) {
     $user = $result->fetch_assoc();
     $user_count = $result->num_rows;
     if ($user_count === 0) {
-        $errors['email'] = "Email is not registered";
+        $errors['login-error'] = "Incorrect Login Details";
     }
     if(password_verify($pword , $user['user_password'])){
         $user_id = $conn->insert_id;

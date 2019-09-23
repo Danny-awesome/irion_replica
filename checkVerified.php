@@ -1,4 +1,8 @@
-<?php require_once "scripts/registerUser.php"; ?>
+<?php 
+require_once "scripts/registerUser.php";
+require_once "scripts/logoutUser.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +25,7 @@
                     ?>
                 </div>
                 <?php endif; ?>
-                
+
                 <h3> Welcome, <?php echo $_SESSION['username']; ?> </h3>
 
                 <?php if(!$_SESSION['verified']): ?>
@@ -36,6 +40,7 @@
                 <?php if($_SESSION['verified']): ?>
                     <button class="btn btn-block btn-lg btn-primary">You Are Verified. Continue to Dashboard</button>   
                 <?php endif; ?>
+                    <a href="checkVerified.php?logout=1"><button class="btn btn-block btn-lg btn-primary">Logout</button> </a> 
 
             </div>
         </div>
