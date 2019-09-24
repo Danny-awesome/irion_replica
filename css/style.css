@@ -578,7 +578,7 @@ a{
   .notes{
 	margin-top: 70px;
   }
-  .choose_us_card {
+  .a_choose_us_card {
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 	transition: 0.3s;
@@ -586,7 +586,7 @@ a{
 	height: 400px;
 	margin: 25px;
   }
-  .choose_us_card:hover {
+  .a_choose_us_card:hover {
 	background:	 #f2f2f2;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
   }
@@ -595,7 +595,7 @@ a{
 	padding: 2px 16px;
   }
    
-  .choose_us_card img{
+  .a_choose_us_card img{
 	  width: 150px;
 	  height: 130px;
   }
@@ -653,7 +653,7 @@ a{
 	.card_container p{
 	  font-size: 13px;
 	}
-	.choose_us_card{
+	.a_choose_us_card{
 	  height: 460px;
 	}
   }

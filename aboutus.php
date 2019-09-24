@@ -62,7 +62,7 @@
     </div>
     <div class="row">
       <div class="col-md-4 animated slideInLeft">
-        <div class="choose_us_card">
+        <div class="a_choose_us_card">
           <div class="d-flex justify-content-center ">
               <img src="images/graph.png" alt="graph">
           </div>
@@ -76,7 +76,7 @@
       </div>
 
       <div class="col-md-4 cards">
-          <div class="choose_us_card">
+          <div class="a_choose_us_card">
             <div class="d-flex justify-content-center ">
                 <img src="images/Padlock-16.png" alt="Avatar">
             </div>
@@ -90,7 +90,7 @@
         </div>
 
         <div class="col-md-4 cards  animated slideInRight">
-            <div class="choose_us_card">
+            <div class="a_choose_us_card">
               <div class="d-flex justify-content-center ">
                   <img src="images/card3.png" alt="Avatar">
               </div>
