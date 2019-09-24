@@ -49,7 +49,7 @@
               <div class="form-group">
                   <textarea class="form-control" rows="5" id="comment" placeholder="LEAVE US A MESSAGE"></textarea>
               </div>
-              <input type="button" class="btn btn-primary submit-message" value="send message">
+              <input type="button" class="btn btn-primary submit-message" value="SEND MESSAGE">
             </form>
         </div>
         <div class="col-md-1"></div>

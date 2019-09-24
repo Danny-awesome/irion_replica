@@ -11,16 +11,25 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    
     <link rel="stylesheet" href="css/style.css">
+    <style>
+       
+    </style>
   </head>
     <body class="body">
 
    <!-- navbar links -->
-   <nav class="navbar navbar-expand-md irionNavBar fixed-top navbar-default navbar-custom"">
+   <nav class="navbar navbar-expand-md irionNavBar fixed-top navbar-default navbar-custom">
         <a class="navbar-brand" href="#"><img class="irion-logo" src="images/irion-logo.png" alt="irion logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon">
+          <div class="burger-container">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          </span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
           <ul class="navbar-nav nav-links">
@@ -48,6 +57,5 @@
           </ul>
         </div>  
       </nav>
-
     </body>
 </html>

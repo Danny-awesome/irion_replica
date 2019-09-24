@@ -1,12 +1,9 @@
 // on clicks
 $(document).ready(function(){
-    $(".submit-message").click(homePageMsg);
-    // $(".sign-up-btn").click(signUpForm);
-    // $(".loginbtn").click(loginForm);
+    $(".submit-message").click(homePageMsg);=
     $(".recoverbtn").click(retrievepwd);
     $(".changepwdbtn").click(changepassword);
 });
-
 // preloader
 $(window).on('load',function(){
   $('.preloader').addClass('complete');
@@ -46,3 +43,7 @@ function myFunction() {
   $(document).ready(function(){
     $("#payment-method").slideDown("slow");
 });
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}
