@@ -620,7 +620,8 @@ a{
 	margin-left: 60px;
 	margin-right: 60px;
   }
-  .about-us-notes h2,.pm-title
+  .about-us-notes h2,
+  .pm-title
   {
 	color: #333333;
 	margin-top: 20px;
