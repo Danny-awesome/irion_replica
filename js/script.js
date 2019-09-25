@@ -1,6 +1,6 @@
 // on clicks
 $(document).ready(function(){
-    $(".submit-message").click(homePageMsg);=
+    $(".submit-message").click(homePageMsg);
     $(".recoverbtn").click(retrievepwd);
     $(".changepwdbtn").click(changepassword);
 });
@@ -8,6 +8,7 @@ $(document).ready(function(){
 $(window).on('load',function(){
   $('.preloader').addClass('complete');
   preloaderFadeOutTime = 500;
+  
 })
 
 // home page
