@@ -7,6 +7,11 @@ if (isset($_GET['token'])) {
     verifyUser($token);
 }
 
+if (isset($_GET['password-token'])) {
+    $passwordToken = $_GET['password-token'];
+    resetPassword($token);
+}
+
 if (!isset($_SESSION['id'])) {
     header('location: login.php');
     exit();

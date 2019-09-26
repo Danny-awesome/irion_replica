@@ -1,5 +1,3 @@
-<?php require_once "scripts/sendPasswordRecoveryMail.php" ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,22 +29,10 @@
           <div class="login-icon  d-flex justify-content-center">
             <a href="index.html"><img src="images/Irion-login.png" alt="irion's logo"></a>
           </div>
-          <?php if(count($errors) > 0): ?>
-            <div class="alert alert-danger">
-                <?php foreach ($errors as $error): ?>
-                <li><?php echo $error; ?></li>
-                <?php endforeach; ?>
-            </div>
-          <?php endif;?>
-          <!-- <p class="recover-notice d-flex justify-content-center">
-            We will send a new password to your mail and it will be used to recover your account on the next page
-          </p> -->
-          <div class="form-group d-flex justify-content-center">
-            <input type="text" id="recover-email" placeholder="TallySmith@gmail.com" name="email">
-          </div>
-          <div class="form-group d-flex justify-content-center ">
-            <input type="submit"  id="recover-btn" class="recoverbtn" value="Recover Account" name="fp-btn">
-          </div>
+
+          <p class="recover-notice d-flex justify-content-center">
+            We just sent an email to your email address with a reset link to your password.
+          </p>
         </form>
       </div>
       <div class="col-md-4 b">

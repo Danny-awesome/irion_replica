@@ -2,7 +2,7 @@
 session_start();
 
 require_once 'config/dbConnect.php';
-require_once 'emailVerify.php';
+require_once 'emailController.php';
 
 $errors = array();
 $lastname = "";
