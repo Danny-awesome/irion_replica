@@ -1,14 +1,11 @@
 // on clicks
 $(document).ready(function(){
     $(".submit-message").click(homePageMsg);
-    $(".recoverbtn").click(retrievepwd);
-    $(".changepwdbtn").click(changepassword);
 });
 // preloader
 $(window).on('load',function(){
   $('.preloader').addClass('complete');
   preloaderFadeOutTime = 500;
-  
 })
 
 // home page
@@ -39,12 +36,4 @@ function myFunction() {
   } else {
     x.className = "topnav";
   }
-}
-  // slider
-  $(document).ready(function(){
-    $("#payment-method").slideDown("slow");
-});
-
-function myFunction(x) {
-  x.classList.toggle("change");
 }

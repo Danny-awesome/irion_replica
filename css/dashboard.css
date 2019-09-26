@@ -36,13 +36,13 @@ a:focus{
   font-size: 16px;
 }
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 200px;
+    max-width: 200px;
     background:#001a33;
     transition: all 0.3s;
 }
 #sidebar.active{
-	margin-left: -250px;
+	margin-left: -200px;
 }
 
 #sidebar .sidebar-header{
@@ -96,16 +96,48 @@ a[data-toggle="collapse"] {
     transition: all 0.3s;
 }
 
-@media(maz-width:768px){
-	#sidebar{margin-left: -250px;}
+@media(max-width:768px){
+	#sidebar{margin-left: -200px;}
 	#sidebar.active{
 		margin-left: 0px;
 	}
 	#sidebarCollapse span{
 		display: none;
-	}
+  }
+  #sidebar ul li a{
+    padding: 8px;
+    font-size: 0.705em;
+  }
+
+.logout-icon-light{
+      width: 15px !important;
+      height: 12px !important;
+  }
+  .home-icon{
+    width: 17px !important;
+    height: 14px !important;
+  }
+  .dash h4{
+    font-weight: bold;
+    font-size: 12px !important;
+  }
+  #day,#month,#year{
+    font-size: 14px !important;
+  }
+  #acc-profile-image{
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .dropdown a{
+    font-size: 12px !important;
+  }
 }
 
+@media (max-width:1100px) and (min-width:767px){
+  .dropdown a{
+    font-size: 11px ;
+  }
+}
 /* The side navigation menu */
 .sidenav {
 	height: 90vh;;
@@ -253,14 +285,9 @@ a[data-toggle="collapse"] {
   }
 
   @media (max-width:1100px) and (min-width:767px){
-      .card_container p{
-        font-size: 13px;
-      }
-      .b_choose_us_card{
-        height: 400px;
-      }
-      .date-time{
-        font-size: 14px;
+   
+      .b_choose_us_card h4{
+        font-size: 14px !important;
       }
     }
 
@@ -281,6 +308,10 @@ a[data-toggle="collapse"] {
     .logout-icon-dark{
       width: 23px;
       height: 19px;
+    }
+    .logout-icon-dark-t{
+      font-weight: bold !important; 
+      color: #00061a !important;                                   
     }
     .logout-icon-light{
       width: 23px;

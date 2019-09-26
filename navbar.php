@@ -11,17 +11,13 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
-    
     <link rel="stylesheet" href="css/style.css">
-    <style>
-       
-    </style>
   </head>
     <body class="body">
 
    <!-- navbar links -->
    <nav class="navbar navbar-expand-md irionNavBar fixed-top navbar-default navbar-custom">
-        <a class="navbar-brand" href="#"><img class="irion-logo" src="images/irion-logo.png" alt="irion logo"></a>
+        <a class="navbar-brand" href="index.php"><img class="irion-logo" src="images/irion-logo.png" alt="irion logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon">
           <div class="burger-container">
@@ -40,7 +36,7 @@
               <a class="nav-link" href="aboutus.php"> About Irion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.php">Faq</a>
+              <a class="nav-link" href="howItWorks.php">How It Works</a>
             </li>    
             <li class="nav-item">
               <a class="nav-link" href="contactus.php">Contact Us</a>

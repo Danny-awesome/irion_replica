@@ -17,12 +17,9 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
-<body>
-   
-   <div class="wrapper">
-   	<nav id="sidebar">
-   		<div class="sidebar-header">
+<body  class="wrapper">
+   	<nav id="sidebar" class="mt-5">
+   		<div class="sidebar-header mt-4">
    			<a id="profile-link" href="index.php"><img class="irion-logo pr-2" src="images/irion-logo.png" alt="profile image">slogan</a>
 		
    		</div>
@@ -45,11 +42,10 @@
    			  <a class="text-center" href="#"><img class="logout-icon-light mr-2" src="images/logoutr.png" alt="logout icon">Logout</a>
    			</li>
    		</ul>
-   		
    	</nav>
    	
    	<div class="content">
-   		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+   		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
    		  <!-- toggle button with divs -->
         <span  id="sidebarCollapse">
           <div class="d-container">
@@ -57,37 +53,25 @@
           <div class="bar2"></div>
           <div class="bar3"></div></div>
         </span>
-  		
-  
-    </span>
+        <div class="pl-2 dash">
+            <h4 class="pl-5 pt-3"><img class="home-icon mr-2" src="images/home.png" alt="home icon">DASHBOARD</h4>
+          </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-    <div class="collapse navbar-collapse justify-content-center">
-            <ul class="navbar-nav nav-links ml-auto">
-              <li class="nav-item pr-5">
-                <a class="nav-link" href="#"><img class="logout-icon-dark mr-2" src="images/logout.png" alt="logout icon">LOGOUT</a>
-              </li>
-            </ul>
-          </div>  
-    </ul>
-  </div>
-</nav>
-<div class="row m-3 dash-row animated slideInRight">
-        <div class="col-md-4 pl-2 dash">
-          <h4 class="pl-5 pt-3"><img class="home-icon mr-2" src="images/home.png" alt="home icon">DASHBOARD</h4>
-        </div>
-        <div class="col-md-4 pl-5 date-time pt-3" >
-        <table>
-        <tr>
+      <li class="nav-item">
+        <table class="mt-3 ml-4">
+          <tr>
             <td><h6 id="day"></h6></td>
             <td><h6 id="month"></h6></td>
             <td><h6 id="year"></h6></td>
-        </tr>
-    </table>
-        </div>
-        <div class="col-md-4">
-          <div class="dropdown pl-2 pb-2">
+          </tr>
+        </table>      
+        </li>
+       <li class="nav-item">
+        <div class="dropdown">
                 <a class="dropbtn"><img id="acc-profile-image" class="mr-1" src="images/user-male.png" alt="profile image">My Account
                 </a>
                 <div class="dropdown-content  float-left dash-dropdown-content">
@@ -97,18 +81,22 @@
                   <p id="user-email" class="pl-2">tally@gmail.com</p>
               </div>
             </div>
-        </div>
-      </div>
-      <h6 class="text-center notice-head">Notice!!</h6>
+        </li>
+      </ul> 
+  </div>
+  </nav>
+
+  <h6 class="mt-5">.</h6>
+  <h6 class="text-center mt-5 notice-head">Notice!!</h6>
      <p class="ml-3 mr-3 dash-notice">Please do not share your personal details with anyone.
      Do not verify a downlines payment if you haven't received full proof of payment .
       For faster gain,we encourage you to keep upgrading to a higher level and if you are 
      in the final level,feel free to renew your account.For more info visit our
     <a href="aboutus.php"> About Us Page</a>, we got you!</p>
      
-      <div class="row mt-1 p-3">
-        <div class="col-md-6 cards p-3 ">
-          <div class="b_choose_us_card pt-3">
+      <div class="row ml-5 mr-5">
+        <div class="col-md-6 cards">
+          <div class="b_choose_us_card pt-3 ">
             <h4 class="text-center">Last Amount Recieved (₦)</h4>
             <div class="d-line"></div>
             <table class="dash-table p-2">
@@ -132,7 +120,7 @@
          </div>
       </div>
 
-      <div class="col-md-6 cards p-3">
+      <div class="col-md-6 cards">
           <div class="b_choose_us_card pt-3">
             <h4 class="text-center">Last Amount Payed (₦)</h4>
             <div class="d-line"></div>
@@ -158,9 +146,9 @@
         </div>
     </div>
     
-  <div class="row">
-      <div class="col-md-6 cards">
-        <div class="b_choose_us_card pt-3">
+    <div class="row ml-5 mr-5">
+        <div class="col-md-6 cards">
+          <div class="b_choose_us_card pt-3 ">
           <h4 class="text-center">Total Amount Gained (₦)</h4>
           <div class="d-line">
           <table class="dash-table p-2">
@@ -216,11 +204,18 @@
     </div>
     <!-- <i class="fa fa-users" aria-hidden="true"> -->
 
+<!-- footer  -->
+<!-- <div class="row footer">
+     <div class="col-md-12 text-center m-1">
+        <a class="text-center" href="terms.php">Terms & Conditions</a>
+      </div>
+    </div> -->
 
     <script>
 	    $(document).ready(function(){
 			$('#sidebarCollapse').on('click',function(){
 				$('#sidebar').toggleClass('active');
+        
 			});
     });
       var d = new Date();
