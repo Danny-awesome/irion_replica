@@ -1,3 +1,6 @@
+<?php require_once "scripts/_resetPassword.php" ?>
+<!-- <?php require_once "scripts/registerUser.php" ?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,18 +28,28 @@
       </div>
       <!-- change the password of after the reset/new password is sent -->
       <div class="col-md-4 change-pwd-form">
-        <form id="reset-password-form">
+        <form id="reset-password-form" action="resetPassword.php" method="post">
           <div class="login-icon  d-flex justify-content-center">
             <a href="index.html"><img src="images/Irion-login.png" alt="irion's logo"></a>
           </div>
-          <p class  ="recover-notice d-flex justify-content-center">
+          <?php if(count($errors) > 0): ?>
+            <div class="alert alert-danger">
+                <?php foreach ($errors as $error): ?>
+                <li><?php echo $error; ?></li>
+                <?php endforeach; ?>
+            </div>
+          <?php endif;?>
+          <!-- <p class  ="recover-notice d-flex justify-content-center">
             copy and paste new password from your mail    
-          </p>
+          </p> -->
           <div class="form-group d-flex justify-content-center">
-            <input type="password" id="change-pwd" placeholder="password" required>
+            <input type="password" id="change-pwd" placeholder="password" name="new-pword">
+          </div>
+          <div class="form-group d-flex justify-content-center">
+            <input type="password" id="change-pwd" placeholder="Retype Password" name="cpword">
           </div>
           <div class="form-group d-flex justify-content-center ">
-            <input type="button"  id="change-pwd-btn" class="changepwdbtn" value="Change Password" required>
+            <input type="submit"  id="change-pwd-btn" class="changepwdbtn" value="Reset Password" name="rp-btn">
           </div>
         </form>
       </div>

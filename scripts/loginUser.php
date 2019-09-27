@@ -37,7 +37,7 @@ if (isset($_POST['login-submit-btn'])) {
         $_SESSION['email'] = $user['user_email'];
         $_SESSION['verified'] = $user['verified'];
         if ($_SESSION['verified'] === 1) {
-            header('location: profileB.php');
+            header('location: userDashboard.php');
         } else {
             $_SESSION['message'] = "Success,Logged in!";
             $_SESSION['alert-class'] = "alert-success";

@@ -1,5 +1,6 @@
 <?php
 require_once "scripts/registerUser.php";
+require_once "scripts/_resetPassword.php";
 require_once "scripts/logoutUser.php";
 
 if (isset($_GET['token'])) {
@@ -9,7 +10,7 @@ if (isset($_GET['token'])) {
 
 if (isset($_GET['password-token'])) {
     $passwordToken = $_GET['password-token'];
-    resetPassword($token);
+    resetPassword($passwordToken);
 }
 
 if (!isset($_SESSION['id'])) {

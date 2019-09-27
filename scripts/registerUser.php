@@ -90,30 +90,65 @@ if (isset($_POST['register-btn'])) {
             $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
         }
     }
-
-    
 }
 
 function verifyUser($token)
-    {
-        global $conn;
-        $query = "SELECT * FROM users WHERE token='$token' LIMIT 1";
-        $result = mysqli_query($conn, $query);
+{
+    global $conn;
+    $query = "SELECT * FROM users WHERE token='$token' LIMIT 1";
+    $result = mysqli_query($conn, $query);
 
-        if (mysqli_num_rows($result) > 0) {
-            $user = mysqli_fetch_assoc($result);
-            $update_user_verified_status = "UPDATE users SET verified=1 WHERE token='$token'";
-            if (mysqli_query($conn, $update_user_verified_status)) {
-                $_SESSION['id'] = $user['user_id'];
-                $_SESSION['username'] = $user['user_username'];
-                $_SESSION['email'] = $user['user_email'];
-                $_SESSION['verified'] = 1;
+    if (mysqli_num_rows($result) > 0) {
+        $user = mysqli_fetch_assoc($result);
+        $update_user_verified_status = "UPDATE users SET verified=1 WHERE token='$token'";
+        if (mysqli_query($conn, $update_user_verified_status)) {
+            $_SESSION['id'] = $user['user_id'];
+            $_SESSION['username'] = $user['user_username'];
+            $_SESSION['email'] = $user['user_email'];
+            $_SESSION['verified'] = 1;
 
-                $_SESSION['message'] = "Hey, We are happy to tell you that your email has been successfully verified!";
-                $_SESSION['alert-class'] = "alert-success";
-                header('location: checkVerified.php');
-                exit();
-            }
+            $_SESSION['message'] = "Hey, We are happy to tell you that your email has been successfully verified!";
+            $_SESSION['alert-class'] = "alert-success";
+            header('location: checkVerified.php');
+            exit();
         }
     }
-?>
+}
+
+
+// if (isset($_POST['rp-btn'])) {
+//     $pword = $_POST['new-pword'];
+//     $cpword = $_POST['cpword'];
+
+//     if (empty($pword)) {
+//         $errors['pword'] = "Password is required";
+//     }
+//     if ($pword !== $cpword) {
+//         $errors['pword'] = "Passwords do not match";
+//     }
+//     $pword = password_hash($pword, PASSWORD_DEFAULT);
+//     $email = $_SESSION['email'];
+
+//     if (count($errors) == 0) {
+//         $reset_query = "UPDATE users SET user_password='$pword' WHERE user_email='$email' ";
+//         $result = mysqli_query($conn, $reset_query);
+//         if ($result) {
+//             header('location: login.php');
+//             exit(0);
+//         }
+//     }
+// }
+
+// function resetPassword($TOKEN)
+// {
+//     global $conn;
+//     $query = "SELECT * FROM users WHERE token=? LIMIT 1";
+//     $stmt = $conn->prepare($query);
+//     $stmt->bind_param('s', $TOKEN);
+//     $stmt->execute();
+//     $result = $stmt->get_result();
+//     $user = $result->fetch_assoc();
+//     $_SESSION['email'] = $user['user_email'];
+//     header('location: resetPassword.php');
+//     exit(0);
+// }

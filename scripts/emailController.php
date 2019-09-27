@@ -61,7 +61,7 @@ function sendPasswordResetLink($EMAIL, $TOKEN)
                 Hey we noticed you are trying to reset your password. Please click the link below to do so.
             </p>
             <a href="https://localhost/irion/checkVerified.php?password-token='.$TOKEN.'">
-                Verify your email Address.
+                Reset your password.
             </a>
         </div>
     </body>

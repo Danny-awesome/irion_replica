@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once 'config/dbConnect.php';
 require_once 'scripts/emailController.php';
 $email = "";
@@ -35,21 +35,10 @@ if (isset($_POST['fp-btn'])) {
         $user = $result->fetch_assoc();
         $TOKEN  = $user['token'];
         sendPasswordResetLink($email, $TOKEN);
+        $stmt->close();
         header('location: passwordResetMessage.php');
-        exit();
+        exit(0);
     }
-}
-function resetPassword($TOKEN){
-    global $conn;
-    $query = "SELECT * FROM users WHERE token=? LIMIT 1";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param('s', $TOKEN);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $user = $result->fetch_assoc();
-    $_SESSION['email'] = $user['email'];
-    header('location: resetPassword.php');
-    exit(0);
 }
     
 ?>

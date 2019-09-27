@@ -1,5 +1,6 @@
-<?php require_once 'scripts/loginUser.php'; ?>
-
+<?php 
+require_once 'scripts/loginUser.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +45,7 @@
                     <input type="text" id="login-email" placeholder="TallySmith@gmail.com" name="email" value="<?php echo $email ?>">
                 </div>
                 <div class="form-group d-flex justify-content-center ">
-                    <input type="password" id="login-pwd" placeholder="Password" name="pword" value="<?php echo $pword ?>">
+                    <input type="password" id="login-pwd" placeholder="Password" name="pword">
                 </div>
                 <div class="form-group d-flex justify-content-center ">
                     <input type="submit" id="login-btn" class="loginbtn" value="login" name="login-submit-btn" required>
