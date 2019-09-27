@@ -1,3 +1,7 @@
+  <!-- header page  -->
+  <?php include 'dashheader.php' ?>
+    <!-- sidebar page  -->
+      <?php include 'dashSideNavigation.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,17 +17,14 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/dashboard.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
   <body>
-    <!-- header page  -->
-      <?php include 'dashheader.php' ?>
-    <!-- sidebar page  -->
-      <?php include 'dashSideNavigation.php' ?>
-
-      <h6 class="text-center mt-5 notice-head">Notice!!</h6>
+    <div class="dashboard-wrappers">
+    <h6 class="text-center mt-5 notice-head">Notice!!</h6>
      <p class="ml-3 mr-3 dash-notice">Please do not share your personal details with anyone.
      Do not verify a downlines payment if you haven't received full proof of payment .
       For faster gain,we encourage you to keep upgrading to a higher level and if you are 
@@ -138,5 +139,6 @@
         </div>
       </div>
     </div>
-  </body>
+   </div>
+</body>
 </html>
