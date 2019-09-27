@@ -1,0 +1,11 @@
+
+#personal-details label{
+    font-weight: bold;
+}
+.pd-container{
+    /* border: 1px solid black; */
+}
+#personal-details h6{
+    font-size: 30px;
+    text-align: center;
+}

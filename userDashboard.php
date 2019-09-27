@@ -225,9 +225,5 @@
     var year = document.getElementById("year").innerHTML = d.getFullYear();
 	</script>
     
-    
-    
-    
-    
   </body>
 </html>

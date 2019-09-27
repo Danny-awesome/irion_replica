@@ -40,6 +40,7 @@ a:focus{
     max-width: 200px;
     background:#001a33;
     transition: all 0.3s;
+    
 }
 #sidebar.active{
 	margin-left: -200px;
@@ -62,7 +63,7 @@ a:focus{
 /* side bar links  */
 #sidebar ul li a{
 	padding: 10px;
-	font-size: 1.1em;
+	font-size: 0.89em;
   display: block;
   text-transform: uppercase;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
