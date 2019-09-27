@@ -1,0 +1,121 @@
+.navbar{
+	z-index: -9999;
+	position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+	background-color: #F4F3EF;
+	/*border-bottom: 1px solid #D3D3D3;*/
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+	min-height: 60px;
+}
+
+.navbar .btn{
+	margin-left: 5px;
+	font-family: Dosis;
+	border: none;
+	border-radius: .25rem;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+	width: 100px !important;
+    height: 38px;
+    /* text-transform: uppercase; */
+    font-weight: 500;
+	color: #727271 !important;
+	background-color: #fafbfc;
+	transition: all 0.5s ease-in-out;
+}
+
+.navbar .btn:hover{
+	background-color: #4CB170;
+	color: #fff !important;
+}
+
+.navbar .btn i{
+	margin-left: 5px;
+}
+
+.header-wrapper{
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	/* padding-top: 10px; */
+	padding-left: 3px;
+	padding-right: 2px;
+	text-align: center;
+	width: 200px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 9999;
+	-webkit-transition: all 0.3s ease;
+}
+
+.header-wrapper hr{
+	margin-top: 8px;
+}
+
+.nav-user-img{
+	cursor: pointer;
+}
+
+.nav-user-img img{
+	width: 40px;
+	height: 40px;
+}
+
+.dropdown-menu .dropdown-item {
+	color: #4CB170;
+	/*font-family: Dosis !important;*/
+}
+
+.dashboard-header .dropdown-toggle::after {
+ 	color: #727271;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em !important;
+    vertical-align: -0.8em !important;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.navbar-right-top .nav-item {
+    border-right: 1px solid #e6e6f2;
+}
+
+.navbar-right-top .nav-item .nav-link {
+    font-size: 16px;
+    color: #82849f;
+}
+
+#timeSpan{
+	font-family: 'Titillium Web';
+	font-size: 1em;
+	color: #727271 !important;
+}
+
+@media only screen and (max-width: 900px){
+	.header-wrapper{
+		width: 100px !important;
+		padding-left: 15px;
+	}
+	.irion-logo{
+		width: 70px !important;
+		height: 50px !important;
+	  }
+}
+
+@media only screen and (max-width: 468px){
+	.navbar-right-top .nav-item:last-child {
+		margin-right: 0;
+	}
+}
+.irion-logo{
+	width: 90px;
+	height: 50px;
+  }

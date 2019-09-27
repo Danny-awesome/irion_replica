@@ -13,81 +13,17 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body  class="wrapper">
-   	<nav id="sidebar" class="mt-5">
-   		<div class="sidebar-header mt-4">
-   			<a id="profile-link" href="index.php"><img class="irion-logo pr-2" src="images/irion-logo.png" alt="profile image">slogan</a>
-		
-   		</div>
-   		
-   		<ul class="list-unstyled components">
-   			
-   		  <li>
-   			    <a class="text-center" href="userDashboard.php">DASHBOARD</a>
-   			</li>
-         <li>
-            <a class="text-center" href="profileSettings.php">Profile</a>
-          </li>
-   			<li>
-            <a class="text-center" href="downlines.php">Downlines</a>
-   			</li>
-   			<li>
-   			    <a class="text-center" href="history.php">History</a>
-   			</li>
-   			<li>
-   			  <a class="text-center" href="#"><img class="logout-icon-light mr-2" src="images/logoutr.png" alt="logout icon">Logout</a>
-   			</li>
-   		</ul>
-   	</nav>
-   	
-   	<div class="content">
-   		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-   		  <!-- toggle button with divs -->
-        <span  id="sidebarCollapse">
-          <div class="d-container">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div></div>
-        </span>
-        <div class="pl-2 dash">
-            <h4 class="pl-5 pt-3"><img class="home-icon mr-2" src="images/home.png" alt="home icon">DASHBOARD</h4>
-          </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <table class="mt-3 ml-4">
-          <tr>
-            <td><h6 id="day"></h6></td>
-            <td><h6 id="month"></h6></td>
-            <td><h6 id="year"></h6></td>
-          </tr>
-        </table>      
-        </li>
-       <li class="nav-item">
-        <div class="dropdown">
-                <a class="dropbtn"><img id="acc-profile-image" class="mr-1" src="images/user-male.png" alt="profile image">My Account
-                </a>
-                <div class="dropdown-content  float-left dash-dropdown-content">
-                  <p class="pt-2 pl-2 irion-acc">Irion Account</p>
-                  <p id="user-name" class="pl-2">Default username</p>
-                  <p id="current-level" class="pl-2">current level</p>
-                  <p id="user-email" class="pl-2">tally@gmail.com</p>
-              </div>
-            </div>
-        </li>
-      </ul> 
-  </div>
-  </nav>
+  <body>
+    <!-- header page  -->
+      <?php include 'dashheader.php' ?>
+    <!-- sidebar page  -->
+      <?php include 'dashSideNavigation.php' ?>
 
-  <h6 class="mt-5">.</h6>
-  <h6 class="text-center mt-5 notice-head">Notice!!</h6>
+      <h6 class="text-center mt-5 notice-head">Notice!!</h6>
      <p class="ml-3 mr-3 dash-notice">Please do not share your personal details with anyone.
      Do not verify a downlines payment if you haven't received full proof of payment .
       For faster gain,we encourage you to keep upgrading to a higher level and if you are 
@@ -202,28 +138,5 @@
         </div>
       </div>
     </div>
-    <!-- <i class="fa fa-users" aria-hidden="true"> -->
-
-<!-- footer  -->
-<!-- <div class="row footer">
-     <div class="col-md-12 text-center m-1">
-        <a class="text-center" href="terms.php">Terms & Conditions</a>
-      </div>
-    </div> -->
-
-    <script>
-	    $(document).ready(function(){
-			$('#sidebarCollapse').on('click',function(){
-				$('#sidebar').toggleClass('active');
-        
-			});
-    });
-      var d = new Date();
-    
-    document.getElementById("day").innerHTML = d.getDate() + " / ";
-    document.getElementById("month").innerHTML = d.getMonth()+1  + " / ";
-    var year = document.getElementById("year").innerHTML = d.getFullYear();
-	</script>
-    
   </body>
 </html>
