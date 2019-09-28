@@ -18,16 +18,16 @@
         <nav class="navbar-white bg-transparent">
             <ul class="navbar-nav flex-column pt-2" id="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="userDashboard.php"><i class="fas fa-file-invoice-dollar"></i><span>DASHBOARD</span></a>
+                    <a class="nav-link" href="userDashboard.php"><i class="fas fa-paste"></i><span>DASHBOARD</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profileSettings.php"><i class="fas fa-file-invoice-dollar"></i><span>PROFILE</span></a>
+                    <a class="nav-link" href="profileSettings.php"><i class="fas fa-user"></i><span>PROFILE</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="downlines.php"><i class="fas fa-file-invoice-dollar"></i><span>DOWNLINES</span></a>
+                    <a class="nav-link" href="downlines.php"><i class="fa fa-arrow-down"></i><span>DOWNLINES</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="HISTORY.php"><i class="fas fa-file-invoice-dollar"></i><span>HISTORY</span></a>
+                    <a class="nav-link" href="HISTORY.php"><i class="fa fa-history"></i><span>HISTORY</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>

@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 /* dashboard container  */
 .dashboard-wrappers{
   position: relative;
@@ -19,339 +23,98 @@
     	margin-left: 70px;
 	}
 }
-
-
-
-.components p{
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1em;
-	font-weight: 300;
-	line-height: 1.7em;
-	color: #999;
-}
-a,
-a:hover,
-a:focus{
-	text-decoration: none;
-	transition: all 0.3s;
-}
-.navbar{
-	padding: 15px 10px;
-	background: #fff;
-	border: none;
-	border-radius: 0;
-	margin-bottom: 40px;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.navbar-btn{
-	box-shadow: none;
-	outline: none!important;
-	border: none;
-}
-
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-.components .user-name{
-  font-weight: bold;
-  font-size: 16px;
-}
-#sidebar {
-    min-width: 200px;
-    max-width: 200px;
-    background:#001a33;
-    transition: all 0.3s;
-    
-}
-#sidebar.active{
-	margin-left: -200px;
-}
-
-#sidebar .sidebar-header{
-	padding: 20px;
-	background: #000d1a;
-}
-.components li {
-  font-weight: bold;
-  color: #e6f2ff;
-}
-
-#sidebar ul p{
-	padding: 10px;
-	font-size: 1.1em;
-	display: block;
-}
-/* side bar links  */
-#sidebar ul li a{
-	padding: 10px;
-	font-size: 0.89em;
-  display: block;
-  text-transform: uppercase;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-  color: #85adad !important;
-}
-#sidebar ul li a:hover {
-    color: #000d1a !important;
-    background:#85adad;
-}
-
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-.dropdown:hover{
-  cursor: pointer;
-}
-
-
-#content {
-    width: 100%;
-    padding: 20px;
-    min-height: 100vh;
-    transition: all 0.3s;
-}
-
-@media(max-width:768px){
-	#sidebar{margin-left: -200px;}
-	#sidebar.active{
-		margin-left: 0px;
-	}
-	#sidebarCollapse span{
-		display: none;
-  }
-  #sidebar ul li a{
-    padding: 8px;
-    font-size: 0.705em;
-  }
-
-.logout-icon-light{
-      width: 15px !important;
-      height: 12px !important;
-  }
-  .home-icon{
-    width: 17px !important;
-    height: 14px !important;
-  }
-  .dash h4{
-    font-weight: bold;
-    font-size: 12px !important;
-  }
-  #day,#month,#year{
-    font-size: 14px !important;
-  }
-  #acc-profile-image{
-    width: 20px !important;
-    height: 20px !important;
-  }
-  .dropdown a{
-    font-size: 12px !important;
-  }
-}
-
-@media (max-width:1100px) and (min-width:767px){
-  .dropdown a{
-    font-size: 11px ;
-  }
-}
-/* The side navigation menu */
-.sidenav {
-	height: 90vh;;
-	width: 0; 
-	position: fixed; 
-	/* z-index: 1; */
-	top: 0; 
-	left: 0;
-	background-color: #00061a;
-	overflow-x: hidden;
-	padding-top: 60px; 
-	transition: 0.5s; 
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	display: block;
-	transition: 0.3s;
-  }
-  .sidenav a:hover {
-	color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
-  position: absolute;
-	right: 25px;
-	font-size: 36px;
-  margin-left: 50px;
-  margin-top: 200px;
-  }
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
-	transition: margin-left .5s;
-	padding: 20px;
-  } 
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 18px;}
-  }
-
-  #profile-image{
-      width: 80px;
-      height: 70px
-  }
-  #profile-link{
-      color:  #999999;
-      font-size: 17px;
-      font-weight: bold;
-  }
-  .username{
-      font-weight: bold;
-      color:  #adad85;
-      border-bottom: 2px solid #85adad;
-  }
-
-
-/* toggler  */
-.d-container {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 28px;
-  height: 3px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-/* dashboard row under the notice text  */
-.dash-row{
-  border-radius: 60px; 
-  background-color: #f2f2f2;
-	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.3);
-}
-.dash h4{
-  font-weight: bold;
-  color:#002633;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 15px;
-}
-#day,#month,#year{
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 18px;
-  color: #737373;
-  font-weight: bold;
-}
-@media (max-width:1100px) and (min-width:767px){
-  .dropdown a{
-    font-size: 11px ;
-  }
-}
-    /* nav profile image  */
-#acc-profile-image{
-  width: 40px;
-  height: 40px;
-}
-.dash-dropdown-content{
-  background:  #333333 !important;
-  line-height: 0.4;
-  
-}
-.dash-dropdown-content .irion-acc{
-  font-size: 13px;
-  font-weight : bold;
-  color:#f2f2f2;
-}
-.dash-dropdown-content #user-name,
-.dash-dropdown-content #current-level,
-.dash-dropdown-content #user-email{
-  font-size: 11px;
-  color: #a6a6a6;
-  font-weight: bold;
-}
-
-/* containers under the dashboard texts */
-.b_choose_us_card {
-	border-radius: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
-	transition: 0.3s;
-	/* padding: 30px;  */
-	height: 300px;
-  margin: 25px;
-  overflow: auto;
-  }
-  .b_choose_us_card:hover {
-	background:	 #f2f2f2;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
-  }
-  .b_choose_us_card h4{
-    font-size: 18px;
-    font-weight: bold;
-  }
   .d-line{
-    width: 100%;
-    height: 1px;
-    background-color:#bfbfbf;
+    width: 100% !important;
+    height: 2px !important;
+    background-color:red !important;
   }
 
-  @media (max-width:1100px) and (min-width:767px){
-   
-      .b_choose_us_card h4{
-        font-size: 14px !important;
-      }
-    }
+  /* dashboard information cards  */
 
-    .dash-table tr td h6{
-      font-size: 14px;
-    }
-    .dash-notice{
-     font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-      font-size: 15px;
-      text-indent: 30px;
-      color: #404040; 
-      font-weight: bold;
-    }
-    .home-icon{
-      width: 20px;
-      height: 18px;
-    }
-    .logout-icon-dark{
-      width: 23px;
-      height: 19px;
-    }
-    .logout-icon-dark-t{
-      font-weight: bold !important; 
-      color: #00061a !important;                                   
-    }
-    .logout-icon-light{
-      width: 23px;
-      height: 19px;
-    }
-    .dash-notice a{
-      color: #7094db;
-    }
-    .notice-head{
-      font-weight: bold;
-      font-size: 25px;
-      color: #990000;
-      text-transform: uppercase;
-      font-family: Verdana, Geneva, sans-serif;
-      letter-spacing: -1px;
-    }
 
-  
+.dash-downline{
+	box-shadow: 0 4px 8px 0 rgb(128, 51, 0, 0.3);
+  background: #ffffff;
+  border-radius: 20px;
+  height: 370px;
+  /* width: 100%; */
+}
+.card{
+  background:#ffffff;
+  border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgb(128, 51, 0, 0.3);
+	transition: 0.3s;
+	padding: 30px;
+  height: 170px;
+  overflow: auto;
+}
+.card:hover, .dash-downline:hover{
+  transition: 0.3s;
+  background : rgb(242, 242, 242);
+}
+
+/* card content  */
+.card h6{
+  font-weight: bold;
+  font-family: 'Titillium Web' ,'Open Sans';
+  color: #33001a;
+  text-transform: uppercase;
+}
+.card p{
+  font-weight: bold;
+  font-size: 22px;
+}
+.card h5{
+  font-weight: bold;
+  font-family: 'Titillium Web' ,'Open Sans';
+  color: #4d8000;
+  font-size: 17px;
+}
+.card img{
+  width: 18px;
+  height: 18px;
+}
+@media only screen and (max-width: 1320px){
+  .card h6{
+    font-size: 15px;
+  }
+  .card p{
+    font-size: 17px;
+  }
+  .card h5{
+    font-size: 14px;
+  }
+  .card{
+    /* background: #008000; */
+  }
+}
+
+/* scrollbar  */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bfbfbf; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:#bfbfbf; 
+}
+
+@media only screen and (max-width: 767px){
+  .dash-downline{
+    transition: all 0.3s ease;
+  }
+  .card{
+    margin-top: 25px;
+  }
+}

@@ -108,6 +108,20 @@
 		width: 70px !important;
 		height: 50px !important;
 	  }
+	  /* .header-wrapper{
+		width: 70px !important;
+	}
+	.header-wrapper .navbar-brand{
+		text-indent: -9999px;
+  		line-height: 0;
+	}
+	.header-wrapper .navbar-brand::after{
+		content: url("images/irion-icon-small.png") !important;
+	} */
+	.header-wrapper{
+		background: rgba(0, 0, 0, 0);
+		box-shadow: none;
+	}
 }
 
 @media only screen and (max-width: 468px){

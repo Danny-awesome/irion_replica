@@ -22,123 +22,56 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+
   <body>
     <div class="dashboard-wrappers">
-    <h6 class="text-center mt-5 notice-head">Notice!!</h6>
-     <p class="ml-3 mr-3 dash-notice">Please do not share your personal details with anyone.
-     Do not verify a downlines payment if you haven't received full proof of payment .
-      For faster gain,we encourage you to keep upgrading to a higher level and if you are 
-     in the final level,feel free to renew your account.For more info visit our
-    <a href="aboutus.php"> About Us Page</a>, we got you!</p>
-     
-      <div class="row ml-5 mr-5">
-        <div class="col-md-6 cards">
-          <div class="b_choose_us_card pt-3 ">
-            <h4 class="text-center">Last Amount Recieved (₦)</h4>
-            <div class="d-line"></div>
-            <table class="dash-table p-2">
-              <tr>
-                <td><h6 class="mt-5 ml-3">Amount (₦):</h6></td>
-                <td><h6 class="mt-5 ml-3">0:001 </h6></td>
-              </tr>
-              <tr>
-                <td><h6 class="ml-3">Senders Name : </h6></td>
-                <td><h6 class="ml-3">Sn </h6></td>
-              </tr>
-              <tr>
-                <td><h6 class="ml-3">Date Recieved : </h6></td>
-                <td><h6 class="ml-3">Date</h6></td>
-              </tr>
-              <tr>
-                <td><h6 class="ml-3">Date Verified : <h6></td>
-                <td><h6 class="ml-3">Date Verified  <h6></td>
-              </tr>
-            </table>
-         </div>
-      </div>
+      <div class="row p-5">
+        <div class="col-md-8 pt-5">
+          
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="card">
+                    <h6>Last Recieved <span class="fa fa-arrow-down"></span> </h6>
+                    <p><span>&#8358;</span>0:00</p>
+                    <h5>Payed by : <span class=""></span></h5>
+                  </div>
+              </div>
+                
+              <div class="col-md-6">
+                <div class="card">
+                  <h6>Last Payed <span class="fa fa-arrow-up"></h6>
+                  <p><span>&#8358;</span>0:00</p>
+                  <h5>Payed to : <span class=""></span></h5>
+                </div>
+              </div>
+            </div>
 
-      <div class="col-md-6 cards">
-          <div class="b_choose_us_card pt-3">
-            <h4 class="text-center">Last Amount Payed (₦)</h4>
-            <div class="d-line"></div>
-         <table class="dash-table p-2">
-              <tr>
-                <td><h6 class="mt-5 ml-3">Amount (₦):</h6></td>
-                <td><h6 class="mt-5 ml-3">0:001 </h6></td>
-              </tr>
-              <tr>
-                <td><h6 class="ml-3">Recievers Name : </h6></td>
-                <td><h6 class="ml-3">Sn </h6></td>
-              </tr>
-              <tr>
-                <td><h6 class="ml-3">Date Recieved : </h6></td>
-                <td><h6 class="ml-3">Date</h6></td>
-              </tr>
-              <tr>
-                <td><h6 class="ml-3">Date Verified : <h6></td>
-                <td><h6 class="ml-3">Date Verified  <h6></td>
-              </tr>
-            </table>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <div class="card" >
+                <h6>Total Gained <span><img src="images/money-bag.png" alt="icon"></span></h6>
+                <p><span>&#8358;</span>0:00</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card" >
+                <h6>Current Level</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" 
+                    aria-valuemin="0" aria-valuenow="100" style="width:5%">
+                      0
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
-    </div>
-    
-    <div class="row ml-5 mr-5">
-        <div class="col-md-6 cards">
-          <div class="b_choose_us_card pt-3 ">
-          <h4 class="text-center">Total Amount Gained (₦)</h4>
-          <div class="d-line">
-          <table class="dash-table p-2">
-            <tr>
-              <td><h6 class="mt-5 ml-3">Amount (₦):</h6></td>
-              <td><h6 class="mt-5 ml-3">0:001 </h6></td>
-            </tr>
-            <tr>
-              <td><h6 class="ml-3">My Name : </h6></td>
-              <td><h6 class="ml-3">Sn </h6></td>
-            </tr>
-            <tr>
-              <td><h6 class="ml-3">Current Level : </h6></td>
-              <td><h6 class="ml-3">level</h6></td>
-            </tr>
-            <tr>
-              <td><h6 class="ml-3">Account Details : <h6></td>
-              <td><h6 class="ml-3">Details <h6></td>
-            </tr>
-          </table>
-        </div>
-      </div>  
-    </div>
-  
-    <div class="col-md-6 cards">
-        <div class="b_choose_us_card pt-3">
-          <h4 class="text-center">Downlines & Upline Summary</h4>
-          <div class="d-line">
-          <table class="dash-table p-2">
-            <tr>
-              <td><h6 class="mt-5 ml-3"><b>Upliner name :</b></h6></td>
-              <td><h6 class="mt-5 ml-3"><b>Account Details</b></h6></td>
-            </tr>
-            <tr>
-              <td><h6 class="mt-2 ml-3">Name :</h6></td>
-              <td><h6 class="mt-2 ml-3">Account Details</h6></td>
-            </tr>
-            <tr>
-              <td><h6 class="ml-3">Name : </h6></td>
-              <td><h6 class="ml-3">Account Details </h6></td>
-            </tr>
-            <tr>
-              <td><h6 class="ml-3">Name : </h6></td>
-              <td><h6 class="ml-3">Account Details </h6></td>
-            </tr>
-            <tr>
-              <td><h6 class="ml-3">Name : </h6></td>
-              <td><h6 class="ml-3">Account Details </h6></td>
-            </tr>
-          </table>
+        <div class="col-md-4 p-5">
+          <div class="dash-downline">
+              downline content
+          </div>
         </div>
       </div>
-    </div>
    </div>
 </body>
 </html>

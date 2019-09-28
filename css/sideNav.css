@@ -27,7 +27,10 @@
 }
 
 .nav-left-sidebar .nav-item a:hover{
-	color: #242849;
+    color: #242849;
+    background:#c2ff66;
+
+    transition: all 0.3s ease;
 }
 
 .nav-left-sidebar .nav-item a{
