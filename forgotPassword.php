@@ -1,4 +1,4 @@
-<?php require_once "scripts/sendPasswordRecoveryMail.php" ?>
+<?php require_once "scripts/account/_send_reset_mail.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">

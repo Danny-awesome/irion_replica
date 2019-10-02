@@ -1,6 +1,6 @@
 <?php
 require_once "scripts/registerUser.php";
-require_once "scripts/_resetPassword.php";
+require_once "scripts/account/_send_reset_mail.php";
 require_once "scripts/logoutUser.php";
 
 if (isset($_GET['token'])) {
