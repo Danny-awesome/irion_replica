@@ -10,7 +10,7 @@
     top: 60px;
     overflow: auto;
     box-shadow: 0px 40px 28px 0px rgba(82, 63, 105, 0.13);
-    -webkit-transition: all 0.3s ease;
+    /* -webkit-transition: all 0.3s ease; */
 }
 
 .nav-left-sidebar .nav-link i {
@@ -27,8 +27,9 @@
 }
 
 .nav-left-sidebar .nav-item a:hover{
-    color: #242849;
-    background:#c2ff66;
+    color: #eeeff7;
+    background: #242849;
+    /* background:#c2ff66; */
 
     transition: all 0.3s ease;
 }

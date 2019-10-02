@@ -38,6 +38,7 @@
   border-radius: 20px;
   height: 370px;
   /* width: 100%; */
+  overflow: auto;
 }
 .card{
   background:#ffffff;
@@ -84,9 +85,17 @@
   .card h5{
     font-size: 14px;
   }
-  .card{
-    /* background: #008000; */
+  .dash-downline h6{
+    font-size: 16px;
   }
+  .user-upline h3{
+    font-size: 9px;
+  }
+  
+  .user-upline p{
+    font-size: 9px;
+  }
+
 }
 
 /* scrollbar  */
@@ -117,4 +126,37 @@
   .card{
     margin-top: 25px;
   }
+}
+
+/* upliner and downline cards  */
+.dash-downline{
+	box-shadow: 0 4px 8px 0 rgb(128, 51, 0, 0.3);
+  background: #ffffff;
+  border-radius: 20px;
+  height: 370px;
+  /* width: 100%; */
+}
+.dash-downline h6{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color:#4d8000;
+  font-family: 'Titillium Web' ,'Open Sans';
+}
+.user-upline h3,.user-downline h3{
+  /* font-family:  */
+  font-size: 12px;
+  padding-left: 12px;
+  font-weight: bold;
+  color: 	 #404040;
+}
+
+.user-upline p,.user-downline p{
+  font-weight: bold;
+  font-size: 13px;
+  padding-left: 10px;
+  color:#666666;
+}
+.downline-row{
+  margin-top: -120px;
 }

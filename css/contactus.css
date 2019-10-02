@@ -1,0 +1,9 @@
+.contact-form{
+    box-shadow: 0 4px 8px 0 rgb(128, 51, 0, 0.3);
+}
+.contact-form .submit-message{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

@@ -708,6 +708,7 @@ a{
     border: 1px solid #e6e6e6;
 	box-shadow: 1px 5px 3px  #d9d9d9;
 	padding-bottom: 50px;
+	border-radius: 15px;
 }
 .login-icon img,.signup-icon img{
     width: 120px;
@@ -716,7 +717,6 @@ a{
 }
 #login-email,
 #login-pwd,
-#login-btn,
 #signup-surname,
 #signup-firstName,
 #signup-username,
@@ -725,21 +725,29 @@ a{
 #signup-re-pwd,
 #signup-telNo,
 #signup-cardNo,
-.signup-bank-names,
-.sign-up-btn,
-#recover-btn,
-#recover-email,
-#change-pwd-btn,
-#change-pwd{
+.signup-bank-names
+{
     width: 370px;
     height: 47px;
-    border: #990000;
+    border: #242849;
     border-radius: 6px;
     border-top-style: none;
     border-left-style: solid;
 
 }
-
+.sign-up-btn,#recover-btn,#change-pwd-btn,.sign-up-btn,
+#recover-email,
+#change-pwd,
+#login-btn
+{
+	width: 370px;
+	height: 47px;
+	
+	border: #242849;
+    border-radius: 6px;
+    border-top-style: none;
+    border-left-style: solid;
+}
 #login-email::placeholder,
 #login-pwd::placeholder,
 #signup-surname::placeholder,
@@ -762,15 +770,22 @@ a{
 #recover-btn,
 #change-pwd-btn,
 .sign-up-btn{
-    background-color:#660000;;
+	background-color:#242849;
+	color: #eeeff7;
+	text-transform: uppercase;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 #login-btn:hover,
 #recover-btn:hover,
 .sign-up-btn:hover,
 #change-pwd-btn:hover{
-    background-color: #800000;
+	background-color: #dcdeef;
+	border: #dcdeef !important;
+	color: #242849;
+	box-shadow: 0 4px 8px 0 rgb(128, 51, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+	
 }
 .fg-pwd{
 	color: #737373;

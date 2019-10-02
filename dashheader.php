@@ -17,7 +17,7 @@
       <div class="dashboard-header">
         <nav class="navbar navbar-expand fixed-top">
           <div class="header-wrapper">
-           <a class="navbar-brand" href="index.php"><img class="irion-logo" src="images/irion-logo.png" alt="irion logo"></a>
+           <a class="navbar-brand" href="index.php"><img class="irion-logo" src="images/irion-logo1.png" alt="irion logo"></a>
            <hr>
           </div>
           <div class=" navbar-collapse">

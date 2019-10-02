@@ -18,7 +18,7 @@
 
  <!-- navbar links -->
    <nav class="navbar navbar-expand-md irionNavBar fixed-top navbar-default navbar-custom">
-        <a class="navbar-brand" href="index.php"><img class="irion-logo" src="images/irion-logo.png" alt="irion logo"></a>
+        <a class="navbar-brand" href="index.php"><img class="irion-logo" src="images/irion-logo1.png" alt="irion logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon">
           <div class="burger-container">

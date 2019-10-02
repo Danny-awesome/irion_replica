@@ -68,10 +68,145 @@
         </div>
         <div class="col-md-4 p-5">
           <div class="dash-downline">
-              downline content
+             <h6 class="pt-5" >UPLINE DETAILS</h6>
+             <table class="user-upline ">
+                <tr>
+                  <td><h3>Name :</h3> </td>
+                  <td> <p>upliner name </p></td>
+                </tr>
+                <tr>
+                  <td><h3>Phone Number :</h3> </td>
+                  <td><p>upliner digits </p></td>
+                </tr>
+                <tr>
+                  <td><h3>Account Name :</h3> </td>
+                  <td><p>Account Name  </p></td>
+                </tr>
+                <tr>
+                  <td><h3>Account Number :</h3> </td>
+                  <td><p>Account Number  </p></td>
+                </tr>
+                <tr>
+                  <td><h3>Account Number :</h3> </td>
+                  <td><p>Bank Name  </p></td>
+                </tr>
+             </table>
           </div>
         </div>
-      </div>
-   </div>
+    </div>
+
+      <div class="row downline-row p-5">
+        <div class="col-md-3 pt-5">
+          <div class="dash-downline">
+            <h6 class="pt-5" >DOWNLINE DETAILS</h6>
+              <table class="user-downline ">
+                  <tr>
+                    <td><h3>Name :</h3> </td>
+                    <td> <p>downline name </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Phone Number :</h3> </td>
+                    <td><p>downline digits </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Name :</h3> </td>
+                    <td><p>Account Name  </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Number :</h3> </td>
+                    <td><p>Account Number  </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Number :</h3> </td>
+                    <td><p>Bank Name  </p></td>
+                  </tr>
+              </table>
+            </div>
+           </div>
+           
+        <div class="col-md-3 pt-5">
+          <div class="dash-downline">
+            <h6 class="pt-5" >DOWNLINE DETAILS</h6>
+              <table class="user-downline ">
+                  <tr>
+                    <td><h3>Name :</h3> </td>
+                    <td> <p>downline name </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Phone Number :</h3> </td>
+                    <td><p>downline digits </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Name :</h3> </td>
+                    <td><p>Account Name  </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Number :</h3> </td>
+                    <td><p>Account Number  </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Number :</h3> </td>
+                    <td><p>Bank Name  </p></td>
+                  </tr>
+              </table>
+            </div>
+           </div>
+        <div class="col-md-3 pt-5">
+          <div class="dash-downline">
+            <h6 class="pt-5" >DOWNLINE DETAILS</h6>
+              <table class="user-downline ">
+                  <tr>
+                    <td><h3>Name :</h3> </td>
+                    <td> <p>downline name </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Phone Number :</h3> </td>
+                    <td><p>downline digits </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Name :</h3> </td>
+                    <td><p>Account Name  </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Number :</h3> </td>
+                    <td><p>Account Number  </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Number :</h3> </td>
+                    <td><p>Bank Name  </p></td>
+                  </tr>
+              </table>
+            </div>
+           </div>
+        <div class="col-md-3 pt-5">
+          <div class="dash-downline">
+            <h6 class="pt-5" >DOWNLINE DETAILS</h6>
+              <table class="user-downline">
+                  <tr>
+                    <td><h3>Name :</h3> </td>
+                    <td> <p>downline name </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Phone Number :</h3> </td>
+                    <td><p>downline digits </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Name :</h3> </td>
+                    <td><p>Account Name  </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Number :</h3> </td>
+                    <td><p>Account Number  </p></td>
+                  </tr>
+                  <tr>
+                    <td><h3>Account Number :</h3> </td>
+                    <td><p>Bank Name  </p></td>
+                  </tr>
+              </table>
+            </div>
+           </div>
+
+          </div>
+        </div>
 </body>
 </html>
