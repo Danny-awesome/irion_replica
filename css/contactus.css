@@ -1,5 +1,6 @@
 .contact-form{
     box-shadow: 0 4px 8px 0 rgb(128, 51, 0, 0.3);
+    border-radius: 10px !important;
 }
 .contact-form .submit-message{
     padding-left: 25px;

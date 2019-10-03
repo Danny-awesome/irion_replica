@@ -25,9 +25,8 @@
 </head>
 <body>
   <div class="dashboard-wrappers">
-    <div class="mt-5 ml-3 p row">
-        <div class="col-md-2"></div>
-        <div class="col-md-6 pr-5 pd-container">
+    <div class="mt-5 p row">
+        <div class="col-md-6 offset-md-2 pr-5 pd-container">
             <form id="personal-details">
                 <h6 class="text-center">Profile Details</h6>
                 <div class="form-group">
@@ -100,7 +99,6 @@
             </div>
         </form> 
       </div>
-      <div class="col-md-4"></div>
   </div>
   </div>
 </body>

@@ -1,3 +1,8 @@
+        <!-- side nav -->
+        <?php include 'dashSideNavigation.php'; ?>
+        <!-- header nav -->
+        <?php include 'dashheader.php'; ?>
+        
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,16 +17,60 @@
         <script src="css/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/script.js"></script>
         <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/profileB.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
         <link rel="stylesheet" href="css/animate.css">
     </head>
     <body>
-        <!-- side nav -->
-        <?php include 'sidenav.php'; ?>
-        <!-- header nav -->
-        <?php include 'profilenav.php'; ?>
-        
-
+        <div class="dashboard-wrappers">
+            <div class="row">
+                <div class="col-md-9 offset-md-1">
+                    <div class="history-table mt-5">
+                        <table class="table table-bordered table-sm table-hover">
+                            <thead>
+                            <tr>
+                                <th>S/N</th>
+                                <th>TRANSACTION TYPE</th>
+                                <th>DATE</th>
+                                <th>NAME</th>
+                                <th>AMOUNT</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            
+                            </tbody>
+                        </table>        
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
