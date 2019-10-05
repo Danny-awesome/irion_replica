@@ -20,7 +20,7 @@
   <body class="body">
 
    <!-- navbar links -->
-     <?php include 'navbar.php';?>
+     <?php include 'navbar.php';?> 
 
    <div class="row changepwd-card">
       <div class="col-md-4 a">
@@ -28,7 +28,7 @@
       </div>
       <!-- change the password of after the reset/new password is sent -->
       <div class="col-md-4 change-pwd-form">
-        <form id="reset-password-form" action="resetPassword.php" method="post">
+        <form id="reset-password-form" action="reset_account_pass.php" method="post">
           <div class="login-icon  d-flex justify-content-center">
             <a href="index.html"><img src="images/Irion-login.png" alt="irion's logo"></a>
           </div>

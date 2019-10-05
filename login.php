@@ -70,7 +70,7 @@ require_once 'scripts/loginUser.php';
            <div class="login-form">
            <form action="login.php" method="post" id="loginform">
                 <div class="login-icon  d-flex justify-content-center">
-                    <a href="index.html"><img src="images/Irion-logo.png" alt="irion's logo"></a>
+                    <a href="index.html"><img src="images/irion-logo.png" alt="irion's logo"></a>
                 </div>
                 <?php if (count($errors) > 0) : ?>
                     <div class="alert alert-danger">

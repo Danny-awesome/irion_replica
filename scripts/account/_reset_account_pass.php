@@ -41,7 +41,7 @@ function resetPassword($TOKEN)
     $user = $result->fetch_assoc();
     $_SESSION['email'] = $user['user_email'];
     $stmt ->close();
-    header('location: resetPassword.php');
+    header('location: reset_account_pass.php');
     exit(0);
 }
 ?>
