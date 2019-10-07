@@ -1,7 +1,7 @@
   <!-- header page  -->
-  <?php include 'dashheader.php' ?>
+  <?php include 'userDashHeader.php' ?>
     <!-- sidebar page  -->
-      <?php include 'dashSideNavigation.php' ?>
+      <?php include 'userDashSideNav.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +17,6 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/dashboard.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -56,12 +54,7 @@
             <div class="col-md-6">
               <div class="card" >
                 <h6>Current Level</h6>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" 
-                    aria-valuemin="0" aria-valuenow="100" style="width:5%">
-                      0
-                    </div>
-                  </div>
+                  
               </div>
             </div>
           </div>
