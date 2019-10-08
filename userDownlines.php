@@ -1,3 +1,7 @@
+  <!-- header page  -->
+  <?php include 'userDashHeader.php' ?>
+    <!-- sidebar page  -->
+      <?php include 'userDashSideNav.php' ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,11 +21,6 @@
         <link rel="stylesheet" href="css/animate.css">
     </head>
     <body>
-        <!-- side nav -->
-        <?php include 'sidenav.php'; ?>
-        <!-- header nav -->
-        <?php include 'profilenav.php'; ?>
-        
 
     </body>
 </html>

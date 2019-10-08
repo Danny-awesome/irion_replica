@@ -1,8 +1,7 @@
-        <!-- side nav -->
-        <?php include 'dashSideNavigation.php'; ?>
-        <!-- header nav -->
-        <?php include 'dashheader.php'; ?>
-        
+  <!-- header page  -->
+  <?php include 'userDashHeader.php' ?>
+    <!-- sidebar page  -->
+      <?php include 'userDashSideNav.php' ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,7 +17,6 @@
         <script src="js/script.js"></script>
         <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/dashboard.css">
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
         <link rel="stylesheet" href="css/animate.css">
     </head>
     <body>

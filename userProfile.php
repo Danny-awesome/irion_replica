@@ -1,7 +1,7 @@
   <!-- header page  -->
-  <?php include 'dashheader.php' ?>
+  <?php include 'userDashHeader.php' ?>
     <!-- sidebar page  -->
-      <?php include 'dashSideNavigation.php' ?>
+      <?php include 'userDashSideNav.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
