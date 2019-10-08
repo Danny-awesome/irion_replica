@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 require_once 'config/dbConnect.php';
 require_once 'emailController.php';
 
@@ -68,26 +72,33 @@ if (isset($_POST['register-btn'])) {
         $token = bin2hex(random_bytes(50)); //generate_random_token
         $verified = false;
 
-        $insert_query = "INSERT INTO users (username, user_firstname,user_lastname,user_password, user_email, user_phone, verified, token) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-        $stmt = $conn->prepare($insert_query);
-        $stmt->bind_param('ssssssbs', $username, $firstname, $lastname, $pword, $email, $phone, $verified, $token);
-
-        if ($stmt->execute()) {
-            // login user
-            $user_id = $conn->insert_id;
-            $_SESSION['id'] = $user_id;
-            $_SESSION['username'] = $username;
-            $_SESSION['email'] = $email;
-            $_SESSION['verified'] = $verified;
-
-            sendVerificationMail($email, $token);
-
-            $_SESSION['message'] = "Success,Logged in!";
-            $_SESSION['alert-class'] = "alert-success";
-            header('location: checkVerified.php');
-            exit();
-        } else {
-            $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
+        try
+        {
+            $insert_query = "INSERT INTO users (username, user_firstname,user_lastname,user_password, user_email, user_phone, verified, token) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+            $stmt = $conn->prepare($insert_query);
+            $stmt->bind_param('ssssssbs', $username, $firstname, $lastname, $pword, $email, $phone, $verified, $token);
+            //----
+            if ($stmt->execute()) {
+                // login user
+                $user_id = $conn->insert_id;
+                $_SESSION['id'] = $user_id;
+                $_SESSION['username'] = $username;
+                $_SESSION['email'] = $email;
+                $_SESSION['verified'] = $verified;
+    
+                sendVerificationMail($email, $token);
+    
+                $_SESSION['message'] = "Success. Logged in!";
+                $_SESSION['alert-class'] = "alert-success";
+                header('location: checkVerified.php');
+                exit();
+            } else {
+                $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
+            }
+        }
+        catch(PDOException $e)
+        {
+            // echo $e->getMessage();
         }
     }
 }

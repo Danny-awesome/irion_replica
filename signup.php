@@ -64,7 +64,7 @@
         <div class="signup-form">
         <form action="signup.php" method="post" >
           <div class="signup-icon  d-flex justify-content-center">
-            <a href="index.html"><img src="images/irion-logo.png" alt="irion's logo"></a>
+            <a href="index.php"><img src="images/irion-logo.png" alt="irion's logo"></a>
           </div>
           <?php if(count($errors) > 0): ?>
             <div class="alert alert-danger">
