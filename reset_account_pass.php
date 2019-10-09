@@ -1,5 +1,5 @@
 <?php require_once "scripts/account/_reset_account_pass.php" ?>
-<!-- <?php require_once "scripts/registerUser.php" ?> -->
+<?php require_once "scripts/registerUser.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">

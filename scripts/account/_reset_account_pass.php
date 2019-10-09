@@ -1,8 +1,7 @@
 <?php
-session_start();
-
+// session_start();
 require_once "config/dbConnect.php";
-require_once "registerUser.php";
+require_once "scripts/registerUser.php";
 
 $pword="";
 $cpword="";

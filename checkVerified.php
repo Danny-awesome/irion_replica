@@ -1,5 +1,6 @@
 <?php
 require_once "scripts/registerUser.php";
+require_once 'scripts/account/_reset_account_pass.php';
 require_once "scripts/account/_send_reset_mail.php";
 require_once "scripts/logoutUser.php";
 
@@ -58,7 +59,6 @@ if (!isset($_SESSION['id'])) {
                                 ?>
                         </div>
                     <?php endif; ?>
-
                 <h3 class="mt-5"> Welcome,  <?php echo $_SESSION['username']; ?></h3>
                 <?php if (!$_SESSION['verified']) : ?>
                     <div class="alert alert-warning">
@@ -70,7 +70,7 @@ if (!isset($_SESSION['id'])) {
                 <?php endif; ?>
 
                 <?php if ($_SESSION['verified']) : ?>
-                    <a href="profileB.php"><button class="verified-btn">You Are Verified. Continue to Dashboard</button></a>
+                    <a href="userDashboard.php"><button class="verified-btn">You Are Verified. Continue to Dashboard</button></a>
                     <a href="checkVerified.php?logout=1"><button class="v-logout">Logout</button></a>
                 <?php endif; ?>
             </div>
