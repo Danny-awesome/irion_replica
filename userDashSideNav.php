@@ -24,18 +24,38 @@
                     <a class="nav-link" href="userProfile.php"><i class="fas fa-user"></i><span>PROFILE</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="userDownlines.php"><i class="fa fa-arrow-down"></i><span>DOWNLINES</span></a>
+                    <a class="nav-link" href="userWorks.php"><i class="fas fa-sticky-note"></i><span>HOW IT WORKS</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="userHistory.php"><i class="fa fa-history"></i><span>HISTORY</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>
+                    <a class="nav-link "data-toggle="modal" data-target="#myLogout" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>
                 </li>
               </ul>
         </nav>
     </div>
-
+  
+    <div class="modal" id="myLogout">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header ">
+          <h5 class="modal-title">DO YOU WANT TO LOGOUT?</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <button type="button" class="btn log " data-dismiss="modal">LOGOUT</button>
+            <button type="button" class="btn log" data-dismiss="modal">CANCEL</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
     
 </body>
 

@@ -30,13 +30,32 @@
                     <a class="nav-link" href="adminMails.php"><i class="fa fa-envelope"></i><span>USER MAILS</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>
+                    <a class="nav-link" data-toggle="modal" data-target="#myLogout" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>
                 </li>
               </ul>
         </nav>
     </div>
 
     
+    <div class="modal" id="myLogout">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header ">
+          <h5 class="modal-title">DO YOU WANT TO LOGOUT?</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <button type="button" class="btn log " data-dismiss="modal">LOGOUT</button>
+            <button type="button" class="btn log" data-dismiss="modal">CANCEL</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

@@ -1,7 +1,27 @@
 .sidebar-dark{
 	background-color: #FFFFFF !important;
 }
-
+/* LOGOUT POP UP STYLE BEG  */
+#myLogout h5{
+    font-size: 12px;
+    font-weight: bold;
+}
+#myLogout .log{
+    width: 100px;
+    padding: 8px 20px  ;
+    font-weight: bold;
+    background: #242849;
+    color: #eeeff7;
+    font-size: 12px;
+}
+#myLogout .log:hover{
+  
+    background: #eeeff7;
+    color: #242849;
+    box-shadow: 0px 10px 10px 0px #dddfee;
+   transition: 1.2s;
+}
+/* LOGOUT POP UP STYLE END  */
 .nav-left-sidebar {
     z-index: 9999;
     position: fixed;
