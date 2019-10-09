@@ -22,10 +22,10 @@
           </div>
           <div class=" navbar-collapse">
             <ul class="navbar-nav ml-auto navbar-right-top">
-              <li class="nav-item mr-3 pr-2">
+              <li class="nav-item">
                 <span class="nav-link" id="timeSpan"></span>
               </li>
-              <li class="nav-item nav-user dropdown show mr-3 pr-2">
+              <li class="nav-item nav-user dropdown show mr-2 pr-1">
                 <a class="nav-user-img" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img src="images/user-male.png">
                 </a>
@@ -33,14 +33,33 @@
                   <a class="dropdown-item" href="users.php" style="font-family: 'Titillium Web'">User Settings<i class="fas fa-user-cog ml-4"></i></a>
                 </div>
               </li>
-              <li class="nav-item pr-2" style="border: none;">
-                <a class="btn btn-primary" href="php_scripts/logout.php">Logout<i class="fas fa-sign-out-alt"></i></a>
+              <li class="nav-item" style="border: none;">
+                <a class="btn btn-primary" data-toggle="modal" data-target="#myLogout" href="php_scripts/logout.php">Logout<i class="fas fa-sign-out-alt"></i></a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </div>
+    <div class="modal" id="myLogout">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header ">
+          <h5 class="modal-title">DO YOU WANT TO LOGOUT?</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <button type="button" class="btn log " data-dismiss="modal">LOGOUT</button>
+            <button type="button" class="btn log" data-dismiss="modal">CANCEL</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
   </body>
   <script type="text/javascript" src="js/header.js"></script>
 </html>

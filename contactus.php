@@ -56,11 +56,10 @@
           </ul>
         </div>  
       </nav>
-
+<!-- CONTACT US FORM  -->
       <div class="row message-us-form animated slideInUp">
-     
-          <div class="col-md-4 offset-md-4 pl-5 pr-5">
-            <div class="contact-form message-us">
+        <div class="col-md-4 offset-md-4 pl-5 pr-5">
+          <div class="contact-form message-us">
             <h4>Leave us a message</h4>
             <form  id="send-message">
               <div class="form-group">
@@ -77,5 +76,6 @@
             </div>
         </div>
     </div>
+</div>
         </body>
     </html>

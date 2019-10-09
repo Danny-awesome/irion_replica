@@ -93,7 +93,7 @@
     </div>
 
     
-<!-- icon area  -->
+<!-- ICON DESCRIPTION OF IRION -->
     <div class="row lower-choose">
       <h2 class="col-md-12 text-center">Why Choose Us?</h2>
     </div>
@@ -177,6 +177,7 @@
     </div>
 
 <!-- footer  -->
+<!-- LINK TO THE TERMS AND CONDITIONS PAGE -->
     <div class="row footer">
      <div class="col-md-12 text-center m-1">
         <a class="text-center" href="terms.php">Terms & Conditions</a>

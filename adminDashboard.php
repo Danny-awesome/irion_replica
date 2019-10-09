@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+<!-- DASHBOARD WRAPPER  -->
     <div class="dashboard-wrappers">
         <div class="row p-3">
             <div class="col-md-3 mt-3">

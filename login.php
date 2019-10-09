@@ -98,6 +98,7 @@ require_once 'scripts/loginUser.php';
         <div class="col-md-4 b">
             <!-- ad -->
         </div>
+                              
         <script src="js/script.js"></script>
 </body>
 

@@ -16,17 +16,15 @@
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/profile.css">
-
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
 </head>
 <body>
   <div class="dashboard-wrappers">
-    <div class="mt-5 p row">
-        <div class="col-md-6 offset-md-2 pr-5 pd-container">
+    <div class="mt-5 row">
+        <div class="col-md-6 offset-md-2 mr-3 pd-container">
             <form id="personal-details">
                 <h6 class="text-center">Profile Details</h6>
                 <div class="form-group">
@@ -37,13 +35,7 @@
                 <label for="FName">First Name :</label>
                 <input type="text" class="form-control" id="FName" placeholder="Enter First Name">
                 </div>
-                <label class="radio-inline"> 
-                    Gender :
-                <input type="radio" name="optradio" class="ml-3">Male
-                </label>
-                <label class="radio-inline">
-                <input type="radio" name="optradio" class="ml-3">Female
-                </label>
+              
                 <div class="form-group">
                 <label for="email">Email :</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter Email">

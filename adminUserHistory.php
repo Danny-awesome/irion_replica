@@ -36,12 +36,10 @@
                                 <th>FIRST NAME</th>
                                 <th>USERNAME</th>
                                 <th>TELEPHONE</th>
-                                <th>GENDER</th>
                                 <th>ACCOUNT NAME</th>
                                 <th>ACCOUNT NO</th>
                                 <th>BANK NAME</th>
                                 <th>ACTIVE?</th> <!-- true or false -->
-                                
                             </tr>
                             </thead>
                             <tbody>
@@ -67,29 +65,6 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            
                             </tbody>
                         </table>        
                     </div>
