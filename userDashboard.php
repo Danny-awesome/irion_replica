@@ -33,9 +33,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card">
-                            <h6>Last Recieved <span class="fa fa-arrow-down"></span> </h6>
-                            <p><span>&#8358;</span>0:00</p>
-                            <h5>Payed by : <span class=""></span></h5>
+                        <?php 
+                            echo"<h6>Last Recieved <span class='fa fa-arrow-down'></span> </h6>";
+                            echo"<p><span>&#8358;</span>0:00</p>";
+                            echo"<h5>Payed by : <span class=''></span></h5>";
+                            ?>
                         </div>
                     </div>
 
