@@ -1,9 +1,7 @@
 <? require 'config/dbConnect.php';
-    // require_once 'scripts/check_session_state.php';
-  // header page
-  include 'userDashHeader.php';
-    // sidebar page
-  include 'userDashSideNav.php'; ?>
+  require_once 'scripts/check_session_state.php';
+  include_once 'userDashHeader.php';
+  include_once 'userDashSideNav.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +35,7 @@
                             echo"<h6>Last Recieved <span class='fa fa-arrow-down'></span> </h6>";
                             echo"<p><span>&#8358;</span>0:00</p>";
                             echo"<h5>Payed by : <span class=''></span></h5>";
-                            ?>
+                        ?>
                         </div>
                     </div>
 

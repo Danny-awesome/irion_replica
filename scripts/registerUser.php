@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-ini_set('display_errors',1);
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
@@ -66,7 +66,7 @@ if (isset($_POST['register-btn'])) {
         $errors['email'] = "Email already exists";
     }
 
-    if (count($errors) === 0) {  //if no errors
+    if (count($errors) === 0) { //if no errors
         // register user
         $pword = password_hash($pword, PASSWORD_DEFAULT); //hash_password
         $token = bin2hex(random_bytes(50)); //generate_random_token
@@ -85,9 +85,9 @@ if (isset($_POST['register-btn'])) {
                 $_SESSION['username'] = $username;
                 $_SESSION['email'] = $email;
                 $_SESSION['verified'] = $verified;
-    
+
                 sendVerificationMail($email, $token);
-    
+
                 $_SESSION['message'] = "Success. Logged in!";
                 $_SESSION['alert-class'] = "alert-success";
                 header('location: checkVerified.php');
@@ -95,9 +95,7 @@ if (isset($_POST['register-btn'])) {
             } else {
                 $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
             }
-        }
-        catch(PDOException $e)
-        {
+        } catch (PDOException $e) {
             // echo $e->getMessage();
         }
     }
