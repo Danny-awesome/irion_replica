@@ -118,6 +118,10 @@
   .card{
     margin-top: 25px;
   }
+  .downline-row{
+    padding-top: 50px;
+    padding-left: 7px !important;
+  }
 }
 
 /* upliner and downline cards  */
@@ -151,5 +155,44 @@
   color:	 #a6a6a6;
 }
 .downline-row{
-  margin-top: -120px;
+  margin-top: -70px;
+}
+/* upline wrapper  */
+.upline-wrapper{
+  padding-top: 48px;   
+}
+
+/* downline row  */
+.downline-row{
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+/* works section  */
+.works-title h2{
+  color: #333333;
+margin-top: 10px;
+font-weight: bold;
+  font-size: 25px;
+  /* text-transform: uppercase; */
+}
+ol li{
+  list-style-type: none;
+}
+.a{
+  
+  color: #3333ff;
+  font-weight: bold;
+}
+.b{
+  color: #cc0000;
+  font-weight: bold;
+}
+.c{
+  color: #008000;
+  font-weight: bold;
+}
+.d{
+  color:  #800080;
+  font-weight: bold;
 }

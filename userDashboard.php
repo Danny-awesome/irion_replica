@@ -1,7 +1,10 @@
+<?php
+  include 'userDashHeader.php';
+  // sidebar page
+include 'userDashSideNav.php';
+?>
 <? require 'config/dbConnect.php';
-  require_once 'scripts/check_session_state.php';
-  include_once 'userDashHeader.php';
-  include_once 'userDashSideNav.php'; ?>
+  require_once 'scripts/check_session_state.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,61 +53,21 @@
 
           <div class="row mt-4">
             <div class="col-md-6">
-              <div class="card" >
-                <h6>Total Gained ( <span>&#8358;</span> )</h6>
-                <p><span>&#8358;</span>0:00</p>
-              </div>
-            </div>
-            <div class="col-md-4 p-5">
-                <div class="dash-downline">
-                    <h6 class="pt-5">UPLINE DETAILS</h6>
-                    <table class="user-upline ">
-                        <tr>
-                            <td>
-                                <h3>Name :</h3>
-                            </td>
-                            <td>
-                                <p>upliner name </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>Phone Number :</h3>
-                            </td>
-                            <td>
-                                <p>upliner digits </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>Account Name :</h3>
-                            </td>
-                            <td>
-                                <p>Account Name </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>Account Number :</h3>
-                            </td>
-                            <td>
-                                <p>Account Number </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>Account Number :</h3>
-                            </td>
-                            <td>
-                                <p>Bank Name </p>
-                            </td>
-                        </tr>
-                    </table>
+                <div class="card" >
+                    <h6>Total Gained ( <span>&#8358;</span> )</h6>
+                    <p><span>&#8358;</span>0:00</p>
                 </div>
             </div>
+            <div class="col-md-6">
+            <div class="card" >
+                <h6>Whatever Should be here</h6>
+              </div>
+            </div>
+
           </div>
         </div>
-        <div class="col-md-4 pt-5">
+        
+        <div class="col-md-4 upline-wrapper">
           <div class="dash-downline">
              <h6 class="pt-5" >UPLINE DETAILS</h6>
              <table class="user-upline ">
@@ -132,7 +95,7 @@
           </div>
         </div>
 
-      <div class="row downline-row p-5">
+      <div class="row downline-row ">
         <div class="col-md-3 pt-5 pl-2 pr-2">
           <div class="dash-downline">
             <h6 class="pt-5" >DOWNLINE DETAILS</h6>
