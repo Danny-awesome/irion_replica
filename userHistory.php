@@ -22,17 +22,17 @@
     <body>
         <div class="dashboard-wrappers">
             <div class="row">
-                <div class="col-md-9 offset-md-1">
+                <div class="col-md-9 m-4">
                     <div class="history-table mt-5">
                         <table class="table table-bordered table-sm table-hover">
                             <thead>
-                            <tr>
-                                <th>S/N</th>
-                                <th>TRANSACTION TYPE</th>
-                                <th>DATE</th>
-                                <th>NAME</th>
-                                <th>AMOUNT</th>
-                            </tr>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>TRANSACTION TYPE</th>
+                                    <th>DATE</th>
+                                    <th>NAME</th>
+                                    <th>AMOUNT</th>
+                                </tr>
                             </thead>
                             <tbody>
                             <tr>

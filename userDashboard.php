@@ -61,8 +61,8 @@ include 'userDashSideNav.php';
                 </div>
             </div>
             <div class="col-md-6">
-            <div class="card" >
-                <h6>Whatever Should be here</h6>
+            <div class="card animated slideInLeft" >
+                <h6 id="reg-level">Level 0</h6>
               </div>
             </div>
 
