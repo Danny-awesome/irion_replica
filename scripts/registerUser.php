@@ -112,7 +112,7 @@ function verifyUser($token)
         $update_user_verified_status = "UPDATE users SET verified=1 WHERE token='$token'";
         if (mysqli_query($conn, $update_user_verified_status)) {
             $_SESSION['id'] = $user['user_id'];
-            $_SESSION['username'] = $user['user_username'];
+            $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['user_email'];
             $_SESSION['verified'] = 1;
 

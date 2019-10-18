@@ -1,7 +1,8 @@
+  <?php require_once 'scripts/check_session_state.php'; ?>
   <!-- header page  -->
   <?php include 'userDashHeader.php' ?>
     <!-- sidebar page  -->
-      <?php include 'userDashSideNav.php' ?>
+  <?php include 'userDashSideNav.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +27,7 @@
     <div class="mt-5 row">
         <div class="col-md-6 offset-md-2 mr-3 pd-container">
             <form id="personal-details">
+                <?php echo $_SESSION['notactivemsg']; ?>
                 <h6 class="text-center">Profile Details</h6>
                 <div class="form-group">
                 <label for="LName">Last Name :</label>

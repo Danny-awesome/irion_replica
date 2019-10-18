@@ -38,7 +38,7 @@ if (isset($_POST['login-submit-btn'])) {
     if (password_verify($pword, $user['user_password'])) {
         $_SESSION["loggedin"] = true;
         $_SESSION['id'] = $user['user_id'];
-        $_SESSION['username'] = $user['user_username'];
+        $_SESSION['username'] = $user['username'];
         $_SESSION['email'] = $user['user_email'];
         $_SESSION['verified'] = $user['verified'];
         if ($_SESSION['verified'] === 1) {

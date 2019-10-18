@@ -1,3 +1,4 @@
+<?php require_once 'scripts/check_session_state.php'; ?>
   <!-- header page  -->
   <?php include 'userDashHeader.php' ?>
     <!-- sidebar page  -->
@@ -24,48 +25,44 @@
             <div class="row">
                 <div class="col-md-9 offset-md-1">
                     <div class="history-table mt-5">
-                        <table class="table table-bordered table-sm table-hover">
-                            <thead>
-                            <tr>
-                                <th>S/N</th>
-                                <th>TRANSACTION TYPE</th>
-                                <th>DATE</th>
-                                <th>NAME</th>
-                                <th>AMOUNT</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            
-                            </tbody>
-                        </table>        
+                    <?php 
+                        $error["no-data-found"] = "";
+                        echo '<table class="table table-bordered table-sm table-hover">';
+                        echo '<thead>';
+                        echo '<tr>';
+                        echo  '<th>S/N</th>';
+                        echo   '<th>Transaction Made With</th>';
+                        echo   '<th>Transaction Type</th>';
+                        echo    '<th>Amount</th>';
+                        echo    '<th>Transaction Date</th>';
+                        echo   '</tr>';
+                        echo  '</thead>';
+                        require_once 'config/dbConnect.php';
+                        $user = $_SESSION['username'];
+                        $history = "SELECT * FROM transactions_info_all WHERE user = '$user'";
+                        $serialnumber = 1;
+                        $history_result = "";
+                        if ($history_result = mysqli_query($conn, $history)) {
+                            if (mysqli_num_rows($history_result) > 0) {
+                                echo  '<tbody>';
+                                while ($row = mysqli_fetch_array($history_result)) {
+                                    echo    '<tr>';
+                                    echo        '<td>'.$serialnumber.'</td>';
+                                    echo        '<td>'.$row['made_trans_with'].'</td>';
+                                    echo        '<td>'.$row['trans_type'].'</td>';
+                                    echo        '<td>'.$row['amount'].'</td>';
+                                    echo        '<td>'.$row['trans_date'].'</td>';
+                                    echo    '</tr>';
+                                    $serialnumber++;
+                                }
+                                echo  '</tbody>';
+                                echo '</table>'; 
+                            }else {
+                                $error["no-data-found"] = "NO DATA ON TRANSACTION HISTORY FOUND.";
+                                echo '<span class="block">'.$error["no-data-found"].'<i class="fas fa-empty"></i></span>';
+                            }
+                        }  
+                        ?>   
                     </div>
                 </div>
             </div>
