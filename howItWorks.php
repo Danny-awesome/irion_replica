@@ -253,7 +253,7 @@
     <!-- footer  -->
     <div class="row footer">
      <div class="col-md-12 text-center m-1">
-        <a class="text-center" href="terms.php">Terms & Conditions</a>
+        <a class="text-center" href="terms.php" target="_blank">Terms & Conditions</a>
       </div>
     </div>
     </body>

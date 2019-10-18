@@ -801,3 +801,21 @@ a{
    #recover-btn{
     color:#f2f2f2;
 }
+.terms-notes{
+	margin-top: 100px;
+	margin-left: 20px;
+	padding: 20px;
+}
+.terms-notes p{
+	text-indent: 20px;
+	color: #595959;
+}
+.terms-notes h5{
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #404040;
+}
+.terms-notes h6{
+	color: #404040;
+}

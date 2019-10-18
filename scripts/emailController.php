@@ -22,11 +22,28 @@ function sendVerificationMail($EMAIL, $TOKEN)
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Verify Email</title>
+        <style>
+        p{
+             color:#404040;
+             margin-left:40px;
+        }
+        a{
+            background: #00264d;
+            padding: 10px;
+            border-radius:5px;
+            color:#e6f2ff;
+            text-decoration: none;
+            margin-left: 50px;
+        }
+        a:hover{
+            background:#004080;
+        }
+     </style>
     </head>
     <body>
         <div class="wrapper">
             <p>
-                Hey we noticed you registered on Irion. Please click on the link below to verify your email.
+                Hey we noticed you registered on Irion. Please click on the button below to verify your email.
             </p>
             <a href="https://localhost/irion/checkVerified.php?token='.$TOKEN.'">
                 Verify your email Address.
@@ -54,11 +71,28 @@ function sendPasswordResetLink($EMAIL, $TOKEN)
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Verify Email</title>
+        <style>
+        p{
+             color:#404040;
+             margin-left:40px;
+        }
+        a{
+            background: #00264d;
+            padding: 10px;
+            border-radius:5px;
+            color:#e6f2ff;
+            text-decoration: none;
+            margin-left: 50px;
+        }
+        a:hover{
+            background:#004080;
+        }
+     </style>
     </head>
     <body>
         <div class="wrapper">
             <p>
-                Hey we noticed you are trying to reset your password. Please click the link below to do so.
+                Hey we noticed you are trying to reset your password. Please click the button below to do so.
             </p>
             <a href="https://localhost/irion/checkVerified.php?password-token='.$TOKEN.'">
                 Reset your password.

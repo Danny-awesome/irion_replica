@@ -27,8 +27,8 @@
     <body>
         <div class="dashboard-wrappers">
         <div class="row">
-                <div class="col-md-11 ml-5">
-                    <div class="history-table mt-5">
+                <div class="col-md-12 admin-history p-5">
+                    <div class="history-table">
                         <table class="table table-bordered table-sm table-hover">
                             <thead>
                             <tr>
@@ -39,7 +39,9 @@
                                 <th>ACCOUNT NAME</th>
                                 <th>ACCOUNT NO</th>
                                 <th>BANK NAME</th>
-                                <th>ACTIVE?</th> <!-- true or false -->
+                                <th>ACTIVE</th> <!-- true or false -->
+                                <th>WARNINGS</th> <!--NUMBER OF TIMES HE/SHE HAS BEEN BLOCKED -->
+                                <th>BLOCKED</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -53,8 +55,10 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td><input type="button" class="btn btn-danger" value="block"></td>
                             </tr>
                             <tr>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

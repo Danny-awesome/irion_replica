@@ -53,5 +53,27 @@
                 </div>
             </div>
         </div>
+        
+        <div class="row p-3">
+            <div class="col-md-3 mt-3">
+                <div class="admin-card">
+                    <h6>Total Site Visits today</h6>
+                    <h5 class="text-center pt-2">1</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mt-3">
+                <div class="admin-card">
+                    <h6>New Users today</h6>
+                    <h5 class="text-center pt-2">1</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mt-3">
+                <div class="admin-card">
+                    <h6>Blocked Accounts in the last 7 days</h6>
+                    <h5 class="text-center pt-2">1</h5>
+                </div>
+            </div>
+          
+        </div>
     </div>   
 </body>

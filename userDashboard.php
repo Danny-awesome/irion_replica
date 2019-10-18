@@ -96,53 +96,10 @@ include 'userDashSideNav.php';
 
                 </div>
             </div>
-
-            <div class="col-md-4 upline-wrapper">
-                <div class="dash-downline">
-                    <h6 class="pt-5">UPLINE DETAILS</h6>
-                    <table class="user-upline ">
-                        <tr>
-                            <td>
-                                <h3>Name :</h3>
-                            </td>
-                            <td>
-                                <p>upliner name </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>Phone Number :</h3>
-                            </td>
-                            <td>
-                                <p>upliner digits </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>Account Name :</h3>
-                            </td>
-                            <td>
-                                <p>Account Name </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>Account Number :</h3>
-                            </td>
-                            <td>
-                                <p>Account Number </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h3>Account Number :</h3>
-                            </td>
-                            <td>
-                                <p>Bank Name </p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="col-md-6">
+            <div class="card animated slideInLeft" >
+                <h6 id="reg-level">Level 0</h6>
+              </div>
             </div>
 
             <div class="row downline-row ">
