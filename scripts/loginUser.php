@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-ini_set('display_errors',1);
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
@@ -35,9 +35,10 @@ if (isset($_POST['login-submit-btn'])) {
     if ($user_count === 0) {
         $errors['login-error'] = "Incorrect Login Details";
     }
-    if(password_verify($pword , $user['user_password'])){
+    if (password_verify($pword, $user['user_password'])) {
+        $_SESSION["loggedin"] = true;
         $_SESSION['id'] = $user['user_id'];
-        $_SESSION['username'] = $user['user_username'];
+        $_SESSION['username'] = $user['username'];
         $_SESSION['email'] = $user['user_email'];
         $_SESSION['verified'] = $user['verified'];
         if ($_SESSION['verified'] === 1) {
@@ -48,7 +49,7 @@ if (isset($_POST['login-submit-btn'])) {
             header('location: checkVerified.php');
         }
         exit();
-    }else{
+    } else {
         $errors['login-error'] = "Incorrect Login Details!";
     }
 }

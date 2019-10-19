@@ -53,7 +53,9 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-            <button type="button" class="btn log float-right" data-dismiss="modal">LOGOUT</button>
+        <!-- <button type="submit" class="btn log " data-dismiss="modal"> -->
+            <a class="btn btn-primary" href="scripts/logout.php"> LOGOUT</button> </a>
+            <button type="button" class="btn log" data-dismiss="modal">CANCEL</button>
         </div>
         
       </div>
