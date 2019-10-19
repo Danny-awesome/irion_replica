@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="modal" id="myLogout">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
       <div class="modal-content">
       
         <!-- Modal Header -->
@@ -53,8 +53,7 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-            <button type="button" class="btn log " data-dismiss="modal">LOGOUT</button>
-            <button type="button" class="btn log" data-dismiss="modal">CANCEL</button>
+            <button type="button" class="btn log float-right" data-dismiss="modal">LOGOUT</button>
         </div>
         
       </div>
