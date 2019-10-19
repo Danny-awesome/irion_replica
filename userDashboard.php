@@ -33,9 +33,9 @@ include 'userDashSideNav.php';
 <body>
     <div class="dashboard-wrappers">
       <!-- wrapper row  -->
-      <div class="row p-5">
+      <div class="row wrapper-row">
         <!-- left row with small boxes -->
-          <div class="col-md-8 pt-5">
+          <div class="col-md-8">
           <!-- inner row  -->
             <div class="row">
               <div class="col-md-6">
@@ -82,7 +82,7 @@ include 'userDashSideNav.php';
               </div>
             </div>
           <!-- inner row  -->
-            <div class="row pt-5">
+            <div class="row inner-row">
               <div class="col-md-6">
                 <div class="card">
                     <h6>Total Gained ( <span>&#8358;</span> )</h6>
@@ -97,9 +97,9 @@ include 'userDashSideNav.php';
             </div>
           </div>
           <!-- inner row end  -->
-          <div class="col-md-4 pt-5">
-              <div class="dash-downline">
-              <h6 class="pt-5">UPLINE DETAILS</h6>
+          <div class="col-md-4">
+              <div class="dash-downline dash-upline">
+              <h6>UPLINE DETAILS</h6>
                         <table class="user-downline ">
                             <tr>
                                 <td>
@@ -148,10 +148,10 @@ include 'userDashSideNav.php';
       </div>
 
       <!-- second large row wrapper  -->
-      <div class="row downline-row pt-2 pl-5 pr-5 ">
-                <div class="col-md-3 pt-5 pl-5 pr-2">
+      <div class="row downline-row pb-3">
+                <div class="col-md-3">
                     <div class="dash-downline">
-                        <h6 class="pt-5">DOWNLINE DETAILS</h6>
+                        <h6>DOWNLINE DETAILS</h6>
                         <table class="user-downline ">
                             <tr>
                                 <td>
@@ -196,9 +196,9 @@ include 'userDashSideNav.php';
                         </table>
                     </div>
                 </div>
-                <div class="col-md-3 pt-5 pl-3 pr-2">
-                    <div class="dash-downline">
-                        <h6 class="pt-5">DOWNLINE DETAILS</h6>
+                <div class="col-md-3">
+                    <div class="dash-downline dash-downline2">
+                        <h6>DOWNLINE DETAILS</h6>
                         <table class="user-downline ">
                             <tr>
                                 <td>
@@ -243,9 +243,9 @@ include 'userDashSideNav.php';
                         </table>
                     </div>
                 </div>
-                <div class="col-md-3 pt-5 pl-2 pr-2">
-                    <div class="dash-downline">
-                        <h6 class="pt-5">DOWNLINE DETAILS</h6>
+                <div class="col-md-3">
+                    <div class="dash-downline dash-downline2">
+                        <h6>DOWNLINE DETAILS</h6>
                         <table class="user-downline ">
                             <tr>
                                 <td>
@@ -290,9 +290,9 @@ include 'userDashSideNav.php';
                         </table>
                     </div>
                 </div>
-                <div class="col-md-3 pt-5 pl-2 pr-2">
-                    <div class="dash-downline">
-                        <h6 class="pt-5">DOWNLINE DETAILS</h6>
+                <div class="col-md-3">
+                    <div class="dash-downline dash-downline2">
+                        <h6>DOWNLINE DETAILS</h6>
                         <table class="user-downline ">
                             <tr>
                                 <td>

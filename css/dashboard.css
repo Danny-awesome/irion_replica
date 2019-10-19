@@ -114,13 +114,20 @@
 @media only screen and (max-width: 767px){
   .dash-downline{
     transition: all 0.3s ease;
+
+  }
+  .dash-downline2{
+    margin-top: 25px;
   }
   .card{
     margin-top: 25px;
   }
   .downline-row{
-    padding-top: 50px;
+    padding-top: 10px;
     padding-left: 7px !important;
+  }
+  .dash-upline{
+    margin-top: 25px !important;
   }
 }
 #reg-level{
@@ -131,9 +138,16 @@
 	box-shadow: 0 4px 8px 0 rgb(128, 51, 0, 0.3);
   background: #323867;
   border-radius: 20px;
-  height: 370px;
+  padding-top: 40px;
+  height: 300px;;
   /* width: 100%; */
   overflow: auto;
+}
+.dash-upline{
+  height: 357px !important;
+}
+.inner-row{
+  padding-top: 25px;
 }
 .dash-downline h6{
   font-size: 20px;
@@ -156,9 +170,7 @@
   padding-left: 10px;
   color:	 #a6a6a6;
 }
-.downline-row{
-  margin-top: -70px;
-}
+
 /* upline wrapper  */
 .upline-wrapper{
   padding-top: 48px;   
@@ -166,8 +178,9 @@
 
 /* downline row  */
 .downline-row{
-  padding-top: 50px;
-  padding-left: 50px;
+  /* padding-top: 50px; */
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .history-table{
   overflow: auto;
@@ -199,4 +212,7 @@ ol li{
 .d{
   color:  #800080;
   font-weight: bold;
+}
+.wrapper-row{
+  padding: 30px 15px;
 }
