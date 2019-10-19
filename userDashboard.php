@@ -1,7 +1,7 @@
 <?php
-require_once 'config/dbConnect.php';
-require_once 'scripts/check_session_state.php';
-require_once 'scripts/check_new_entry.php';
+// require_once 'config/dbConnect.php';
+// require_once 'scripts/check_session_state.php';
+// require_once 'scripts/check_new_entry.php';
 
 include 'userDashHeader.php';
 // sidebar page
@@ -32,77 +32,217 @@ include 'userDashSideNav.php';
 
 <body>
     <div class="dashboard-wrappers">
-        <div class="row p-5">
-            <div class="col-md-8 pt-5">
+      <!-- wrapper row  -->
+      <div class="row p-5">
+        <!-- left row with small boxes -->
+          <div class="col-md-8 pt-5">
+          <!-- inner row  -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
+                  <?php
+                     //     // define ('DATE_RFC2822', "D, d M Y H:i:s O");
+                    //     $uname = $_SESSION['username'];
+                    //     $trans_confirmed = true;
+                    //     $trans_partner = '';
+                    //     $trans_amount = '';
+                    //     $trans_date = '';
+                    //     $trans_type = 'debit';
+                    //     // $query = "SELECT MAX(trans_date), made_trans_with,amount FROM transactions_info_all WHERE user=? AND trans_confirmed=?";
+                    //     $query = "SELECT  MAX(trans_date) AS trans_date, amount, made_trans_with FROM transactions_info_all WHERE user=? AND trans_type=? AND trans_confirmed=1";
+                    //     if ($stmt = $conn ->prepare($query)) {
+                    //         $stmt ->bind_param("ss",$uname, $trans_type);
+                    //         if ($stmt ->execute()) {
+                    //             $result = $stmt ->get_result();
+                    //             $trans_ = $result ->fetch_array();
+                    //             $trans_date = $trans_['trans_date'];
+                    //             $_date = date_create($trans_date)   ;
+                    //             // $trans_date = date_format($_date,DATE_RFC2822);
+                    //             $trans_date = date_format($_date,'l d, M, Y');
+                    //             $trans_partner = $trans_['made_trans_with'];
+                    //             $trans_amount = $trans_['amount'];
+                    //         }
+                    //     }
+                    //     echo "<h6>Last Received <span class='fa fa-arrow-down'></span> </h6>";
+                    //     echo "<p><span>&#8358;</span>$trans_amount:00</p>";
+                    //     echo "<h5>Payed by : <span class=''>$trans_partner</span></h5>";
+                    //     echo "<h5>Date Received : <span class=''>$trans_date</span></h5>";
+                        
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <?php
-                                // define ('DATE_RFC2822', "D, d M Y H:i:s O");
-                                $uname = $_SESSION['username'];
-                                $trans_confirmed = true;
-                                $trans_partner = '';
-                                $trans_amount = '';
-                                $trans_date = '';
-                                $trans_type = 'debit';
-                                // $query = "SELECT MAX(trans_date), made_trans_with,amount FROM transactions_info_all WHERE user=? AND trans_confirmed=?";
-                                $query = "SELECT  MAX(trans_date) AS trans_date, amount, made_trans_with FROM transactions_info_all WHERE user=? AND trans_type=? AND trans_confirmed=1";
-                                if ($stmt = $conn ->prepare($query)) {
-                                    $stmt ->bind_param("ss",$uname, $trans_type);
-                                    if ($stmt ->execute()) {
-                                        $result = $stmt ->get_result();
-                                        $trans_ = $result ->fetch_array();
-                                        $trans_date = $trans_['trans_date'];
-                                        $_date = date_create($trans_date)   ;
-                                        // $trans_date = date_format($_date,DATE_RFC2822);
-                                        $trans_date = date_format($_date,'l d, M, Y');
-                                        $trans_partner = $trans_['made_trans_with'];
-                                        $trans_amount = $trans_['amount'];
-                                    }
-                                }
-                                echo "<h6>Last Received <span class='fa fa-arrow-down'></span> </h6>";
-                                echo "<p><span>&#8358;</span>$trans_amount:00</p>";
-                                echo "<h5>Payed by : <span class=''>$trans_partner</span></h5>";
-                                echo "<h5>Date Received : <span class=''>$trans_date</span></h5>";
-                                
-
-                            ?>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="card">
-                            <h6>Last Payed <span class="fa fa-arrow-up"></h6>
-                            <p><span>&#8358;</span>0:00</p>
-                            <h5>Payed to : <span class=""></span></h5>
-                            <h5>Date Sent : <span class=""></span></h5>
-                        </div>
-                    </div>
+                  ?>
                 </div>
-
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <h6>Total Gained ( <span>&#8358;</span> )</h6>
-                            <p><span>&#8358;</span>0:00</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <h6>Whatever Should be here</h6>
-                        </div>
-                    </div>
-
+              </div>
+              <div class="col-md-6">
+                <div class="card">
+                    <h6>Last Payed <span class="fa fa-arrow-up"></h6>
+                    <p><span>&#8358;</span>0:00</p>
+                    <h5>Payed to : <span class=""></span></h5>
+                    <h5>Date Sent : <span class=""></span></h5>
                 </div>
-            </div>
-            <div class="col-md-6">
-            <div class="card animated slideInLeft" >
-                <h6 id="reg-level">Level 0</h6>
               </div>
             </div>
+          <!-- inner row  -->
+            <div class="row pt-5">
+              <div class="col-md-6">
+                <div class="card">
+                    <h6>Total Gained ( <span>&#8358;</span> )</h6>
+                    <p><span>&#8358;</span>0:00</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card animated slideInLeft">
+                  <h6 id="reg-level">Level 0</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- inner row end  -->
+          <div class="col-md-4 pt-5">
+              <div class="dash-downline">
+              <h6 class="pt-5">UPLINE DETAILS</h6>
+                        <table class="user-downline ">
+                            <tr>
+                                <td>
+                                    <h3>Name :</h3>
+                                </td>
+                                <td>
+                                    <p>downline name </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Phone Number :</h3>
+                                </td>
+                                <td>
+                                    <p>uplineline digits </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Name :</h3>
+                                </td>
+                                <td>
+                                    <p>Account Name </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Number :</h3>
+                                </td>
+                                <td>
+                                    <p>Account Number </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Number :</h3>
+                                </td>
+                                <td>
+                                    <p>Bank Name </p>
+                                </td>
+                            </tr>
+                        </table>
 
-            <div class="row downline-row ">
+              </div>
+          </div>
+      </div>
+
+      <!-- second large row wrapper  -->
+      <div class="row downline-row pt-2 pl-5 pr-5 ">
+                <div class="col-md-3 pt-5 pl-5 pr-2">
+                    <div class="dash-downline">
+                        <h6 class="pt-5">DOWNLINE DETAILS</h6>
+                        <table class="user-downline ">
+                            <tr>
+                                <td>
+                                    <h3>Name :</h3>
+                                </td>
+                                <td>
+                                    <p>downline name </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Phone Number :</h3>
+                                </td>
+                                <td>
+                                    <p>downline digits </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Name :</h3>
+                                </td>
+                                <td>
+                                    <p>Account Name </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Number :</h3>
+                                </td>
+                                <td>
+                                    <p>Account Number </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Number :</h3>
+                                </td>
+                                <td>
+                                    <p>Bank Name </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-3 pt-5 pl-3 pr-2">
+                    <div class="dash-downline">
+                        <h6 class="pt-5">DOWNLINE DETAILS</h6>
+                        <table class="user-downline ">
+                            <tr>
+                                <td>
+                                    <h3>Name :</h3>
+                                </td>
+                                <td>
+                                    <p>downline name </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Phone Number :</h3>
+                                </td>
+                                <td>
+                                    <p>downline digits </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Name :</h3>
+                                </td>
+                                <td>
+                                    <p>Account Name </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Number :</h3>
+                                </td>
+                                <td>
+                                    <p>Account Number </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Account Number :</h3>
+                                </td>
+                                <td>
+                                    <p>Bank Name </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <div class="col-md-3 pt-5 pl-2 pr-2">
                     <div class="dash-downline">
                         <h6 class="pt-5">DOWNLINE DETAILS</h6>
@@ -150,7 +290,6 @@ include 'userDashSideNav.php';
                         </table>
                     </div>
                 </div>
-
                 <div class="col-md-3 pt-5 pl-2 pr-2">
                     <div class="dash-downline">
                         <h6 class="pt-5">DOWNLINE DETAILS</h6>
@@ -197,103 +336,10 @@ include 'userDashSideNav.php';
                             </tr>
                         </table>
                     </div>
-                </div>
-                <div class="col-md-3 pt-5 pl-2 pr-2">
-                    <div class="dash-downline">
-                        <h6 class="pt-5">DOWNLINE DETAILS</h6>
-                        <table class="user-downline ">
-                            <tr>
-                                <td>
-                                    <h3>Name :</h3>
-                                </td>
-                                <td>
-                                    <p>downline name </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Phone Number :</h3>
-                                </td>
-                                <td>
-                                    <p>downline digits </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Account Name :</h3>
-                                </td>
-                                <td>
-                                    <p>Account Name </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Account Number :</h3>
-                                </td>
-                                <td>
-                                    <p>Account Number </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Account Number :</h3>
-                                </td>
-                                <td>
-                                    <p>Bank Name </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-md-3 pt-5 pl-2 pr-2">
-                    <div class="dash-downline">
-                        <h6 class="pt-5">DOWNLINE DETAILS</h6>
-                        <table class="user-downline">
-                            <tr>
-                                <td>
-                                    <h3>Name :</h3>
-                                </td>
-                                <td>
-                                    <p>downline name </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Phone Number :</h3>
-                                </td>
-                                <td>
-                                    <p>downline digits </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Account Name :</h3>
-                                </td>
-                                <td>
-                                    <p>Account Name </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Account Number :</h3>
-                                </td>
-                                <td>
-                                    <p>Account Number </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Account Number :</h3>
-                                </td>
-                                <td>
-                                    <p>Bank Name </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
                 </div>
             </div>
+  
+    </div>     
 </body>
 
 </html>
