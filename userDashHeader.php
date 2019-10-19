@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="modal" id="myLogout">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
       <div class="modal-content">
       
         <!-- Modal Header -->

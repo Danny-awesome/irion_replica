@@ -53,7 +53,6 @@
         <!-- Modal body -->
         <div class="modal-body">
             <button type="button" class="btn log " data-dismiss="modal">LOGOUT</button>
-            <button type="button" class="btn log" data-dismiss="modal">CANCEL</button>
         </div>
         
       </div>

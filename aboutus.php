@@ -144,8 +144,11 @@
 <!-- footer  -->
 <!-- LINK TO THE TERMS AND CONDITIONS PAGE -->
     <div class="row footer">
-     <div class="col-md-12 text-center m-1">
-        <a class="text-center" href="terms.php" target="_blank">Terms & Conditions</a>
+      <div class="col-md-6 text-center p-1">
+        <a class="text-center" href="terms.php" target="_blank">Copyright &copy; Irion (NG) Ltd, 2019 - all rights reserved.</a>
+      </div>
+      <div class="col-md-6 text-center p-1">
+        <a class="text-center" href="terms.php" target="_blank">LEGAL | PRIVACY POLICY &amp; COOKIES</a>
       </div>
     </div>
     </body>
