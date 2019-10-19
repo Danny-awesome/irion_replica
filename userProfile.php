@@ -1,8 +1,9 @@
-  <?php require_once 'scripts/check_session_state.php'; ?>
+  <?php require_once 'scripts/check_session_state.php';?>
+  <?php require_once 'scripts/update_profile.php';?>
   <!-- header page  -->
-  <?php include 'userDashHeader.php' ?>
+  <?php include 'userDashHeader.php'?>
     <!-- sidebar page  -->
-  <?php include 'userDashSideNav.php' ?>
+  <?php include 'userDashSideNav.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="This content provides you the ability to grow your money safely online by referal">
     <meta name="keywords"  content="online,money,finance,growth">
-    <meta name="author" content="Irion global"> 
+    <meta name="author" content="Irion global">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
@@ -20,78 +21,103 @@
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+
 </head>
 <body>
   <div class="dashboard-wrappers">
     <div class="mt-5 row">
         <div class="col-md-6 offset-md-2 mr-3 pd-container">
-            <form id="personal-details">
-                <?php echo $_SESSION['notactivemsg']; ?>
-                <h6 class="text-center">Profile Details</h6>
-                <div class="form-group">
-                <label for="LName">Last Name :</label>
-                <input type="text" class="form-control" id="LName" placeholder="Enter Last Name">
-                </div>  
-                <div class="form-group">
-                <label for="FName">First Name :</label>
-                <input type="text" class="form-control" id="FName" placeholder="Enter First Name">
-                </div>
-              
-                <div class="form-group">
-                <label for="email">Email :</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter Email">
-                </div>
-                <div class="form-group">
-                <label for="telno">Telephone No :</label>
-                <input type="number" class="form-control" id="telno" placeholder="Enter Telephone Number">
-                </div>
-                <div class="form-group">
-                <label for="o-pwd">Old Password :</label>
-                <input type="password" class="form-control" id="o-pwd" placeholder="Enter Old Password">
-                </div>
-                <div class="form-group">
-                <label for="c-pwd">Change Password :</label>
-                <input type="password" class="form-control" id="c-pwd" placeholder="Enter New Password">
-                </div>
-                <div class="form-group">
-                <label for="n-pwd">New Password :</label>
-                <input type="password" class="form-control" id="n-pwd" placeholder="Retype New Password">
-                </div>
-                
-                <div class="form-group">
-                <label for="AName">Account Name :</label>
-                <input type="text" class="form-control" id="AName" placeholder="Enter Account Name">
-                </div>
-                <div class="form-group">
-                <label for="telno">Account No :</label>
-                <input type="number" class="form-control" id="telno" placeholder="Enter Account Number">
-                </div>
-                <div class="form-group">
-                <label for="sel1">Bank Name :</label>
-                <select class="form-control" id="sel1">
-                    <option>Access Bank Plc</option>
-                    <option>Fidelity Bank Plc</option>
-                    <option>First City Monument Bank Plc</option>
-                    <option>First Bank of Nigeria Limited</option>
-                    <option>Guaranty Trust Bank Plc</option>
-                    <option>Union Bank of Nigeria Plc</option>
-                    <option>United Bank for Africa Plc</option>
-                    <option>Zenith Bank Plc</option>
-                    <option>Citibank Nigeria Limited</option>
-                    <option>Heritage Banking Company Limited</option>
-                    <option>Keystone Bank Limited</option>
-                    <option>Polaris Bank Limited. </option>
-                    <option>Stanbic IBTC Bank Plc</option>
-                    <option>Standard Chartered</option>
-                    <option>Sterling Bank Plc</option>
-                    <option>Unity Bank Plc</option>
-                    <option>Wema Bank Plc</option>
-                </select>
-                <button type="reset" class="mt-4 cancel-btn mr-2">CANCEL</button>
-                <button type="submit" class="mt-4 save-btn">SAVE</button>
-            </div>
-        </form> 
+            <form id="personal-details" method="post" action="userProfile.php">
+                <?php
+echo $_SESSION['notactivemsg'];
+require_once 'config/dbConnect.php';
+$user = $_SESSION['id'];
+$profile_all = "SELECT * FROM users WHERE user_id = '$user'";
+$get_profile_result = "";
+if ($get_profile_result = mysqli_query($conn, $profile_all)) {
+    if (mysqli_num_rows($get_profile_result) > 0) {
+      while ($row = mysqli_fetch_array($get_profile_result)) {
+        echo '<h6 class="text-center">Profile Details</h6>';
+        echo '<div class="form-group">';
+        echo '<label for="LName">Last Name :</label>';
+        echo '<input type="text" class="form-control" id="LName" name="lastname" placeholder="" value="'.$row['user_lastname'].'">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="FName">First Name :</label>';
+        echo '<input type="text" class="form-control" id="FName" name="firstname" placeholder="" value="'.$row['user_firstname'].'">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="FName">Username :</label>';
+        echo '<input type="text" class="form-control" id="UName" name="username" placeholder="" value="'.$row['username'].'">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="email">Email :</label>';
+        echo '<input type="email" class="form-control" id="email" name="email" placeholder="" value="'.$row['user_email'].'">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="telno">Telephone No :</label>';
+        echo '<input type="number" class="form-control" id="telno" name="phone" placeholder="" value="'.$row['user_phone'].'">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="o-pwd">Old Password :</label>';
+        echo '<input type="password" class="form-control" id="o-pwd" name="pword" placeholder="">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="c-pwd">New Password :</label>';
+        echo '<input type="password" class="form-control" id="c-pwd" name="npword" placeholder="">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="n-pwd">Confirm New Password :</label>';
+        echo '<input type="password" class="form-control" name="cnpword" id="n-pwd" placeholder="">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="AName">Account Name :</label>';
+        echo '<input type="text" class="form-control" id="AName" name="acctname" placeholder="" value="'.$row['user_acctname'].'">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="telno">Account No :</label>';
+        echo '<input type="number" class="form-control" id="telno" name="acctnum" placeholder="" value="'.$row['user_acctnum'].'">';
+        echo '</div>';
+        echo ' ';
+        echo '<div class="form-group">';
+        echo '<label for="sel1">Bank Name :</label>';
+        echo '<select class="form-control" id="sel1" name="bank">';
+        echo '<option value="'.$row['user_bank'].'"></option>';
+        echo '<option>Access Bank Plc</option>';
+        echo '<option>Fidelity Bank Plc</option>';
+        echo '<option>First City Monument Bank Plc</option>';
+        echo '<option>First Bank of Nigeria Limited</option>';
+        echo '<option>Guaranty Trust Bank Plc</option>';
+        echo '<option>Union Bank of Nigeria Plc</option>';
+        echo '<option>United Bank for Africa Plc</option>';
+        echo '<option>Zenith Bank Plc</option>';
+        echo '<option>Citibank Nigeria Limited</option>';
+        echo '<option>Heritage Banking Company Limited</option>';
+        echo '<option>Keystone Bank Limited</option>';
+        echo '<option>Polaris Bank Limited. </option>';
+        echo '<option>Stanbic IBTC Bank Plc</option>';
+        echo '<option>Standard Chartered</>';
+        echo '<option>Sterling Bank Plc</option>';
+        echo '<option>Unity Bank Plc</option>';
+        echo '<option>Wema Bank Plc</option>';
+        echo '</select>';
+        echo '<button type="submit" class="mt-4 cancel-btn mr-2">CANCEL</button>';
+        echo '<button type="submit" class="mt-4 save-btn" name="update_profile_btn">SAVE</button>';
+        echo '</div>';
+      }
+    }
+}
+?>
+        </form>
       </div>
   </div>
   </div>
