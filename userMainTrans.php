@@ -68,6 +68,7 @@ include 'userDashSideNav.php';
                                 <td><h6 class="pt-1 pl-2">Bank Name </h6></td>
                               </tr>
                           </table>
+                          <input type="button" class="btn load-proof" value="LOAD PROOF">
                           <input type="button" class="btn check-proof" value="VERIFY USER">
                        </div>
                     </div>
@@ -112,6 +113,7 @@ include 'userDashSideNav.php';
                                 <td><h6 class="pt-1 pl-2">Bank Name </h6></td>
                               </tr>
                           </table>
+                          <input type="button" class="btn load-proof" value="LOAD PROOF">
                           <input type="button" class="btn check-proof" value="VERIFY USER">
                        </div>
                     </div>
@@ -156,6 +158,7 @@ include 'userDashSideNav.php';
                                 <td><h6 class="pt-1 pl-2">Bank Name </h6></td>
                               </tr>
                           </table>
+                          <input type="button" class="btn load-proof" value="LOAD PROOF">
                           <input type="button" class="btn check-proof" value="VERIFY USER">
                        </div>
                     </div>
@@ -200,6 +203,7 @@ include 'userDashSideNav.php';
                                 <td><h6 class="pt-1 pl-2">Bank Name </h6></td>
                               </tr>
                           </table>
+                          <input type="button" class="btn load-proof" value="LOAD PROOF">
                           <input type="button" class="btn check-proof" value="VERIFY USER">
                        </div>
                     </div>
@@ -240,6 +244,8 @@ include 'userDashSideNav.php';
                                 <td><h6 class="pt-1 pl-2">Bank Name </h6></td>
                               </tr>
                           </table>
+                          
+                          <input type="button" class="btn load-proof" value="LOAD PROOF">
                           <input type="button" class="btn check-proof" value="UPLOAD PROOF">
                        </div>
                     </div>

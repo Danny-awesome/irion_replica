@@ -32,36 +32,44 @@
                 <div class="form-group">
                 <label for="LName">Last Name :</label>
                 <input type="text" class="form-control" id="LName" placeholder="Enter Last Name">
+                <p class="error-msg"></p>
                 </div>  
                 <div class="form-group">
                 <label for="FName">First Name :</label>
                 <input type="text" class="form-control" id="FName" placeholder="Enter First Name">
+                <p class="error-msg"></p>
                 </div>
               
                 <div class="form-group">
                 <label for="email">Email :</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                <p class="error-msg"></p>
                 </div>
                 <div class="form-group">
                 <label for="telno">Telephone No :</label>
                 <input type="number" class="form-control" id="telno" placeholder="Enter Telephone Number">
+                <p class="error-msg"></p>
                 </div>
                 <div class="form-group">
                 <label for="o-pwd">Old Password :</label>
                 <input type="password" class="form-control" id="o-pwd" placeholder="Enter Old Password">
+                <p class="error-msg"></p>
                 </div>
                 <div class="form-group">
                 <label for="c-pwd">Change Password :</label>
                 <input type="password" class="form-control" id="c-pwd" placeholder="Enter New Password">
+                <p class="error-msg"></p>
                 </div>
                 <div class="form-group">
                 <label for="n-pwd">New Password :</label>
                 <input type="password" class="form-control" id="n-pwd" placeholder="Retype New Password">
+                <p class="error-msg"></p>
                 </div>
                 
                 <div class="form-group">
                 <label for="AName">Account Name :</label>
                 <input type="text" class="form-control" id="AName" placeholder="Enter Account Name">
+                <p class="error-msg"></p>
                 </div>
                 <div class="form-group">
                 <label for="telno">Account No :</label>
@@ -94,5 +102,5 @@
         </form> 
       </div>
   </div>
-  </div>
+  </div>  
 </body>
