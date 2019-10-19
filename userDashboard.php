@@ -1,7 +1,7 @@
 <?php
-// require_once 'config/dbConnect.php';
-// require_once 'scripts/check_session_state.php';
-// require_once 'scripts/check_new_entry.php';
+require_once 'config/dbConnect.php';
+require_once 'scripts/check_session_state.php';
+require_once 'scripts/check_new_entry.php';
 
 include 'userDashHeader.php';
 // sidebar page
@@ -41,33 +41,33 @@ include 'userDashSideNav.php';
               <div class="col-md-6">
                 <div class="card">
                   <?php
-                     //     // define ('DATE_RFC2822', "D, d M Y H:i:s O");
-                    //     $uname = $_SESSION['username'];
-                    //     $trans_confirmed = true;
-                    //     $trans_partner = '';
-                    //     $trans_amount = '';
-                    //     $trans_date = '';
-                    //     $trans_type = 'debit';
-                    //     // $query = "SELECT MAX(trans_date), made_trans_with,amount FROM transactions_info_all WHERE user=? AND trans_confirmed=?";
-                    //     $query = "SELECT  MAX(trans_date) AS trans_date, amount, made_trans_with FROM transactions_info_all WHERE user=? AND trans_type=? AND trans_confirmed=1";
-                    //     if ($stmt = $conn ->prepare($query)) {
-                    //         $stmt ->bind_param("ss",$uname, $trans_type);
-                    //         if ($stmt ->execute()) {
-                    //             $result = $stmt ->get_result();
-                    //             $trans_ = $result ->fetch_array();
-                    //             $trans_date = $trans_['trans_date'];
-                    //             $_date = date_create($trans_date)   ;
-                    //             // $trans_date = date_format($_date,DATE_RFC2822);
-                    //             $trans_date = date_format($_date,'l d, M, Y');
-                    //             $trans_partner = $trans_['made_trans_with'];
-                    //             $trans_amount = $trans_['amount'];
-                    //         }
-                    //     }
-                    //     echo "<h6>Last Received <span class='fa fa-arrow-down'></span> </h6>";
-                    //     echo "<p><span>&#8358;</span>$trans_amount:00</p>";
-                    //     echo "<h5>Payed by : <span class=''>$trans_partner</span></h5>";
-                    //     echo "<h5>Date Received : <span class=''>$trans_date</span></h5>";
-                        
+                        // define ('DATE_RFC2822', "D, d M Y H:i:s O");
+                    $uname = $_SESSION['username'];
+                    $trans_confirmed = true;
+                    $trans_partner = '';
+                    $trans_amount = '';
+                    $trans_date = '';
+                    $trans_type = 'debit';
+                    // $query = "SELECT MAX(trans_date), made_trans_with,amount FROM transactions_info_all WHERE user=? AND trans_confirmed=?";
+                    $query = "SELECT  MAX(trans_date) AS trans_date, amount, made_trans_with FROM transactions_info_all WHERE user=? AND trans_type=? AND trans_confirmed=1";
+                    if ($stmt = $conn ->prepare($query)) {
+                        $stmt ->bind_param("ss",$uname, $trans_type);
+                        if ($stmt ->execute()) {
+                            $result = $stmt ->get_result();
+                            $trans_ = $result ->fetch_array();
+                            $trans_date = $trans_['trans_date'];
+                            $_date = date_create($trans_date)   ;
+                            // $trans_date = date_format($_date,DATE_RFC2822);
+                            $trans_date = date_format($_date,'l d, M, Y');
+                            $trans_partner = $trans_['made_trans_with'];
+                            $trans_amount = $trans_['amount'];
+                        }
+                    }
+                    echo "<h6>Last Received <span class='fa fa-arrow-down'></span> </h6>";
+                    echo "<p><span>&#8358;</span>$trans_amount:00</p>";
+                    echo "<h5>Payed by : <span class=''>$trans_partner</span></h5>";
+                    echo "<h5>Date Received : <span class=''>$trans_date</span></h5>";
+                    
 
                   ?>
                 </div>
@@ -92,6 +92,8 @@ include 'userDashSideNav.php';
               <div class="col-md-6">
                 <div class="card animated slideInLeft">
                   <h6 id="reg-level">Level 0</h6>
+                  <h4>*If you do not pay your upline the required amount after all 
+                  your downlines have payed you then </h4>
                 </div>
               </div>
             </div>
