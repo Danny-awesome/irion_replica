@@ -28,13 +28,13 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="userMainTrans.php"><i class="fa fa-history"></i><span>TRANSACTIONS</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="userWorks.php"><i class="fas fa-sticky-note"></i><span>HOW IT WORKS</span></a>
+                    <a class="nav-link" href="userMainTrans.php"><i class="fa fa-donate"></i><span>TRANSACTIONS</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="userHistory.php"><i class="fa fa-history"></i><span>HISTORY</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="userWorks.php"><i class="fas fa-sticky-note"></i><span>HOW IT WORKS</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-toggle="modal" data-target="#myLogout" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>
