@@ -32,7 +32,7 @@ CREATE TABLE `irion_downlines` (
   `downline_id` int(11) NOT NULL,
   `user` varchar(300) NOT NULL,
   `downline` varchar(300) NOT NULL,
-  `added_date` date NOT NULL DEFAULT current_timestamp()
+  `added_date` date NOT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -45,7 +45,7 @@ CREATE TABLE `irion_uplines` (
   `upline_id` int(11) NOT NULL,
   `user` varchar(300) NOT NULL,
   `upline` varchar(300) NOT NULL,
-  `added_date` date NOT NULL DEFAULT current_timestamp()
+  `added_date` date NOT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -59,7 +59,7 @@ CREATE TABLE `transactions_info_all` (
   `user` varchar(500) NOT NULL,
   `trans_type` varchar(10) NOT NULL,
   `made_trans_with` varchar(500) NOT NULL,
-  `trans_date` date NOT NULL DEFAULT current_timestamp(),
+  `trans_date` date NOT NULL,
   `amount` double NOT NULL,
   `trans_confirmed` tinyint(4) NOT NULL,
   `trans_code` varchar(500) NOT NULL
@@ -69,11 +69,11 @@ CREATE TABLE `transactions_info_all` (
 -- Dumping data for table `transactions_info_all`
 --
 
-INSERT INTO `transactions_info_all` (`trans_id`, `user`, `trans_type`, `made_trans_with`, `trans_date`, `amount`, `trans_confirmed`, `trans_code`) VALUES
-(1, 'Danny', 'debit', 'Person 1', '2019-10-10', 5000, 0, ''),
-(2, 'Danny', 'debit', 'Person 2', '2019-10-10', 10000, 1, ''),
-(3, 'Danny', 'debit', 'Person 3', '2019-10-11', 5000, 1, ''),
-(4, 'Danny', 'debit', 'Person 4', '2019-10-12', 5000, 1, '');
+-- INSERT INTO `transactions_info_all` (`trans_id`, `user`, `trans_type`, `made_trans_with`, `trans_date`, `amount`, `trans_confirmed`, `trans_code`) VALUES
+-- (1, 'Danny', 'debit', 'Person 1', '2019-10-10', 5000, 0, ''),
+-- (2, 'Danny', 'debit', 'Person 2', '2019-10-10', 10000, 1, ''),
+-- (3, 'Danny', 'debit', 'Person 3', '2019-10-11', 5000, 1, ''),
+-- (4, 'Danny', 'debit', 'Person 4', '2019-10-12', 5000, 1, '');
 
 -- --------------------------------------------------------
 
@@ -97,7 +97,7 @@ CREATE TABLE `users` (
   `user_acctstatus` varchar(100) NOT NULL DEFAULT 'not-active',
   `verified` tinyint(4) NOT NULL,
   `token` varchar(100) NOT NULL,
-  `registered_date` date NOT NULL DEFAULT current_timestamp()
+  `registered_date` date NOT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
