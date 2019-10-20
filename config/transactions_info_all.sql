@@ -43,11 +43,11 @@ CREATE TABLE `transactions_info_all` (
 -- Dumping data for table `transactions_info_all`
 --
 
-INSERT INTO `transactions_info_all` (`trans_id`, `user`, `trans_type`, `made_trans_with`, `trans_date`, `amount`, `trans_confirmed`, `trans_code`) VALUES
-(1, 'Danny', 'debit', 'Person 1', '2019-10-10', 5000, 0, ''),
-(2, 'Danny', 'debit', 'Person 2', '2019-10-10', 10000, 1, ''),
-(3, 'Danny', 'debit', 'Person 3', '2019-10-11', 5000, 1, ''),
-(4, 'Danny', 'debit', 'Person 4', '2019-10-12', 5000, 1, '');
+-- INSERT INTO `transactions_info_all` (`trans_id`, `user`, `trans_type`, `made_trans_with`, `trans_date`, `amount`, `trans_confirmed`, `trans_code`) VALUES
+-- (1, 'Danny', 'debit', 'Person 1', '2019-10-10', 5000, 0, ''),
+-- (2, 'Danny', 'debit', 'Person 2', '2019-10-10', 10000, 1, ''),
+-- (3, 'Danny', 'debit', 'Person 3', '2019-10-11', 5000, 1, ''),
+-- (4, 'Danny', 'debit', 'Person 4', '2019-10-12', 5000, 1, '');
 
 --
 -- Indexes for dumped tables

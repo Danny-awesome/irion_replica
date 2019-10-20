@@ -32,13 +32,16 @@ if (isset($_POST['update_profile_btn'])) {
     if(empty($firstname)){
         $numero_dos = "firstname can't be empty";
     }
+    if(empty($username)){
+        $numero_tres = "firstname can't be empty";
+    }
     if(empty($email)){
-        $numero_tres = "email can't be empty";
+        $numero_cuatro = "email can't be empty";
     }elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $numero_tres = "email is invalid";
+        $numero_cuatro = "email is invalid";
     }
     if(empty($phone)){
-        $numero_cuatro = "phone can't be empty";
+        $numero_cinco = "phone can't be empty";
     }
     if (empty($acctname)) {
         $numero_ocho = "account name can't be empty";
@@ -64,11 +67,7 @@ if (isset($_POST['update_profile_btn'])) {
         $numero_once = "username already taken";
         $numero_nueve = "account number already in use";
     }
-    if (password_verify($pword, $user['user_password'])) {
-        $npword = password_hash($npword, PASSWORD_DEFAULT); 
-    }else{
-        $numero_cinco = "old password is incorrect";
-    }
+    
     $errors = array
     (
         $numero_uno, $numero_dos, $numero_tres, $numero_cuatro, $numero_cinco, $numero_seis, $numero_siete, $numero_ocho,
@@ -95,6 +94,11 @@ if (isset($_POST['update_profile_btn'])) {
 //     $numero_cinco = "enter old password";   
 // }elseif ($cnpword != $npword) {
 //     $numero_siete = "passwords do not match";
+// }
+// if (password_verify($pword, $user['user_password'])) {
+//     $npword = password_hash($npword, PASSWORD_DEFAULT); 
+// }else{
+//     $numero_cinco = "old password is incorrect";
 // }
 
 ?>
