@@ -43,7 +43,7 @@ If your account is blocked more than 3 times then you will be permanently blocke
                 <form>
                 <div class="form-group">
                   <input type="button" class="btn ref-btn" value="REFERAL LINK">
-                  <input type="text" class="form-control mt-2" placeholder="COPY YOUR REFERAL LINK" >
+                  <input type="text" class="form-control mt-2" placeholder="COPY YOUR REFERAL LINK" disabled >
                 </div>
                 </form>
               </div>
