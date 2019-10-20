@@ -40,16 +40,6 @@ if (isset($_POST['update_profile_btn'])) {
     if(empty($phone)){
         $numero_cuatro = "phone can't be empty";
     }
-    if (!empty($pword) && (empty($npword))) {
-        $numero_seis = "enter new password";
-    }elseif (!empty($pword) && (empty($cnpword))) {
-        $numero_siete = "enter new password";
-    }
-    if (!empty($npword) && empty($pword)) {
-        $numero_cinco = "enter old password";   
-    }elseif ($cnpword != $npword) {
-        $numero_siete = "passwords do not match";
-    }
     if (empty($acctname)) {
         $numero_ocho = "account name can't be empty";
     }
@@ -94,5 +84,17 @@ if (isset($_POST['update_profile_btn'])) {
         }
     }
 }
+
+
+// if (!empty($pword) && (empty($npword))) {
+//     $numero_seis = "enter new password";
+// }elseif (!empty($pword) && (empty($cnpword))) {
+//     $numero_siete = "enter new password";
+// }
+// if (!empty($npword) && empty($pword)) {
+//     $numero_cinco = "enter old password";   
+// }elseif ($cnpword != $npword) {
+//     $numero_siete = "passwords do not match";
+// }
 
 ?>
