@@ -30,6 +30,25 @@ include 'userDashSideNav.php';
     <body>
         <div class="dashboard-wrappers">
     
+        <div class="row pl-5 pr-5">
+        
+        <div class="col-md-7 pl-5">
+          <P><span class="warning-note">PLEASE READ!! </span>When all your downlines have payed you, 
+          you are expected to pay your upgrade fee to your upline before 48 hours runs out. If you do not
+           abide by that, your account will be temporarily blocked until you pay unblocking fee of <span>&#8358;</span>5000 to your upline and then your account will be unblocked after 24hours.
+If your account is blocked more than 3 times then you will be permanently blocked from using this platform. </P>
+        </div>    
+        <div class="col-md-5 pr-5">
+              <div class="referal-link">
+                <form>
+                <div class="form-group">
+                  <input type="button" class="btn ref-btn" value="REFERAL LINK">
+                  <input type="text" class="form-control mt-2" placeholder="COPY YOUR REFERAL LINK" >
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
         <div class="vk-room-list-content">
          <div class="container">
             <div class="row pl-5 pr-5">
@@ -252,7 +271,6 @@ include 'userDashSideNav.php';
                   </div>
                 </div>
             </div>
-
-          </div>
+        </div>
     </body>
 </html>

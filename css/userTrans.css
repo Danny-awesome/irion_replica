@@ -25,7 +25,19 @@ body{
     padding-right: 20px;
 
 }
-.check-proof:hover,.load-proof:hover{
+.ref-btn{
+    background: #19334d;
+    color:#ecf2f9;
+    font-weight: bold;
+    border-radius: 14px;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.check-proof:hover,.load-proof:hover,.ref-btn:hover{
     color: #19334d;
     background:#ecf2f9;
     box-shadow: 0 4px 8px 0 rgb(128, 51, 0, 0.3);
@@ -161,4 +173,24 @@ body{
       font-size: 14px;
   }
     
+}
+/* referal link  */
+.referal-link-col{
+    /* padding-right: 10px !important; */
+}
+.referal-link{
+    /* background: #19334d; */
+    width: 100%;
+    height: 100px;
+    margin-right: 20px;
+}
+.referal-link label{
+    font-weight: bold;
+    color: #204060;
+}
+
+/* warning text  */
+.warning-note{
+    font-weight: bold;
+    color:#ff0000;
 }
