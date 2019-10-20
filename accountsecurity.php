@@ -32,29 +32,34 @@
             <div class="col-md-6 offset-md-2 mr-3 pd-container">
                 <form id="personal-details" method="post" action="accountsecurity.php">
                     <?php
-echo '<h6 class="text-center">Change Password</h6>';
-echo '<div class="form-group">';
-echo '<div class="form-group">';
-echo '<label for="o-pwd">Old Password :</label>';
-echo '<p class="error-msg">' . $numero_cinco . '</p>';
-echo '<input type="password" class="form-control" id="o-pwd" name="pword" placeholder="">';
-echo '</div>';
-echo ' ';
-echo '<div class="form-group">';
-echo '<label for="c-pwd">New Password :</label>';
-echo '<p class="error-msg">' . $numero_seis . '</p>';
-echo '<input type="password" class="form-control" id="c-pwd" name="npword" placeholder="">';
-echo '</div>';
-echo ' ';
-echo '<div class="form-group">';
-echo '<label for="n-pwd">Confirm New Password :</label>';
-echo '<p class="error-msg">' . $numero_siete . '</p>';
-echo '<input type="password" class="form-control" name="cnpword" id="n-pwd" placeholder="">';
-echo '</div>';
-echo ' ';
-echo '<button type="submit" class="mt-4 up-btn" name="update_profile_btn">Update Password</button>';
-echo '</div>';
-?>
+                        if (!empty($update_confirmed)) {
+                            echo '<div class="alert alert-success">';
+                            echo $update_confirmed;
+                            echo '</div>';
+                        }
+                        echo '<h6 class="text-center">Change Password</h6>';
+                        echo '<div class="form-group">';
+                        echo '<div class="form-group">';
+                        echo '<label for="o-pwd">Old Password :</label>';
+                        echo '<p class="error-msg">' . $numero_nueve . '</p>';
+                        echo '<input type="password" class="form-control" id="o-pwd" name="pword" placeholder="">';
+                        echo '</div>';
+                        echo ' ';
+                        echo '<div class="form-group">';
+                        echo '<label for="c-pwd">New Password :</label>';
+                        echo '<p class="error-msg">' . $numero_diez . '</p>';
+                        echo '<input type="password" class="form-control" id="c-pwd" name="npword" placeholder="">';
+                        echo '</div>';
+                        echo ' ';
+                        echo '<div class="form-group">';
+                        echo '<label for="n-pwd">Confirm New Password :</label>';
+                        echo '<p class="error-msg">' . $numero_once . '</p>';
+                        echo '<input type="password" class="form-control" name="cnpword" id="n-pwd" placeholder="">';
+                        echo '</div>';
+                        echo ' ';
+                        echo '<button type="submit" class="mt-4 up-btn" name="security_reset_btn">Update Password</button>';
+                        echo '</div>';
+                    ?>
             </div>
         </div>
     </div>
