@@ -36,6 +36,17 @@ label{
     color: #ebfafa;
     box-shadow: 0 4px 8px 0 rgb(166, 166, 166, 0.6);
 }
+.up-btn{
+    background: #003366;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    box-shadow: none;
+    font-weight: bold;
+    border: none;
+    width:23%;
+    color: #ebfafa;
+    box-shadow: 0 4px 8px 0 rgb(166, 166, 166, 0.6);
+}
 
 .cancel-btn:hover, .save-btn:hover{
     background: #d6f5f5;

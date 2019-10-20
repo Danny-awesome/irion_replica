@@ -30,6 +30,9 @@
             <form id="personal-details" method="post" action="userProfile.php">
                 <?php
 echo $_SESSION['notactivemsg'];
+echo '<div class="alert alert-success">';
+echo $profileUpdated;
+echo '</div>';
 require_once 'config/dbConnect.php';
 $user = $_SESSION['id'];
 $profile_all = "SELECT * FROM users WHERE user_id = '$user'";
@@ -40,68 +43,79 @@ if ($get_profile_result = mysqli_query($conn, $profile_all)) {
             echo '<h6 class="text-center">Profile Details</h6>';
             echo '<div class="form-group">';
             echo '<label for="LName">Last Name :</label>';
-            echo '<p class="error-msg"></p>';
+            echo '<p class="error-msg">'.$numero_uno.'</p>';
             echo '<input type="text" class="form-control" id="LName" name="lastname" placeholder="" value="' . $row['user_lastname'] . '">';
             echo '</div>';
             echo ' ';
             echo '<div class="form-group">';
             echo '<label for="FName">First Name :</label>';
-            echo '<p class="error-msg"></p>';
+            echo '<p class="error-msg">'.$numero_dos.'</p>';
             echo '<input type="text" class="form-control" id="FName" name="firstname" placeholder="" value="' . $row['user_firstname'] . '">';
             echo '</div>';
             echo ' ';
             echo '<div class="form-group">';
             echo '<label for="FName">Username :</label>';
-            echo '<p class="error-msg"></p>';
+            echo '<p class="error-msg">'.$numero_once.'</p>';
             echo '<input type="text" class="form-control" id="UName" name="username" placeholder="" value="' . $row['username'] . '">';
             echo '</div>';
             echo ' ';
             echo '<div class="form-group">';
             echo '<label for="email">Email :</label>';
-            echo '<p class="error-msg"></p>';
+            echo '<p class="error-msg">'.$numero_tres.'</p>';
             echo '<input type="email" class="form-control" id="email" name="email" placeholder="" value="' . $row['user_email'] . '">';
             echo '</div>';
             echo ' ';
             echo '<div class="form-group">';
             echo '<label for="telno">Telephone No :</label>';
-            echo '<p class="error-msg"></p>';
-            echo '<input type="number" class="form-control" id="telno" name="phone" placeholder="" value="' . $row['user_phone'] . '">';
+            echo '<p class="error-msg">'.$numero_cuatro.'</p>';
+            echo '<input type="text" class="form-control" id="telno" name="phone" placeholder="" value="' . $row['user_phone'] . '">';
             echo '</div>';
             echo ' ';
-            echo '<div class="form-group">';
-            echo '<label for="o-pwd">Old Password :</label>';
-            echo '<p class="error-msg"></p>';
-            echo '<input type="password" class="form-control" id="o-pwd" name="pword" placeholder="">';
-            echo '</div>';
-            echo ' ';
-            echo '<div class="form-group">';
-            echo '<label for="c-pwd">New Password :</label>';
-            echo '<p class="error-msg"></p>';
-            echo '<input type="password" class="form-control" id="c-pwd" name="npword" placeholder="">';
-            echo '</div>';
-            echo ' ';
-            echo '<div class="form-group">';
-            echo '<label for="n-pwd">Confirm New Password :</label>';
-            echo '<p class="error-msg"></p>';
-            echo '<input type="password" class="form-control" name="cnpword" id="n-pwd" placeholder="">';
-            echo '</div>';
-            echo ' ';
+            // echo '<div class="form-group">';
+            // echo '<label for="o-pwd">Old Password :</label>';
+            // echo '<p class="error-msg">'.$numero_cinco.'</p>';
+            // echo '<input type="password" class="form-control" id="o-pwd" name="pword" placeholder="">';
+            // echo '</div>';
+            // echo ' ';
+            // echo '<div class="form-group">';
+            // echo '<label for="c-pwd">New Password :</label>';
+            // echo '<p class="error-msg">'.$numero_seis.'</p>';
+            // echo '<input type="password" class="form-control" id="c-pwd" name="npword" placeholder="">';
+            // echo '</div>';
+            // echo ' ';
+            // echo '<div class="form-group">';
+            // echo '<label for="n-pwd">Confirm New Password :</label>';
+            // echo '<p class="error-msg">'.$numero_siete.'</p>';
+            // echo '<input type="password" class="form-control" name="cnpword" id="n-pwd" placeholder="">';
+            // echo '</div>';
+            // echo ' ';
             echo '<div class="form-group">';
             echo '<label for="AName">Account Name :</label>';
-            echo '<p class="error-msg"></p>';
+            echo '<p class="error-msg">'.$numero_ocho.'</p>';
             echo '<input type="text" class="form-control" id="AName" name="acctname" placeholder="" value="' . $row['user_acctname'] . '">';
             echo '</div>';
             echo ' ';
-            echo '<div class="form-group">';
-            echo '<label for="telno">Account No :</label>';
-            echo '<p class="error-msg"></p>';
-            echo '<input type="number" class="form-control" id="telno" name="acctnum" placeholder="" value="' . $row['user_acctnum'] . '">';
-            echo '</div>';
+            // if (empty($_SESSION['notactivemsg'])) {
+            //   echo '<div class="form-group">';
+            //   echo '<label for="telno">Account No :</label>';
+            //   echo '<p class="error-msg">'.$numero_nueve.'</p>';
+            //   echo '<input type="text" class="form-control" id="telno" name="acctnum" placeholder="" value="' . $row['user_acctnum'] . '">';
+            //   echo '</div>';
+              
+            // } else {
+              echo '<div class="form-group">';
+              echo '<label for="telno">Account No :</label>';
+              echo '<p class="error-msg">'.$numero_nueve.'</p>';
+              echo '<input type="text" class="form-control" id="telno" name="acctnum" placeholder="" value="' . $row['user_acctnum'] . '">';
+              echo '</div>';
+            // }
+            
             echo ' ';
             echo '<div class="form-group">';
             echo '<label for="sel1">Bank Name :</label>';
+            echo '<p class="error-msg">'.$numero_diez.'</p>';
             echo '<select class="form-control" id="sel1" name="bank">';
-            echo '<option value="' . $row['user_bank'] . '"></option>';
+            echo '<option value="'.$row['user_bank'].'"></option>';
             echo '<option>Access Bank Plc</option>';
             echo '<option>Fidelity Bank Plc</option>';
             echo '<option>First City Monument Bank Plc</option>';
@@ -120,12 +134,12 @@ if ($get_profile_result = mysqli_query($conn, $profile_all)) {
             echo '<option>Unity Bank Plc</option>';
             echo '<option>Wema Bank Plc</option>';
             echo '</select>';
-            echo '<button type="submit" class="mt-4 cancel-btn mr-2">CANCEL</button>';
+            echo '<button type="submit" class="mt-4 cancel-btn mr-2" name="">CANCEL</button>';
             echo '<button type="submit" class="mt-4 save-btn" name="update_profile_btn">SAVE</button>';
             echo '</div>';
         }
+      }
     }
-}
 ?>
        </div>
   </div>

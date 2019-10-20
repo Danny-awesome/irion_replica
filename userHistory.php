@@ -43,7 +43,14 @@
                         $serialnumber = 1;
                         $history_result = "";
                         if ($history_result = mysqli_query($conn, $history)) {
-                            if (mysqli_num_rows($history_result) > 0) {
+                            if (mysqli_num_rows($history_result) == 0) {
+                                
+                                $error["no-data-found"] = "NO DATA ON TRANSACTION HISTORY FOUND.";
+                                echo '<div class="alert alert-success">';
+                                echo $error["no-data-found"];
+                                echo '</div>';
+                               
+                            }else {
                                 echo  '<tbody>';
                                 while ($row = mysqli_fetch_array($history_result)) {
                                     echo    '<tr>';
@@ -57,9 +64,6 @@
                                 }
                                 echo  '</tbody>';
                                 echo '</table>'; 
-                            }else {
-                                $error["no-data-found"] = "NO DATA ON TRANSACTION HISTORY FOUND.";
-                                echo '<span class="block">'.$error["no-data-found"].'<i class="fas fa-empty"></i></span>';
                             }
                         }  
                         ?>   

@@ -23,6 +23,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="userProfile.php"><i class="fas fa-user"></i><span>PROFILE</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="accountsecurity.php"><i class="fas fa-lock"></i><span>SECURITY</span></a>
+                </li>
                 
                 <li class="nav-item">
                     <a class="nav-link" href="userMainTrans.php"><i class="fa fa-history"></i><span>TRANSACTIONS</span></a>

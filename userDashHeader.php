@@ -30,7 +30,7 @@
                   <img src="images/user-male.png">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="users.php" style="font-family: 'Titillium Web'">User Settings<i class="fas fa-user-cog ml-4"></i></a>
+                  <a class="dropdown-item" href="userProfile.php" style="font-family: 'Titillium Web'">ACCOUNT<i class="fas fa-user-cog ml-4"></i></a>
                 </div>
               </li>
               <li class="nav-item" style="border: none;">
