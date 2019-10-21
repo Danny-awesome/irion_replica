@@ -54,10 +54,9 @@
         </div>
         
         <!-- Modal body -->
-        <div class="modal-body">
-            <button type="button" class="btn log " data-dismiss="modal">LOGOUT</button>
+        <div class="modal-body"> 
+         <button type="button" class="btn log float-right" data-dismiss="modal">LOGOUT</button>
         </div>
-        
       </div>
     </div>
   </div>

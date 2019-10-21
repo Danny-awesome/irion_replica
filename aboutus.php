@@ -129,7 +129,7 @@
         <div class="col-md-4 cards  animated slideInRight">
             <div class="a_choose_us_card">
               <div class="d-flex justify-content-center ">
-                  <img src="images/card3.png" alt="Avatar">
+                  <img src="images/connect.jpg" alt="Avatar">
               </div>
               <div class="card_container text-center ">
                   <h4><b>Refer To Earn</b></h4> 

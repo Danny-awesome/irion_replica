@@ -27,6 +27,12 @@
                     <a class="nav-link" href="adminUserHistory.php"><i class="fa fa-history"></i><span>USER HISTORY</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="adminsecurity.php"><i class="fas fa-lock"></i><span>SECURITY</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="userWorks.php"><i class="fas fa-info-circle"></i><span>HOW IT WORKS</span></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="adminSlot1.php"><i class="fa fa-history"></i><span>SLOT 1</span></a>
                 </li>
                 <li class="nav-item">
