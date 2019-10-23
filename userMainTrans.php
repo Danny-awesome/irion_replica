@@ -55,7 +55,7 @@ If your account is blocked more than 3 times then you will be permanently blocke
                 <div class="item pb-4">
                     <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
                         <div class="vk-dark-our-room-item-img">
-                            <img src="" alt="no payment proof yet" class="img-responsive">
+                            <img src="images/default.png" alt="no payment proof yet" class=" img-responsive">
                         </div>
                     </div>
                     <div class="col-md-6 vk-dark-our-room-item-right">
@@ -100,7 +100,7 @@ If your account is blocked more than 3 times then you will be permanently blocke
                 <div class="item pb-4">
                     <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
                         <div class="vk-dark-our-room-item-img">
-                            <img src="images/agree.jpg" alt="no payment proof yet" class="img-responsive">
+                            <img src="images/default.png" alt="no payment proof yet" class="img-responsive">
                         </div>
                     </div>
                     <div class="col-md-6 vk-dark-our-room-item-right">
@@ -145,7 +145,7 @@ If your account is blocked more than 3 times then you will be permanently blocke
                 <div class="item pb-4">
                     <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
                         <div class="vk-dark-our-room-item-img">
-                            <img src="images/agree.jpg" alt="no payment proof yet" class="img-responsive">
+                            <img src="images/default.png" alt="no payment proof yet" class="img-responsive">
                         </div>
                     </div>
                     <div class="col-md-6 vk-dark-our-room-item-right">
@@ -190,7 +190,7 @@ If your account is blocked more than 3 times then you will be permanently blocke
                 <div class="item pb-4">
                     <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
                         <div class="vk-dark-our-room-item-img">
-                            <img src="images/agree.jpg" alt="no payment proof yet" class="img-responsive">
+                            <img src="images/default.png" alt="no payment proof yet" class="img-responsive">
                         </div>
                     </div>
                     <div class="col-md-6 vk-dark-our-room-item-right">
@@ -235,7 +235,7 @@ If your account is blocked more than 3 times then you will be permanently blocke
                 <div class="item pb-4">
                     <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
                         <div class="vk-dark-our-room-item-img">
-                            <img src="images/agree.jpg" alt="no payment proof yet" class="img-responsive">
+                            <img src="images/default.png" alt="no payment proof yet" class="img-responsive">
                         </div>
                     </div>
                     <div class="col-md-6 vk-dark-our-room-item-right">
