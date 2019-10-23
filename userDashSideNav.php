@@ -55,7 +55,7 @@
         
         <!-- Modal body -->
         <div class="modal-body"> 
-         <button type="button" class="btn log float-right" data-dismiss="modal">LOGOUT</button>
+        <a class="btn btn-primary" href="scripts/logout.php">Logout<i class="fas fa-sign-out-alt"></i></a>
         </div>
       </div>
     </div>

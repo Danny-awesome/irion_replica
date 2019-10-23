@@ -42,6 +42,7 @@ if (isset($_POST['login-submit-btn'])) {
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['user_email'];
             $_SESSION['verified'] = $user['verified'];
+            $_SESSION['block-status'] = $user['block_status'];
             if ($_SESSION['verified'] === 1) {
                 header('location: userDashboard.php');
             } else {

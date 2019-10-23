@@ -86,17 +86,20 @@
             <input type="email"  id="signup-email" name="email" value="<?php echo $email?>" placeholder="email" >
           </div>
           <div class="form-group d-flex justify-content-center ">
+            <input type="text"  id="signup-email" name="referrer" value="<?php echo $referrer?>" placeholder="referrer" >
+          </div>
+          <div class="form-group d-flex justify-content-center ">
             <input type="password"  id="signup-pwd" name="pword" placeholder="Password" >
           </div>
           <div class="form-group d-flex justify-content-center ">
             <input type="password"  id="signup-re-pwd" name="cpword" placeholder="Retype password">
           </div>
           <div class="form-group d-flex justify-content-center ">
-            <input type="number"  id="signup-telNo" name="phone" value="<?php echo $phone?>" placeholder="Phone Number">
+            <input type="text"  id="signup-telNo" name="phone" value="<?php echo $phone?>" placeholder="Phone Number">
           </div>
           <div class="d-flex justify-content-center">
             <input type="submit" class="sign-up-btn" name="register-btn" value="sign up">
-          </div>  
+          </div>
         </form>
      
         </div>  

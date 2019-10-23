@@ -17,11 +17,13 @@ $phone = "";
 $pword = "";
 $cpword = "";
 $verified = "";
+$referrer = '';
 
 if (isset($_POST['register-btn'])) {
     $lastname = $_POST['lastname'];
     $firstname = $_POST['firstname'];
     $username = $_POST['username'];
+    $referrer = $_POST['referrer'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $pword = $_POST['pword'];
@@ -53,7 +55,6 @@ if (isset($_POST['register-btn'])) {
         $errors['phone'] = "Phone is required";
     }
 
-    // validate for duplicates
     $emailCheckQuery = "SELECT * FROM users WHERE user_email=? LIMIT 1";
     $stmt = $conn->prepare($emailCheckQuery);
     $stmt->bind_param('s', $email);
@@ -61,23 +62,42 @@ if (isset($_POST['register-btn'])) {
     $result = $stmt->get_result();
     $user_count = $result->num_rows;
     $stmt->close();
-
     if ($user_count > 0) {
         $errors['email'] = "Email already exists";
     }
-
-    if (count($errors) === 0) { //if no errors
-        // register user
-        $pword = password_hash($pword, PASSWORD_DEFAULT); //hash_password
-        $token = bin2hex(random_bytes(50)); //generate_random_token
+    $usernameCheckQuery = "SELECT * FROM users WHERE username=? LIMIT 1";
+    $stmt = $conn->prepare($usernameCheckQuery);
+    $stmt->bind_param('s', $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user_count = $result->num_rows;
+    $stmt->close();
+    if ($user_count > 0) {
+        $errors['username'] = "Username already taken";
+    }
+    if(!empty($referrer)){
+        $referrerCheck = "SELECT * FROM users WHERE username=? LIMIT 1";
+        $stmt = $conn->prepare($referrerCheck);
+        $stmt->bind_param('s', $referrer);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user_count = $result->num_rows;
+        $stmt->close();
+        if ($user_count == 0) {
+            $errors['referrer'] = "Referrer username wasn't found on our database";
+        }
+    }
+    if (count($errors) === 0) {
+        $pword = password_hash($pword, PASSWORD_DEFAULT);
+        $token = bin2hex(random_bytes(50)); 
         $verified = false;
 
         try
         {
             $insert_query = "INSERT INTO users (username, user_firstname,user_lastname,user_password, user_email, user_phone, verified, token) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($insert_query);
-            $stmt->bind_param('ssssssbs', $username, $firstname, $lastname, $pword, $email, $phone, $verified, $token);
-            //----
+            $stmt->bind_param('ssssssbs', $username, $firstname, $lastname, $pword, $email, $phone, $verified, $token); 
+
             if ($stmt->execute()) {
                 // login user
                 $user_id = $conn->insert_id;

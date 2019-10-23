@@ -1,3 +1,4 @@
+<?php require_once 'scripts/check_session_state.php';?>
 <?php
   include 'userDashHeader.php';
   // sidebar page
@@ -39,14 +40,7 @@ include 'userDashSideNav.php';
 If your account is blocked more than 3 times then you will be permanently blocked from using this platform. </P>
         </div>    
         <div class="col-md-5 pr-5">
-              <div class="referal-link">
-                <form>
-                <div class="form-group">
-                  <input type="button" class="btn ref-btn" value="REFERAL LINK">
-                  <input type="text" class="form-control mt-2" placeholder="COPY YOUR REFERAL LINK" disabled >
-                </div>
-                </form>
-              </div>
+              <!--  -->
             </div>
           </div>
         <div class="vk-room-list-content">

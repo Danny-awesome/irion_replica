@@ -6,4 +6,5 @@
     define('DB_USER', 'root');
     define('DB_PASS', '');
     define('DB_NAME', 'IrionPersisted');
+    define('REFERRAL_URL', 'localhost/irion/signup.php');
 ?>
