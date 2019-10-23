@@ -19,9 +19,6 @@
   </head>
   <body class="body">
 
-   <!-- navbar links -->
-     <?php include 'navbar.php';?> 
-
    <div class="row changepwd-card">
       <div class="col-md-4 a">
         <!-- ad -->
@@ -30,7 +27,7 @@
       <div class="col-md-4 change-pwd-form">
         <form id="reset-password-form" action="reset_account_pass.php" method="post">
           <div class="login-icon  d-flex justify-content-center">
-            <a href="index.html"><img src="images/Irion-login.png" alt="irion's logo"></a>
+            <a href="index.html"><img src="images/Irion-logo.png" alt="irion's logo"></a>
           </div>
           <?php if(count($errors) > 0): ?>
             <div class="alert alert-danger">

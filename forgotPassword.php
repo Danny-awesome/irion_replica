@@ -79,7 +79,7 @@
               We will send a new password to your mail and it will be used to recover your account on the next page
             </p> -->
             <div class="form-group d-flex justify-content-center">
-              <input type="text" id="recover-email" placeholder="TallySmith@gmail.com" name="email">
+              <input type="text" id="recover-email" placeholder="Enter Your Mail" name="email">
             </div>
             <div class="form-group d-flex justify-content-center ">
               <input type="submit"  id="recover-btn" class="recoverbtn" value="Recover Account" name="fp-btn">

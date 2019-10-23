@@ -73,7 +73,7 @@ require_once 'scripts/loginUser.php';
                     <a href="index.html"><img src="images/irion-logo.png" alt="irion's logo"></a>
                 </div>
                 <?php if (count($errors) > 0) : ?>
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger text-center">
                         <?php foreach ($errors as $error) : ?>
                             <li><?php echo $error; ?></li>
                         <?php endforeach; ?>

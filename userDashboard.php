@@ -92,8 +92,6 @@ include 'userDashSideNav.php';
               <div class="col-md-6">
                 <div class="card animated slideInLeft">
                   <h6 id="reg-level">Level 0</h6>
-                  <h4>*If you do not pay your upline the required amount after all 
-                  your downlines have payed you then </h4>
                 </div>
               </div>
             </div>

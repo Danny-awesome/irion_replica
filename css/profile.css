@@ -43,12 +43,11 @@ label{
     box-shadow: none;
     font-weight: bold;
     border: none;
-    width:23%;
     color: #ebfafa;
     box-shadow: 0 4px 8px 0 rgb(166, 166, 166, 0.6);
 }
 
-.cancel-btn:hover, .save-btn:hover{
+.cancel-btn:hover, .save-btn:hover,.up-btn:hover{
     background: #d6f5f5;
     color: #003366;
     transition: all 0.3s ease;

@@ -57,7 +57,7 @@
                         echo '<input type="password" class="form-control" name="cnpword" id="n-pwd" placeholder="">';
                         echo '</div>';
                         echo ' ';
-                        echo '<button type="submit" class="mt-4 up-btn" name="security_reset_btn">Update Password</button>';
+                        echo '<button type="submit" class="mt-4 up-btn " name="security_reset_btn">Update Password</button>';
                         echo '</div>';
                     ?>
             </div>
