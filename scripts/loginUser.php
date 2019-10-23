@@ -51,7 +51,7 @@ if (isset($_POST['login-submit-btn'])) {
             }
             exit();
         }else {
-            $error['user-blocked'] = "This account has been blocked";
+            $errors['user-blocked'] = "This account has been blocked";
         }
     } else {
         $errors['login-error'] = "Incorrect Login Details!";
