@@ -20,9 +20,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="adminDashboard.php"><i class="fas fa-paste"></i><span>DASHBOARD</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="adminControls.php"><i class="fas fa-ban"></i><span>CONTROLS / BLOCKING</span></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="adminUserHistory.php"><i class="fa fa-history"></i><span>USER HISTORY</span></a>
                 </li>
@@ -33,18 +33,9 @@
                     <a class="nav-link" href="userWorks.php"><i class="fas fa-info-circle"></i><span>HOW IT WORKS</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="adminSlot1.php"><i class="fa fa-history"></i><span>SLOT 1</span></a>
+                    <a class="nav-link" href="adminSlot1.php"><i class="fa fa-hands-helping"></i><span>CENTRAL ACCOUNT</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="adminSlot2.php"><i class="fa fa-history"></i><span>SLOT 2</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="adminSlot3.php"><i class="fa fa-history"></i><span>SLOT 3</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="adminSlot4.php"><i class="fa fa-history"></i><span>SLOT 4</span></a>
-                </li>
-              
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="modal" data-target="#myLogout" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>
                 </li>

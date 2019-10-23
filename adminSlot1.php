@@ -31,7 +31,7 @@
    
     <div class="col-md-7 pl-5">
         <h2>
-            SLOT 1
+            CENTRAL ACCOUNT
         </h2>
     </div>    
     <div class="col-md-5 pr-5">
