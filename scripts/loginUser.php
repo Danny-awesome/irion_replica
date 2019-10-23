@@ -36,19 +36,23 @@ if (isset($_POST['login-submit-btn'])) {
         $errors['login-error'] = "Incorrect Login Details";
     }
     if (password_verify($pword, $user['user_password'])) {
-        $_SESSION["loggedin"] = true;
-        $_SESSION['id'] = $user['user_id'];
-        $_SESSION['username'] = $user['username'];
-        $_SESSION['email'] = $user['user_email'];
-        $_SESSION['verified'] = $user['verified'];
-        if ($_SESSION['verified'] === 1) {
-            header('location: userDashboard.php');
-        } else {
-            $_SESSION['message'] = "Success,Logged in!";
-            $_SESSION['alert-class'] = "alert-success";
-            header('location: checkVerified.php');
+        if($user['block_status'] == 0){
+            $_SESSION["loggedin"] = true;
+            $_SESSION['id'] = $user['user_id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['user_email'];
+            $_SESSION['verified'] = $user['verified'];
+            if ($_SESSION['verified'] === 1) {
+                header('location: userDashboard.php');
+            } else {
+                $_SESSION['message'] = "Success,Logged in!";
+                $_SESSION['alert-class'] = "alert-success";
+                header('location: checkVerified.php');
+            }
+            exit();
+        }else {
+            $error['user-blocked'] = "This account has been blocked";
         }
-        exit();
     } else {
         $errors['login-error'] = "Incorrect Login Details!";
     }
