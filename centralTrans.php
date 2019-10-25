@@ -1,8 +1,8 @@
 <?php
 // HEADER 
-    include 'centralHeaderNav.php';
+    include 'userDashHeader.php';
 // SIDENAV 
-    include 'centralSideNav.php';
+    include 'userDashSideNav.php';
 ?>
 
 <head>

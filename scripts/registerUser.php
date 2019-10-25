@@ -131,7 +131,10 @@ if (isset($_POST['register-btn'])) {
                         $_SESSION['username'] = $username;
                         $_SESSION['email'] = $email;
                         $_SESSION['verified'] = $verified;
-            
+                        $_SESSION["loggedin"] = true;
+                        $_SESSION['acct-type'] = $user['acct_type'];
+                        $_SESSION['block-status'] = $user['block_status'];
+
                         sendVerificationMail($email, $token, $firstname.' '.$lastname);
             
                         $_SESSION['message'] = "Success. Logged in!";
@@ -169,6 +172,8 @@ if (isset($_POST['register-btn'])) {
                     $_SESSION['email'] = $email;
                     $_SESSION['verified'] = $verified;
                     $_SESSION["loggedin"] = true;
+                    $_SESSION['acct-type'] = $user['acct_type'];
+                    $_SESSION['block-status'] = $user['block_status'];
         
                     sendVerificationMail($email, $token, $firstname.' '.$lastname);
         

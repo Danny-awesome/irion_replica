@@ -1,10 +1,9 @@
 <?php
 // HEADER 
-    include 'centralHeaderNav.php';
+    include 'userDashHeader.php';
 // SIDENAV 
-    include 'centralSideNav.php';
+    include 'userDashSideNav.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

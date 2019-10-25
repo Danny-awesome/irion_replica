@@ -1,3 +1,4 @@
+<?php require_once 'scripts/check_session_state.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -17,19 +18,39 @@
     <div class="nav-left-sidebar sidebar-dark">
         <nav class="navbar-white bg-transparent">
             <ul class="navbar-nav flex-column pt-2" id="navbar-nav">
+                <?php
+                    require_once 'config/dbConnect.php';
+                    $user_type = $_SESSION['acct-type'];
+                    if($user_type != 'common'){
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="userDashboard.php"><i class="fas fa-paste"></i><span>DASHBOARD</span></a>
                 </li>
+                <?php }else{?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="centralDash.php"><i class="fas fa-paste"></i><span>DASHBOARD</span></a>
+                    </li>
+                <?php }?>
                 <li class="nav-item">
                     <a class="nav-link" href="userProfile.php"><i class="fas fa-user"></i><span>PROFILE</span></a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="accountsecurity.php"><i class="fas fa-lock"></i><span>SECURITY</span></a>
                 </li>
-                
+                <?php
+                    require_once 'config/dbConnect.php';
+                    $user_type = $_SESSION['acct-type'];
+                    if($user_type != 'common'){
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="userMainTrans.php"><i class="fa fa-hands-helping"></i><span>TRANSACTIONS</span></a>
                 </li>
+                <?php }else{?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="centralTrans.php"><i class="fas fa-paste"></i><span>TRANSACTIONS</span></a>
+                    </li>
+                <?php }?>
                 <li class="nav-item">
                     <a class="nav-link" href="userHistory.php"><i class="fa fa-history"></i><span>HISTORY</span></a>
                 </li>
