@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/style.css">
   </head>
-<body>
+<body class="container-fluid">
 
  <!-- navbar links -->
    <nav class="navbar navbar-expand-md irionNavBar fixed-top navbar-default navbar-custom">
@@ -133,8 +133,8 @@
               </div>
               <div class="card_container text-center ">
                   <h4><b>Refer To Earn</b></h4> 
-                  <p> We cant stress this enough. In other to grow, you have to refer to earn.
-                    Use your referal link to earn as much as you possible.
+                  <p> We cant stress this enough. In other to grow, you have to refer to earn or the system provides downlines for you.
+                 
                 </p> 
                 </div>  
             </div>

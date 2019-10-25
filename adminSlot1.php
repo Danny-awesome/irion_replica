@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/usertrans.css">
     <link rel="stylesheet" href="css/adminDashboard.css">
-
+    <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -31,7 +31,7 @@
    
     <div class="col-md-7 pl-5">
         <h2>
-            SLOT 1
+            CENTRAL ACCOUNT
         </h2>
     </div>    
     <div class="col-md-5 pr-5">

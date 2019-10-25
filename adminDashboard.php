@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/adminDashboard.css">
 
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>

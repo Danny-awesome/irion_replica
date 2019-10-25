@@ -13,7 +13,8 @@
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contactus.css">
   </head>
@@ -57,7 +58,7 @@
         </div>  
       </nav>
 <!-- CONTACT US FORM  -->
-      <div class="row message-us-form animated slideInUp">
+      <div class="row message-us-form">
         <div class="col-md-4 offset-md-4 pl-5 pr-5">
           <div class="contact-form message-us">
             <h4>Leave us a message</h4>
