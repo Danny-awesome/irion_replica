@@ -141,7 +141,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
@@ -193,7 +193,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
@@ -240,7 +240,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
@@ -287,7 +287,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
@@ -334,7 +334,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
