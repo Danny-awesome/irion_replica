@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/usertrans.css">
     <link rel="stylesheet" href="css/adminDashboard.css">
     <link rel="icon" href="images/irion-logo1.png">
+    <title>Transaction Page</title>
 </head>
 <body>
 <div class="dashboard-wrappers">

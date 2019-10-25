@@ -1,28 +1,35 @@
-<!-- ADMIN HEADER  -->
-<?php include 'adminDashHeader.php' ?>
-<!-- ADMIN SIDE NAVIGATION  -->
-<?php include 'adminDashSideBar.php' ?>
+<?php
+// HEADER 
+    include 'centralHeaderNav.php';
+// SIDENAV 
+    include 'centralSideNav.php';
+?>
 
-<!-- ADMIN DASHBOARD PAGE  -->
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="This content provides you the ability to grow your money safely online by referal">
-    <meta name="keywords"  content="online,money,finance,growth">
-    <meta name="author" content="Irion global"> 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <meta name="description"
+        content="This content provides you the ability to grow your money safely online by referal">
+    <meta name="keywords" content="online,money,finance,growth">
+    <meta name="author" content="Irion global">
     <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
+   <!-- BOOTSTRAP MIN CSS  -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- JQUERY 3.4.1  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- BOOTSTRAP MIN JS  -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- LOGO  -->
+  
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/adminDashboard.css">
-    <title>Update Password</title>
-</head>
+    <link rel="stylesheet" href="css/profile.css">
+    <title>Central Security</title>
+</head> 
+
+
 <body>
     <div class="dashboard-wrappers">
         <div class="mt-5 row">

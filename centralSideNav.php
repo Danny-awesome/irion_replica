@@ -18,23 +18,17 @@
         <nav class="navbar-white bg-transparent">
             <ul class="navbar-nav flex-column pt-2" id="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="userDashboard.php"><i class="fas fa-paste"></i><span>DASHBOARD</span></a>
+                    <a class="nav-link" href="centralDash.php"><i class="fas fa-paste"></i><span>CENTRAL DASHBOARD</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="userProfile.php"><i class="fas fa-user"></i><span>PROFILE</span></a>
+                    <a class="nav-link" href="centralProfile.php"><i class="fas fa-user"></i><span>CENTRAL PROFILE</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="accountsecurity.php"><i class="fas fa-lock"></i><span>SECURITY</span></a>
+                    <a class="nav-link" href="centralSecurity.php"><i class="fas fa-lock"></i><span>SECURITY</span></a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="userMainTrans.php"><i class="fa fa-hands-helping"></i><span>TRANSACTIONS</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="userHistory.php"><i class="fa fa-history"></i><span>HISTORY</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="userWorks.php"><i class="fas fa-info-circle"></i><span>HOW IT WORKS</span></a>
+                    <a class="nav-link" href="centralTrans.php"><i class="fa fa-hands-helping"></i><span>TRANSACTIONS</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " data-toggle="modal" data-target="#myLogout" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>

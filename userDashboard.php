@@ -32,6 +32,7 @@ include 'userDashSideNav.php';
   
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
+    <title>My Dashboard</title>
 </head>
 
 <body>
@@ -152,7 +153,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
@@ -204,7 +205,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
@@ -251,7 +252,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
@@ -298,7 +299,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>
@@ -345,7 +346,7 @@ include 'userDashSideNav.php';
                             </tr>
                             <tr>
                                 <td>
-                                    <h3>Account Number :</h3>
+                                    <h3>Bank Name :</h3>
                                 </td>
                                 <td>
                                     <p>Bank Name </p>

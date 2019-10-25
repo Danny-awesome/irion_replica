@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
     
     <link rel="icon" href="images/irion-logo1.png">
+    <title>Signup</title>
   </head>
   <body>
   <!-- navbar links -->

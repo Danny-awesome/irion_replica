@@ -20,6 +20,7 @@
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contactus.css">
+    <title>Contact Us</title>
   </head>
   <body>
   <!-- navbar links -->

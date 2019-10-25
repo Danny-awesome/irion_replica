@@ -20,6 +20,7 @@
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/works.css">
+    <title>How Irion Works</title>
   </head>
   <body>
   <!-- navbar links -->

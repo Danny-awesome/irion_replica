@@ -182,7 +182,7 @@
   padding-left: 25px;
   padding-right: 25px;
 }
-.history-table{
+.history-table,.central-table{
   overflow: auto;
 }
 /* works section  */

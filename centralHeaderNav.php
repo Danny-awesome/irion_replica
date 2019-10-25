@@ -34,7 +34,7 @@
                 </div>
               </li>
               <li class="nav-item" style="border: none;">
-                <a class="btn btn-primary" data-toggle="modal" data-target="#myLogout" href="scripts/logout.php">Logout<i class="fas fa-sign-out-alt"></i></a>
+                <a class="btn btn-primary" data-toggle="modal" data-target="#myLogout" href="php_scripts/logout.php">Logout<i class="fas fa-sign-out-alt"></i></a>
               </li>
             </ul>
           </div>

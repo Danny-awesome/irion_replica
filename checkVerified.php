@@ -46,7 +46,7 @@ if (!isset($_SESSION['id'])) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- LOGO  -->
   <link rel="icon" href="images/irion-logo1.png">
-    
+    <title>Are You Verified?</title>
 </head>
 
 <body>

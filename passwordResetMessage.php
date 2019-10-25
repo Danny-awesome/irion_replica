@@ -19,6 +19,7 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/irion-logo1.png">
+    <title>reset password</title>
   </head>
     <body class="body">
  <!-- navbar links -->

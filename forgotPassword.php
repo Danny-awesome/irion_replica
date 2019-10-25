@@ -21,6 +21,7 @@
   
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/style.css">
+    <title>Forgot Password</title>
   </head>
     <body class="body">
 <!-- navbar links -->

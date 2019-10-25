@@ -19,7 +19,7 @@
       <script src="js/script.js"></script>
       <link rel="stylesheet" href="css/profile.css">
       <link rel="icon" href="images/irion-logo1.png">
-
+        <title>My Profile</title>
   </head>
 
   <body>
@@ -135,7 +135,7 @@
                                     echo '<option>Keystone Bank Limited</option>';
                                     echo '<option>Polaris Bank Limited. </option>';
                                     echo '<option>Stanbic IBTC Bank Plc</option>';
-                                    echo '<option>Standard Chartered</>';
+                                    echo '<option>Standard Chartered</option>';
                                     echo '<option>Sterling Bank Plc</option>';
                                     echo '<option>Unity Bank Plc</option>';
                                     echo '<option>Wema Bank Plc</option>';

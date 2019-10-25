@@ -34,6 +34,7 @@ include 'userDashSideNav.php';
   
         <link rel="stylesheet" href="css/userTrans.css">
         <link rel="icon" href="images/irion-logo1.png">
+        <title>Transactions Page</title>
     </head>
 
     <body>
