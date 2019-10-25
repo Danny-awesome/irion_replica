@@ -25,8 +25,8 @@ include 'userDashSideNav.php';
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
+    <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 

@@ -24,8 +24,8 @@ include 'userDashSideNav.php';
         <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
         <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
         <link rel="stylesheet" href="css/userTrans.css">
-        <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="icon" href="images/irion-logo1.png">
     </head>
 
     <body>

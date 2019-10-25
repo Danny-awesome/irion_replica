@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/usertrans.css">
     <link rel="stylesheet" href="css/adminDashboard.css">
-
+    <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>

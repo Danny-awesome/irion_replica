@@ -13,7 +13,7 @@
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/works.css">
   </head>
@@ -73,7 +73,7 @@
               <ol>
                 <li><span class="a">-</span> Welcome to Irion.</li>
                 <li><span class="b">-</span> This is the registration money.</li>
-                <li><span class="c">-</span> You pay 5k to your upliner to activate level 1.</li>
+                <li><span class="c">-</span> You pay <span>&#8358;</span>5,000 to your upliner to activate level 1.</li>
                 <li><span class="d">-</span>  You gain the right to earn.</li>
               </ol>
           </div>
@@ -91,9 +91,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Four users will be given to you as your downlines.</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 10k to your upliner to activate next level.</li>
-              <li><span class="c">-</span> Each user under you pays 5k which amounts to the 20k.</li>
-              <li><span class="d">-</span> After paying 10k to your upliner, you gain 10k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>10,000 to your upliner to activate next level.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>5,000 which amounts to the <span>&#8358;</span>20,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>10,000 to your upliner, you gain <span>&#8358;</span>10,000.</li>
             </ol>
         </div>
     </div>
@@ -110,9 +110,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Welcome to level 2.</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 15k to your upliner to activate next level.</li>
-              <li><span class="c">-</span> Each user under you pays 10k which amounts to the 40k.</li>
-              <li><span class="d">-</span> After paying 15k to your upliner, you gain 25k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>15,000 to your upliner to activate next level.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>10,000 which amounts to the <span>&#8358;</span>40,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>15,000 to your upliner, you gain <span>&#8358;</span>25,000.</li>
             </ol>
         </div>
     </div>
@@ -129,9 +129,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Welcome to level 3   .</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 20k to your upliner to activate next level.</li>
-              <li><span class="c">-</span> Each user under you pays 15k which amounts to the 60k.</li>
-              <li><span class="d">-</span> After paying 20k to your upliner, you gain 40k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>20,000 to your upliner to activate next level.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>15,000 which amounts to the <span>&#8358;</span>60,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>20,000 to your upliner, you gain <span>&#8358;</span>40,000.</li>
             </ol>
         </div>
     </div>
@@ -148,9 +148,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Welcome to level 4.</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 30k to your upliner to activate next level.</li>
-              <li><span class="c">-</span> Each user under you pays 20k which amounts to the 80k.</li>
-              <li><span class="d">-</span> After paying 30k to your upliner, you gain 50k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>30,000 to your upliner to activate next level.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>20,000 which amounts to the <span>&#8358;</span>80,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>30,000 to your upliner, you gain <span>&#8358;</span>50,000.</li>
             </ol>
         </div>
     </div>
@@ -167,9 +167,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Welcome to level 5.</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 40k to your upliner to activate next level.</li>
-              <li><span class="c">-</span> Each user under you pays 30k which amounts to the 120k.</li>
-              <li><span class="d">-</span> After paying 40k to your upliner, you gain 80k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>40,000 to your upliner to activate next level.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>30,000 which amounts to the <span>&#8358;</span>120,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>40,000 to your upliner, you gain <span>&#8358;</span>80,000.</li>
             </ol>
         </div>
     </div>
@@ -186,9 +186,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Welcome to level 6.</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 50k to your upliner to activate next level.</li>
-              <li><span class="c">-</span> Each user under you pays 40k which amounts to the 160k.</li>
-              <li><span class="d">-</span> After paying 50k to your upliner, you gain 110k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>50,000 to your upliner to activate next level.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>40,000 which amounts to the <span>&#8358;</span>160,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>50,000 to your upliner, you gain <span>&#8358;</span>110,000.</li>
             </ol>
         </div>
     </div>
@@ -205,9 +205,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Welcome to level 7.</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 60k to your upliner to activate next level.</li>
-              <li><span class="c">-</span> Each user under you pays 50k which amounts to the 200k.</li>
-              <li><span class="d">-</span> After paying 60k to your upliner, you gain 140k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>60,000 to your upliner to activate next level.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>50,000 which amounts to the <span>&#8358;</span>200,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>60,000 to your upliner, you gain <span>&#8358;</span>140,000.</li>
             </ol>
         </div>
     </div>
@@ -224,9 +224,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Welcome to level 8.</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 70k to your upliner to activate next level.</li>
-              <li><span class="c">-</span> Each user under you pays 60k which amounts to the 240k.</li>
-              <li><span class="d">-</span> After paying 70k to your upliner, you gain 170k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>70,000 to your upliner to activate next level.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>60,000 which amounts to the <span>&#8358;</span>240,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>70,000 to your upliner, you gain <span>&#8358;</span>170,000.</li>
             </ol>
         </div>
     </div>
@@ -243,9 +243,9 @@
         <div class="col-md-12 pl-5">
             <ol>
               <li><span class="a">-</span> Welcome to level 9.</li>
-              <li><span class="b">-</span> After all your downlines have paid you, you pay 70k to your upliner to RENEW your account.</li>
-              <li><span class="c">-</span> Each user under you pays 70k which amounts to the 280k.</li>
-              <li><span class="d">-</span> After paying 70k to your upliner, you gain 170k.</li>
+              <li><span class="b">-</span> After all your downlines have paid you, you pay <span>&#8358;</span>70,000 to your upliner to RENEW your account.</li>
+              <li><span class="c">-</span> Each user under you pays <span>&#8358;</span>70,000 which amounts to the <span>&#8358;</span>280,000.</li>
+              <li><span class="d">-</span> After paying <span>&#8358;</span>70,000 to your upliner, you gain <span>&#8358;</span>170,000.</li>
               <li><span class="d">-</span> After renewal, you are to restart the cycle to earn again as you did till this level.</li>
             </ol>
         </div>

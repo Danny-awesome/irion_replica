@@ -13,6 +13,7 @@
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/irion-logo1.png">
   </head>
     <body class="body">
  <!-- navbar links -->
