@@ -21,7 +21,7 @@
                 <?php
                     require_once 'config/dbConnect.php';
                     $user_type = $_SESSION['acct-type'];
-                    if($user_type != 'common'){
+                    if($user_type == 'common'){
                 ?>
                 <li class="nav-item">
                     <a class="nav-link" href="userDashboard.php"><i class="fas fa-paste"></i><span>DASHBOARD</span></a>
@@ -41,7 +41,7 @@
                 <?php
                     require_once 'config/dbConnect.php';
                     $user_type = $_SESSION['acct-type'];
-                    if($user_type != 'common'){
+                    if($user_type == 'common'){
                 ?>
                 <li class="nav-item">
                     <a class="nav-link" href="userMainTrans.php"><i class="fa fa-hands-helping"></i><span>TRANSACTIONS</span></a>

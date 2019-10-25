@@ -1,8 +1,10 @@
 <?php
-// HEADER 
-    include 'userDashHeader.php';
-// SIDENAV 
-    include 'userDashSideNav.php';
+require_once "config/dbConnect.php";
+require_once 'scripts/check_session_state.php';
+// HEADER
+include 'userDashHeader.php';
+// SIDENAV
+include 'userDashSideNav.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,14 +20,18 @@
     <meta name="keywords" content="online,money,finance,growth">
     <meta name="author" content="Irion global">
     <script src="js/script.js"></script>
-   <!-- BOOTSTRAP MIN CSS  -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- BOOTSTRAP MIN CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- JQUERY 3.4.1  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- BOOTSTRAP MIN JS  -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <!-- LOGO  -->
-  
+
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
     <title>Central Dashboard</title>
@@ -36,28 +42,52 @@
         <div class="row">
             <div class="col-md-9 m-4">
                 <div class="central-table mt-5">
-                    <table class="table table-bordered table-sm table-hover">
-                        <thead>
-                            <tr>
-                                <th>S/N</th>
-                                <th>Name</th>
-                                <th>Tel No</th>
-                                <th>Account Name</th>
-                                <th>Account Number</th>
-                                <th>Bank Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>dets</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+echo '<div class="alert alert-success">';
+echo '<h4>DOWNLINES</h4>';
+echo '</div>';
+echo '<table class="table table-bordered table-sm table-hover">';
+echo '<thead>';
+echo '<tr>';
+echo '<th>S/N</th>';
+echo '<th>Name</th>';
+echo '<th>Tel No</th>';
+echo '<th>Account Name</th>';
+echo '<th>Account Number</th>';
+echo '<th>Bank Name</th>';
+echo '</tr>';
+echo '</thead>';
+require_once 'config/dbConnect.php';
+$user = $_SESSION['username'];
+$history = "SELECT * FROM users WHERE username IN (SELECT downline FROM irion_downlines WHERE user='$user')";
+$serialnumber = 1;
+$history_result = "";
+if ($history_result = mysqli_query($conn, $history)) {
+    if (mysqli_num_rows($history_result) == 0) {
+
+        $error["no-data-found"] = "NO DOWNLINE FOUND";
+        echo '<div class="alert alert-danger">';
+        echo $error["no-data-found"];
+        echo '</div>';
+
+    } else {
+        echo '<tbody>';
+        while ($row = mysqli_fetch_array($history_result)) {
+            echo '<tr>';
+            echo '<td>' . $serialnumber . '</td>';
+            echo '<td>' . $row['username'] . '</td>';
+            echo '<td>' . $row['user_phone'] . '</td>';
+            echo '<td>' . $row['user_acctnum'] . '</td>';
+            echo '<td>' . $row['user_acctname'] . '</td>';
+            echo '<td>' . $row['user_bankname'] . '</td>';
+            echo '</tr>';
+            $serialnumber++;
+        }
+        echo '</tbody>';
+        echo '</table>';
+    }
+}
+?>
                 </div>
             </div>
         </div>
