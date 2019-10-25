@@ -56,11 +56,11 @@ include 'userDashSideNav.php';
                             $result = $stmt ->get_result();
                             $trans_ = $result ->fetch_array();
                             $trans_date = $trans_['trans_date'];
-                            $_date = date_create($trans_date)   ;
+                            // $_date = date_create($trans_date);
                             // $trans_date = date_format($_date,DATE_RFC2822);
-                            $trans_date = date_format($_date,'l d, M, Y');
+                            // $trans_date = date_format($_date,'l d, M Y');
                             $trans_partner = $trans_['made_trans_with'];
-                            $trans_amount = $trans_['amount'];
+                            $trans_amount = $trans_['amount'];  
                         }
                     }
                     echo "<h6>Last Received <span class='fa fa-arrow-down'></span> </h6>";

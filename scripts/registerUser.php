@@ -28,7 +28,7 @@ if (isset($_POST['register-btn'])) {
     $phone = $_POST['phone'];
     $pword = $_POST['pword'];
     $cpword = $_POST['cpword'];
-
+    $currentDateTime = date('Y-m-d H:i:s');
     // validate for empty fields
     if (empty($lastname)) {
         $errors['lastname'] = "Lastname is required";
@@ -75,7 +75,8 @@ if (isset($_POST['register-btn'])) {
     if ($user_count > 0) {
         $errors['username'] = "Username already taken";
     }
-    if(!empty($referrer)){
+    $ref_flag = 0;
+    if (!empty($referrer)) {
         $referrerCheck = "SELECT * FROM users WHERE username=? LIMIT 1";
         $stmt = $conn->prepare($referrerCheck);
         $stmt->bind_param('s', $referrer);
@@ -83,40 +84,102 @@ if (isset($_POST['register-btn'])) {
         $result = $stmt->get_result();
         $user_count = $result->num_rows;
         $stmt->close();
-        if ($user_count == 0) {
+        if ($user_count > 0) {
+            $ref_flag = 1;
+        }else{
             $errors['referrer'] = "Referrer username wasn't found on our database";
         }
     }
     if (count($errors) === 0) {
         $pword = password_hash($pword, PASSWORD_DEFAULT);
-        $token = bin2hex(random_bytes(50)); 
+        $token = bin2hex(random_bytes(50));
         $verified = false;
-
-        try
-        {
-            $insert_query = "INSERT INTO users (username, user_firstname,user_lastname,user_password, user_email, user_phone, verified, token) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-            $stmt = $conn->prepare($insert_query);
-            $stmt->bind_param('ssssssbs', $username, $firstname, $lastname, $pword, $email, $phone, $verified, $token); 
-
-            if ($stmt->execute()) {
-                // login user
-                $user_id = $conn->insert_id;
-                $_SESSION['id'] = $user_id;
-                $_SESSION['username'] = $username;
-                $_SESSION['email'] = $email;
-                $_SESSION['verified'] = $verified;
-
-                sendVerificationMail($email, $token);
-
-                $_SESSION['message'] = "Success. Logged in!";
-                $_SESSION['alert-class'] = "alert-success";
-                header('location: checkVerified.php');
-                exit();
-            } else {
-                $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
+        if($ref_flag == 1){
+            $type = 'common';
+            $count_referrer_downline_no = "SELECT * FROM users WHERE username = ? AND acct_type=?";
+            $stmt = $conn->prepare($count_referrer_downline_no);
+            $stmt->bind_param('ss', $referrer, $type);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+            $user_count = $result->num_rows;
+            $stmt->close();
+            if($user['user_downline'] == 4){
+                $errors['downline_excess'] = "This user can't take anymore downlines";
+            }else{                  
+                $insert_downline = "INSERT INTO irion_downlines(user, downline, added_date) VALUES(?,?,?)";
+                $stmt = $conn->prepare($insert_downline);
+                $stmt->bind_param('sss', $referrer, $username, $currentDateTime);
+                $stmt->execute();
+                
+                $insert_upline = "INSERT INTO irion_uplines(user, upline, added_date) VALUES(?,?,?)";
+                $stmt = $conn->prepare($insert_upline);
+                $stmt->bind_param('sss', $username, $referrer, $currentDateTime);
+                $stmt->execute();
+                
+                $update_upline = "UPDATE users SET user_downline= user_downline+1 WHERE username = '$referrer' ";
+                $confirm = mysqli_query($conn, $update_upline);
+                if($confirm){
+                    $insert_query = "INSERT INTO users (username, user_firstname,user_lastname,user_password, user_email, user_phone, verified, token, registered_date) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                    $stmt = $conn->prepare($insert_query);
+                    $stmt->bind_param('ssssssbss', $username, $firstname, $lastname, $pword, $email, $phone, $verified, $token, $currentDateTime);
+            
+                    if ($stmt->execute()) {
+                        
+                        $user_id = $conn->insert_id;
+                        $_SESSION['id'] = $user_id;
+                        $_SESSION['username'] = $username;
+                        $_SESSION['email'] = $email;
+                        $_SESSION['verified'] = $verified;
+            
+                        sendVerificationMail($email, $token);
+            
+                        $_SESSION['message'] = "Success. Logged in!";
+                        $_SESSION['alert-class'] = "alert-success";
+                        header('location: checkVerified.php');
+                        exit();
+                    } else {
+                        $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
+                    }
+                }
             }
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        }else{
+            $PLATFORM = 'Irion';
+            $insert_downline = "INSERT INTO irion_downlines(user, downline, added_date) VALUES(?,?,?)";
+            $stmt = $conn->prepare($insert_downline);
+            $stmt->bind_param('sss', $PLATFORM, $username, $currentDateTime);
+            $stmt->execute();
+            
+            $insert_upline = "INSERT INTO irion_uplines(user, upline, added_date) VALUES(?,?,?)";
+            $stmt = $conn->prepare($insert_upline);
+            $stmt->bind_param('sss', $username, $PLATFORM, $currentDateTime);
+            $stmt->execute();
+            
+            $update_upline = "UPDATE users SET user_downline= user_downline+1 WHERE username='$PLATFORM' ";
+            $confirm = mysqli_query($conn, $update_upline);
+            if($confirm){
+                $insert_query = "INSERT INTO users (username, user_firstname,user_lastname,user_password, user_email, user_phone, verified, token, registered_date) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $stmt = $conn->prepare($insert_query);
+                $stmt->bind_param('ssssssbss', $username, $firstname, $lastname, $pword, $email, $phone, $verified, $token, $currentDateTime);
+        
+                if ($stmt->execute()) {
+                    $user_id = $conn->insert_id;
+                    $_SESSION['id'] = $user_id;
+                    $_SESSION['username'] = $username;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['verified'] = $verified;
+                    $_SESSION["loggedin"] = true;
+        
+                    sendVerificationMail($email, $token);
+        
+                    $_SESSION['message'] = "Success. Logged in!";
+                    $_SESSION['alert-class'] = "alert-success";
+                    header('location: checkVerified.php');
+                    exit();
+                } else {
+                    $errors['db_error'] = "DATABASE_ERROR: something went wrong. failed to register";
+                }
+            }
         }
     }
 }
@@ -143,3 +206,4 @@ function verifyUser($token)
         }
     }
 }
+ 

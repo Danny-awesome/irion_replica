@@ -1,4 +1,8 @@
-<?php require_once 'scripts/check_session_state.php'; ?>
+<?php 
+require_once "config/dbConnect.php";
+require_once 'scripts/check_session_state.php'; 
+require_once 'scripts/check_new_entry.php';
+?>
   <!-- header page  -->
   <?php include 'userDashHeader.php' ?>
     <!-- sidebar page  -->
