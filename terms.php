@@ -18,6 +18,7 @@
                                                                                 
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/style.css">
+    <title>Privacy Policy</title>
   </head>
 <body>
 

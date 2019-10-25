@@ -28,6 +28,7 @@ require_once 'scripts/check_new_entry.php';
         <script src="js/script.js"></script>
         <link rel="stylesheet" href="css/dashboard.css">
         <link rel="icon" href="images/irion-logo1.png">
+        <title>User History</title>
     </head>
     <body>
         <div class="dashboard-wrappers">

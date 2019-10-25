@@ -26,6 +26,7 @@
     <!-- LOGO  -->
   
     <link rel="stylesheet" href="css/profile.css">
+    <title>Update Password</title>
 
 </head>
 

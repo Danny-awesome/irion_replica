@@ -21,7 +21,7 @@
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/adminDashboard.css">
-
+    <title>Update Password</title>
 </head>
 <body>
     <div class="dashboard-wrappers">

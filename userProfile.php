@@ -19,7 +19,7 @@
       <script src="js/script.js"></script>
       <link rel="stylesheet" href="css/profile.css">
       <link rel="icon" href="images/irion-logo1.png">
-
+        <title>My Profile</title>
   </head>
 
   <body>

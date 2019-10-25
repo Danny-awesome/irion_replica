@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/adminDashboard.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Admin Dashboard</title>
 </head>
 <body>
 <!-- DASHBOARD WRAPPER  -->

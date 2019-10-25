@@ -53,7 +53,7 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-            <a class="btn btn-primary" href="scripts/logout.php">Logout<i class="fas fa-sign-out-alt"></i></a>
+            <a class="btn btn-primary float-right" href="scripts/logout.php">Logout<i class="fas fa-sign-out-alt"></i></a>
         </div>
         
       </div>

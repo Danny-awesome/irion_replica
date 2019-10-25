@@ -32,6 +32,7 @@ include 'userDashSideNav.php';
   
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
+    <title>My Dashboard</title>
 </head>
 
 <body>
