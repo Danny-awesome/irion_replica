@@ -53,13 +53,14 @@ include 'userDashSideNav.php';
                     $trans_date = '';
                     $trans_type = 'debit';
                     // $query = "SELECT MAX(trans_date), made_trans_with,amount FROM transactions_info_all WHERE user=? AND trans_confirmed=?";
-                    $query = "SELECT  MAX(trans_date) AS trans_date, amount, made_trans_with FROM transactions_info_all WHERE user=? AND trans_type=? AND trans_confirmed=1";
+                    // $query = "SELECT  MAX(trans_date) AS 'payday', amount, made_trans_with FROM transactions_info_all WHERE user=? AND trans_type=? AND trans_confirmed=1";
+                    $query = "SELECT * FROM transactions_info_all WHERE trans_date = (SELECT MAX(trans_date) FROM transactions_info_all WHERE user=? AND trans_type=?";
                     if ($stmt = $conn ->prepare($query)) {
                         $stmt ->bind_param("ss",$uname, $trans_type);
                         if ($stmt ->execute()) {
                             $result = $stmt ->get_result();
                             $trans_ = $result ->fetch_array();
-                            $trans_date = $trans_['trans_date'];
+                            $trans_date = $trans_['payday'];
                             // $_date = date_create($trans_date);
                             // $trans_date = date_format($_date,DATE_RFC2822);
                             // $trans_date = date_format($_date,'l d, M Y');
