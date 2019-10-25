@@ -132,7 +132,7 @@ if (isset($_POST['register-btn'])) {
                         $_SESSION['email'] = $email;
                         $_SESSION['verified'] = $verified;
             
-                        sendVerificationMail($email, $token);
+                        sendVerificationMail($email, $token, $firstname.' '.$lastname);
             
                         $_SESSION['message'] = "Success. Logged in!";
                         $_SESSION['alert-class'] = "alert-success";
@@ -170,7 +170,7 @@ if (isset($_POST['register-btn'])) {
                     $_SESSION['verified'] = $verified;
                     $_SESSION["loggedin"] = true;
         
-                    sendVerificationMail($email, $token);
+                    sendVerificationMail($email, $token, $firstname.' '.$lastname);
         
                     $_SESSION['message'] = "Success. Logged in!";
                     $_SESSION['alert-class'] = "alert-success";

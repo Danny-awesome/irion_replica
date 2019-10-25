@@ -11,7 +11,7 @@ $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
 // Create the Mailer using your created Transport
 $mailer = new Swift_Mailer($transport);
 
-function sendVerificationMail($EMAIL, $TOKEN)
+function sendVerificationMail($EMAIL, $TOKEN, $NAME)
 {
     global $mailer;
 
@@ -43,7 +43,7 @@ function sendVerificationMail($EMAIL, $TOKEN)
     <body>
         <div class="wrapper">
             <p>
-                Hey we noticed you registered on Irion. Please click on the button below to verify your email.
+                Greetings Mr/Mrs '.$NAME.', Welcome to IrionCycle, please click on the link below to verify your email.
             </p>
             <a href="https://localhost/irion/checkVerified.php?token='.$TOKEN.'">
                 Verify your email Address.

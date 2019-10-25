@@ -72,8 +72,6 @@ include 'userDashSideNav.php';
                     echo "<p><span>&#8358;</span>$trans_amount:00</p>";
                     echo "<h5>Payed by : <span class=''>$trans_partner</span></h5>";
                     echo "<h5>Date Received : <span class=''>$trans_date</span></h5>";
-                    
-
                   ?>
                 </div>
               </div>
@@ -94,10 +92,24 @@ include 'userDashSideNav.php';
                     <p><span>&#8358;</span>0:00</p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="card animated slideInLeft">
-                  <h6 id="reg-level">Level 0</h6>
-                </div>
+              <?php
+              require_once "config/dbConnect.php";
+              $uname = $_SESSION['username'];
+              $query = "SELECT * FROM users WHERE username=?";
+              $level = '';
+              if ($stmt = $conn ->prepare($query)) {
+                    $stmt ->bind_param("s",$uname);
+                    if ($stmt ->execute()) {
+                        $result = $stmt ->get_result();
+                        $user = $result ->fetch_array();
+                        $level = $user['user_level'];
+                    }   
+                }
+              echo '<div class="col-md-6">';
+                echo '<div class="card animated slideInLeft">';
+                  echo '<h6 id="reg-level">Level '.$level.'</h6>';
+                echo '</div>';
+                ?>
               </div>
             </div>
           </div>
