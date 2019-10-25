@@ -18,13 +18,16 @@ include 'userDashSideNav.php';
             content="This content provides you the ability to grow your money safely online by referal">
         <meta name="keywords" content="online,money,finance,growth">
         <meta name="author" content="Irion global">
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="css/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/script.js"></script>
-        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
-        <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
+           <!-- BOOTSTRAP MIN CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- JQUERY 3.4.1  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- BOOTSTRAP MIN JS  -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- LOGO  -->
+  
         <link rel="stylesheet" href="css/userTrans.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="icon" href="images/irion-logo1.png">
     </head>
 
@@ -36,8 +39,8 @@ include 'userDashSideNav.php';
         <div class="col-md-7 pl-5">
           <P><span class="warning-note">PLEASE READ!! </span>When all your downlines have payed you, 
           you are expected to pay your upgrade fee to your upline before 48 hours runs out. If you do not
-           abide by that, your account will be temporarily blocked until you pay unblocking fee of <span>&#8358;</span>5000 to your upline and then your account will be unblocked after 24hours.
-If your account is blocked more than 3 times then you will be permanently blocked from using this platform. </P>
+           abide by that, your account will be temporarily blocked until you pay unblocking fee of <span>&#8358;</span>5000 and then your account will be unblocked after 24hours.
+If your account is blocked more than 3 times then you will be permanently blocked from using this platform. Once you are blocked, you will lose your level progress and start all over from the beginning.</P>
         </div>    
         <div class="col-md-5 pr-5">
               <!--  -->
