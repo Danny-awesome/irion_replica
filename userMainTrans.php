@@ -52,7 +52,8 @@ If your account is blocked more than 3 times then you will be permanently blocke
               <!--  -->
             </div>
           </div>
-        <div class="vk-room-list-content">
+
+        <!-- <div class="vk-room-list-content">
          <div class="container">
             <div class="row pl-5 pr-5">
                 <div class="item pb-4">
@@ -231,46 +232,129 @@ If your account is blocked more than 3 times then you will be permanently blocke
                     </div>
                   </div>
                 </div>
-            </div>
-        <div class="vk-room-list-content">
+            </div> -->
+            <div class="vk-room-list-content">
          <div class="container">
             <div class="row pl-5 pr-5">
                 <div class="item pb-4">
                     <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
-                        <div class="vk-dark-our-room-item-img">
-                            <img src="images/default.png" alt="no payment proof yet" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-md-6 vk-dark-our-room-item-right">
-                        <div class="vk-dark-our-room-item-content">
-                            <h3 class="text-center"><a href="#">~ UPLINE ~</a></h3>
-                            <table>
-                              <tr>
-                                <td>- Username</span></td>
-                                <td><h6 class="pt-1 pl-2">user name </h6></td>
-                              </tr>
-                              <tr>
-                                <td>- Tel No</span></td>
-                                <td><h6 class="pt-1 pl-2">number</h6></td>
-                              </tr>
-                              <tr>
-                                <td>- Account Name</span></td>
-                                <td><h6 class="pt-1 pl-2">Acc name</h6></td>
-                              </tr>
-                              <tr>
-                                <td>- Account No</span></td>
-                                <td><h6 class="pt-1 pl-2">Acc number</h6></td>
-                              </tr>
-                              <tr>
-                                <td>- Bank Name</span></td>
-                                <td><h6 class="pt-1 pl-2">Bank Name </h6></td>
-                              </tr>
-                          </table>
+                        <?php
+                        echo '<form method="POST" action="index.php" enctype="multipart/form-data">';
+                        echo '<div class="vk-dark-our-room-item-img">';
+                            echo '<img src="images/default.png" alt="no payment proof yet" class=" img-responsive">';
+                        echo '</div>';
+                    echo '</div>';
+                    echo '<div class="col-md-6 vk-dark-our-room-item-right">';
+                        echo '<div class="vk-dark-our-room-item-content">';
+                        $user = $_SESSION['username'];
+                        $history = "SELECT * FROM users WHERE username IN (SELECT downline FROM irion_downlines WHERE user='$user')";
+                        $serialnumber = 1;
+                         $history_result = "";
+                        if ($history_result = mysqli_query($conn, $history)) {
+                            if (mysqli_num_rows($history_result) == 0) {
+                            }else {
+                                while ($row = mysqli_fetch_array($history_result)) {
+                             echo '<h3 class="text-center"><a href="#">~ DOWNLINE '.$serialnumber.' ~</a></h3>';
+                            echo '<table>';
+                              echo '<tr>';
+                                echo '<td>- Username</span></td>';
+                                echo '<td><h6 class="pt-1 pl-2">'.$row['username'].'</h6></td>';
+                              echo '</tr>';
+                              echo '<tr>';
+                                echo '<td>- Downline Level</span></td>';
+                                echo '<td><h6 class="pt-1 pl-2">level '.$row['user_level'].'</h6></td>';
+                              echo '</tr>';
+                              echo '<tr>';
+                                echo '<td>- Tel No</span></td>';
+                                echo '<td><h6 class="pt-1 pl-2">'.$row['user_phone'].'</h6></td>';
+                              echo '</tr>';
+                              echo '<tr>';
+                                echo '<td>- Account Name</span></td>';
+                                echo '<td><h6 class="pt-1 pl-2">'.$row['user_acctname'].'</h6></td>';
+                              echo '</tr>';
+                              echo '<tr>';
+                                echo '<td>- Account No</span></td>';
+                                echo '<td><h6 class="pt-1 pl-2">'.$row['user_acctnum'].'</h6></td>';
+                              echo '</tr>';
+                              echo '<tr>';
+                                echo '<td>- Bank Name</span></td>';
+                                echo '<td><h6 class="pt-1 pl-2">'.$row['user_bank'].'</h6></td>';
+                              echo '</tr>';
+                          echo '</table>';
+                          echo '<input type="submit" class="btn load-proof" value="LOAD PROOF">';
+                          echo '<input type="submit" class="btn check-proof" value="VERIFY USER">';
+                                $serialnumber++;
+                                    
+                                }
+                       echo '</div>';
+                    echo '</div>';
+                            }
+                        } 
+                        echo '</form>';
+                        ?>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="vk-room-list-content">
+         <div class="container">
+            <div class="row pl-5 pr-5">
+                <div class="item pb-4">
+                    <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
+                    <?php
+                    require_once "config/dbConnect.php";
+                    $fname = $lname = $phone = $acctname = $acctnum = $bank = $name = '';
+                    $uname = $_SESSION['username'];
+                    $query = "SELECT * FROM users WHERE username IN (SELECT upline FROM irion_uplines WHERE user='$uname')";
+                    if ($stmt = $conn ->prepare($query)) {
+                        if ($stmt ->execute()) {
+                            $result = $stmt ->get_result();
+                            $user = $result ->fetch_array();
+                            $fname = $user['user_firstname'];
+                            $lname = $user['user_lastname'];
+                            $name = $fname.' '.$lname;
+                            $phone = $user['user_phone'];
+                            $acctnum = $user['user_acctnum'];
+                            $acctname = $user['user_acctname'];
+                            $bank = $user['user_bank'];
+                        }
+                    }
+                    
+                    echo '<div class="vk-dark-our-room-item-img">';
+                    echo '<img src="images/default.png" alt="no payment proof yet" class="img-responsive">';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<div class="col-md-6 vk-dark-our-room-item-right">';
+                    echo '<div class="vk-dark-our-room-item-content">';
+                    echo '<h3 class="text-center"><a href="#">~ UPLINE ~</a></h3>';
+                    echo '<table>';
+                    echo '<tr>';
+                    echo '<td>- Name</span></td>';
+                    echo '<td><h6 class="pt-1 pl-2">'.$name.' </h6></td>';
+                    echo '</tr>';
+                    echo '<tr>';
+                    echo '<td>- Tel No</span></td>';
+                    echo '<td><h6 class="pt-1 pl-2">'.$phone.'</h6></td>';
+                    echo '</tr>';
+                    echo '<tr>';
+                    echo '<td>- Account Name</span></td>';
+                    echo '<td><h6 class="pt-1 pl-2">'.$acctname.'</h6></td>';
+                    echo '</tr>';
+                    echo '<tr>';
+                    echo '<td>- Account No</span></td>';
+                    echo '<td><h6 class="pt-1 pl-2">'.$acctnum.'</h6></td>';
+                    echo '</tr>';
+                    echo '<tr>';
+                    echo '<td>- Bank Name</span></td>';
+                    echo '<td><h6 class="pt-1 pl-2">'.$bank.'</h6></td>';
+                    echo '</tr>';
+                    echo '</table>';
                           
-                          <input type="button" class="btn load-proof" value="LOAD PROOF">
-                          <input type="button" class="btn check-proof" value="UPLOAD PROOF">
-                       </div>
-                    </div>
+                    echo '<input type="button" class="btn load-proof" value="LOAD PROOF">';
+                    echo '<input type="button" class="btn check-proof" value="UPLOAD PROOF">';
+                    echo '</div>';
+                    echo '</div>';
+                    ?>
                   </div>
                 </div>
             </div>

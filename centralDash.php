@@ -140,9 +140,12 @@ include 'userDashSideNav.php';
                             }else {
                                 echo  '<tbody>';
                                 while ($row = mysqli_fetch_array($history_result)) {
+                                    $fname = $row['user_firstname'];
+                                    $lname = $row['user_lastname'];
+                                    $name = $fname.' '.$lname;
                                     echo    '<tr>';
                                     echo        '<td>'.$serialnumber.'</td>';
-                                    echo        '<td>'.$row['username'].'</td>';
+                                    echo        '<td>'.$name.'</td>';
                                     echo        '<td>'.$row['user_phone'].'</td>';
                                     echo        '<td>'.$row['user_acctnum'].'</td>';
                                     echo        '<td>'.$row['user_acctname'].'</td>';
