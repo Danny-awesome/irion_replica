@@ -38,58 +38,125 @@ include 'userDashSideNav.php';
 </head>
 
 <body>
-    <div class="dashboard-wrappers">
-        <div class="row">
-            <div class="col-md-9 m-4">
-                <div class="central-table mt-5">
+<div class="dashboard-wrappers">
+        <div class="col-md-9">
+                <!-- inner row  -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <?php
+                    $uname = $_SESSION['username'];
+                    $trans_confirmed = true;
+                    $trans_partner = '';
+                    $trans_amount = '';
+                    $trans_date = '';
+                    $trans_type = 'debit';
+                    $query = "";
+                    if ($stmt = $conn ->prepare($query)) {
+                        $stmt ->bind_param("ss",$uname, $trans_type);
+                        if ($stmt ->execute()) {
+                            $result = $stmt ->get_result();
+                            $trans_ = $result ->fetch_array();
+                            $trans_date = $trans_['payday'];
+                            $trans_partner = $trans_['made_trans_with'];
+                            $trans_amount = $trans_['amount'];  
+                        }
+                    }
+                    echo "<h6>Last Received <span class='fa fa-arrow-down'></span> </h6>";
+                    echo "<p><span>&#8358;</span>$trans_amount:00</p>";
+                    echo "<h5>Payed by : <span class=''>$trans_partner</span></h5>";
+                    echo "<h5>Date Received : <span class=''>$trans_date</span></h5>";
+                  ?>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h6>Last Payed <span class="fa fa-arrow-up"></h6>
+                            <p><span>&#8358;</span>0:00</p>
+                            <h5>Payed to : <span class=""></span></h5>
+                            <h5>Date Sent : <span class=""></span></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- inner row  -->
+                <div class="row inner-row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h6>Total Gained ( <span>&#8358;</span> )</h6>
+                            <p><span>&#8358;</span>0:00</p>
+                        </div>
+                    </div>
                     <?php
-echo '<div class="alert alert-success">';
-echo '<h4>DOWNLINES</h4>';
-echo '</div>';
-echo '<table class="table table-bordered table-sm table-hover">';
-echo '<thead>';
-echo '<tr>';
-echo '<th>S/N</th>';
-echo '<th>Name</th>';
-echo '<th>Tel No</th>';
-echo '<th>Account Name</th>';
-echo '<th>Account Number</th>';
-echo '<th>Bank Name</th>';
-echo '</tr>';
-echo '</thead>';
-require_once 'config/dbConnect.php';
-$user = $_SESSION['username'];
-$history = "SELECT * FROM users WHERE username IN (SELECT downline FROM irion_downlines WHERE user='$user')";
-$serialnumber = 1;
-$history_result = "";
-if ($history_result = mysqli_query($conn, $history)) {
-    if (mysqli_num_rows($history_result) == 0) {
-
-        $error["no-data-found"] = "NO DOWNLINE FOUND";
-        echo '<div class="alert alert-danger">';
-        echo $error["no-data-found"];
-        echo '</div>';
-
-    } else {
-        echo '<tbody>';
-        while ($row = mysqli_fetch_array($history_result)) {
-            echo '<tr>';
-            echo '<td>' . $serialnumber . '</td>';
-            echo '<td>' . $row['username'] . '</td>';
-            echo '<td>' . $row['user_phone'] . '</td>';
-            echo '<td>' . $row['user_acctnum'] . '</td>';
-            echo '<td>' . $row['user_acctname'] . '</td>';
-            echo '<td>' . $row['user_bankname'] . '</td>';
-            echo '</tr>';
-            $serialnumber++;
-        }
-        echo '</tbody>';
-        echo '</table>';
-    }
-}
-?>
+              require_once "config/dbConnect.php";
+              $uname = $_SESSION['username'];
+              $query = "SELECT * FROM users WHERE username=?";
+              $level = '';
+              if ($stmt = $conn ->prepare($query)) {
+                    $stmt ->bind_param("s",$uname);
+                    if ($stmt ->execute()) {
+                        $result = $stmt ->get_result();
+                        $user = $result ->fetch_array();
+                        $level = $user['user_level'];
+                    }   
+                }
+              echo '<div class="col-md-6">';
+                echo '<div class="card animated slideInLeft">';
+                  echo '<h6 id="reg-level">Level '.$level.'</h6>';
+                echo '</div>';
+                ?>
                 </div>
             </div>
         </div>
+            <div class="col-md-9 m-4">
+                <div class="central-table mt-5">
+                    <?php 
+                    echo '<div class="alert alert-success">';
+                        echo '<h4>DOWNLINES</h4>';
+                    echo '</div>';
+                        echo '<table class="table table-bordered table-sm table-hover">';
+                        echo '<thead>';
+                        echo '<tr>';
+                        echo  '<th>S/N</th>';
+                        echo   '<th>Name</th>';
+                        echo   '<th>Tel No</th>';
+                        echo    '<th>Account Name</th>';
+                        echo    '<th>Account Number</th>';
+                        echo    '<th>Bank Name</th>';
+                        echo   '</tr>';
+                        echo  '</thead>';
+                        require_once 'config/dbConnect.php';
+                        $user = $_SESSION['username'];
+                        $history = "SELECT * FROM users WHERE username IN (SELECT downline FROM irion_downlines WHERE user='$user')";
+                        $serialnumber = 1;
+                        $history_result = "";
+                        if ($history_result = mysqli_query($conn, $history)) {
+                            if (mysqli_num_rows($history_result) == 0) {
+                                
+                                $error["no-data-found"] = "NO DOWNLINE FOUND";
+                                echo '<div class="alert alert-danger">';
+                                echo $error["no-data-found"];
+                                echo '</div>';
+                               
+                            }else {
+                                echo  '<tbody>';
+                                while ($row = mysqli_fetch_array($history_result)) {
+                                    echo    '<tr>';
+                                    echo        '<td>'.$serialnumber.'</td>';
+                                    echo        '<td>'.$row['username'].'</td>';
+                                    echo        '<td>'.$row['user_phone'].'</td>';
+                                    echo        '<td>'.$row['user_acctnum'].'</td>';
+                                    echo        '<td>'.$row['user_acctname'].'</td>';
+                                    echo        '<td>'.$row['user_bank'].'</td>';
+                                    echo    '</tr>';
+                                    $serialnumber++;
+                                }
+                                echo  '</tbody>';
+                                echo '</table>'; 
+                            }
+                        } 
+                        ?>
+                </div>
+            </div>
+        
     </div>
 </body>
