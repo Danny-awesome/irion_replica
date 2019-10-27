@@ -233,20 +233,11 @@ If your account is blocked more than 3 times then you will be permanently blocke
                   </div>
                 </div>
             </div> -->
-            <div class="vk-room-list-content">
-         <div class="container">
-            <div class="row pl-5 pr-5">
-                <div class="item pb-4">
-                    <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
-                        <?php
-                        echo '<form method="POST" action="index.php" enctype="multipart/form-data">';
-                        echo '<div class="vk-dark-our-room-item-img">';
-                            echo '<img src="images/default.png" alt="no payment proof yet" class=" img-responsive">';
-                        echo '</div>';
-                    echo '</div>';
-                    echo '<div class="col-md-6 vk-dark-our-room-item-right">';
-                        echo '<div class="vk-dark-our-room-item-content">';
-                        $user = $_SESSION['username'];
+            <?php
+        echo '<div class="vk-room-list-content">';
+         echo '<div class="container">';
+            echo '<div class="row pl-5 pr-5">';
+            $user = $_SESSION['username'];
                         $history = "SELECT * FROM users WHERE username IN (SELECT downline FROM irion_downlines WHERE user='$user')";
                         $serialnumber = 1;
                          $history_result = "";
@@ -254,11 +245,26 @@ If your account is blocked more than 3 times then you will be permanently blocke
                             if (mysqli_num_rows($history_result) == 0) {
                             }else {
                                 while ($row = mysqli_fetch_array($history_result)) {
+                echo '<div class="item pb-4">';
+                    echo '<div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">';
+                        echo '<div class="vk-dark-our-room-item-img">';
+                            echo '<img src="images/default.png" alt="no payment proof yet" class=" img-responsive">';
+                        echo '</div>';
+                    echo '</div>';
+                    echo '<div class="col-md-6 vk-dark-our-room-item-right">';
+                        echo '<div class="vk-dark-our-room-item-content">';
+                        
+                                $fname = $user['user_firstname'];
+                                $lname = $user['user_lastname'];
+                                $name = $fname.' '.$lname;
                              echo '<h3 class="text-center"><a href="#">~ DOWNLINE '.$serialnumber.' ~</a></h3>';
                             echo '<table>';
                               echo '<tr>';
-                                echo '<td>- Username</span></td>';
-                                echo '<td><h6 class="pt-1 pl-2">'.$row['username'].'</h6></td>';
+                                echo '<td>- Name</span></td>';
+                                $fname = $row['user_firstname'];
+                                $lname = $row['user_lastname'];
+                                $name = $fname.' '.$lname;
+                                echo '<td><h6 class="pt-1 pl-2">'.$name.'</h6></td>';
                               echo '</tr>';
                               echo '<tr>';
                                 echo '<td>- Downline Level</span></td>';
@@ -285,30 +291,27 @@ If your account is blocked more than 3 times then you will be permanently blocke
                           echo '<input type="submit" class="btn check-proof" value="VERIFY USER">';
                                 $serialnumber++;
                                     
-                                }
                        echo '</div>';
                     echo '</div>';
+                                }
+                  echo '</div>';
+                echo '</div>';
+            echo '</div>';
                             }
                         } 
-                        echo '</form>';
-                        ?>
-                  </div>
-                </div>
-            </div>
-            </div>
+                    ?>
             <div class="vk-room-list-content">
          <div class="container">
             <div class="row pl-5 pr-5">
                 <div class="item pb-4">
-                    <div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">
                     <?php
                     require_once "config/dbConnect.php";
                     $fname = $lname = $phone = $acctname = $acctnum = $bank = $name = '';
                     $uname = $_SESSION['username'];
                     $query = "SELECT * FROM users WHERE username IN (SELECT upline FROM irion_uplines WHERE user='$uname')";
                     if ($stmt = $conn ->prepare($query)) {
-                        if ($stmt ->execute()) {
-                            $result = $stmt ->get_result();
+                      if ($stmt ->execute()) {
+                        $result = $stmt ->get_result();
                             $user = $result ->fetch_array();
                             $fname = $user['user_firstname'];
                             $lname = $user['user_lastname'];
@@ -319,9 +322,10 @@ If your account is blocked more than 3 times then you will be permanently blocke
                             $bank = $user['user_bank'];
                         }
                     }
-                    
+                    echo '<form method="post" action="userMainTrans.php" enctype="multipart/form-data">';
+                    echo '<div class="col-md-6 vk-dark-our-room-item-left  vk-clear-padding">';
                     echo '<div class="vk-dark-our-room-item-img">';
-                    echo '<img src="images/default.png" alt="no payment proof yet" class="img-responsive">';
+                    echo '<img src="images/default.png" onclick="triggerClick()" alt="no payment proof yet" class="img-responsive" id="proofDisplay">';
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="col-md-6 vk-dark-our-room-item-right">';
@@ -350,14 +354,16 @@ If your account is blocked more than 3 times then you will be permanently blocke
                     echo '</tr>';
                     echo '</table>';
                           
-                    echo '<input type="button" class="btn load-proof" value="LOAD PROOF">';
-                    echo '<input type="button" class="btn check-proof" value="UPLOAD PROOF">';
+                    echo '<input type="file" onchange="displayImage(this)" class="btn load-proof" value="LOAD PROOF" name="load_proof" id="load_proof">';
+                    echo '<input type="submit" class="btn check-proof" value="UPLOAD PROOF" name="upload_proof">';
                     echo '</div>';
                     echo '</div>';
+                    echo '</form>';
                     ?>
                   </div>
                 </div>
             </div>
         </div>
     </body>
+    <script src="scripts/preview.js"></script>
 </html>
