@@ -213,7 +213,7 @@ include 'userDashSideNav.php';
                             if (mysqli_num_rows($history_result) == 0) {
                                 
                                 $error["no-data-found"] = "NO DOWNLINE FOUND";
-                                echo '<div class="alert alert-danger">';
+                                echo '<div class="alert alert-info">';
                                 echo $error["no-data-found"];
                                 echo '</div>';
                                

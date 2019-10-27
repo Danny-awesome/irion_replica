@@ -51,10 +51,7 @@
                     echo '</div>';
                     echo '<div class="col-md-6 vk-dark-our-room-item-right">';
                         echo '<div class="vk-dark-our-room-item-content">';
-                        
-                                $fname = $user['user_firstname'];
-                                $lname = $user['user_lastname'];
-                                $name = $fname.' '.$lname;
+                
                              echo '<h3 class="text-center"><a href="#">~ DOWNLINE '.$serialnumber.' ~</a></h3>';
                             echo '<table>';
                               echo '<tr>';

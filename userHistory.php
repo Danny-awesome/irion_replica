@@ -51,6 +51,7 @@ require_once 'scripts/check_new_entry.php';
                         echo   '<th>Transaction Made With</th>';
                         echo   '<th>Transaction Type</th>';
                         echo    '<th>Amount</th>';
+                        echo    '<th>Status</th>';
                         echo    '<th>Transaction Date</th>';
                         echo   '</tr>';
                         echo  '</thead>';
@@ -59,11 +60,12 @@ require_once 'scripts/check_new_entry.php';
                         $history = "SELECT * FROM transactions_info_all WHERE user = '$user'";
                         $serialnumber = 1;
                         $history_result = "";
+                        $trans_status = "";
                         if ($history_result = mysqli_query($conn, $history)) {
                             if (mysqli_num_rows($history_result) == 0) {
                                 
                                 $error["no-data-found"] = "NO DATA ON TRANSACTION HISTORY FOUND.";
-                                echo '<div class="alert alert-danger">';
+                                echo '<div class="alert alert-info">';
                                 echo $error["no-data-found"];
                                 echo '</div>';
                                
@@ -75,6 +77,13 @@ require_once 'scripts/check_new_entry.php';
                                     echo        '<td>'.$row['made_trans_with'].'</td>';
                                     echo        '<td>'.$row['trans_type'].'</td>';
                                     echo        '<td>'.$row['amount'].'</td>';
+                                    if($row['trans_confirmed'] == 1){
+                                        $trans_status = "confirmed";
+                                        echo '<td>'.$trans_status.'</td>';
+                                    } else {
+                                        $trans_status = "pending";
+                                        echo '<td>'.$trans_status.'</td>';
+                                    }           
                                     echo        '<td>'.$row['trans_date'].'</td>';
                                     echo    '</tr>';
                                     $serialnumber++;

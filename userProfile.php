@@ -30,11 +30,11 @@
                       <?php
 
                         if (!empty($_SESSION['notactivemsg'])) {
-                            echo '<div class="alert alert-success">';
+                            echo '<div class="alert alert-info">';
                             echo $_SESSION['notactivemsg'];
                             echo '</div>';
                         } elseif (!empty($profileUpdated)) {
-                            echo '<div class="alert alert-success">';
+                            echo '<div class="alert alert-info">';
                             echo $profileUpdated;
                             echo '</div>';
                         }
@@ -77,45 +77,18 @@
                                     echo '<input type="text" class="form-control" id="telno" name="phone" placeholder="" value="' . $row['user_phone'] . '">';
                                     echo '</div>';
                                     echo ' ';
-                                    // echo '<div class="form-group">';
-                                    // echo '<label for="o-pwd">Old Password :</label>';
-                                    // echo '<p class="error-msg">'.$numero_cinco.'</p>';
-                                    // echo '<input type="password" class="form-control" id="o-pwd" name="pword" placeholder="">';
-                                    // echo '</div>';
-                                    // echo ' ';
-                                    // echo '<div class="form-group">';
-                                    // echo '<label for="c-pwd">New Password :</label>';
-                                    // echo '<p class="error-msg">'.$numero_seis.'</p>';
-                                    // echo '<input type="password" class="form-control" id="c-pwd" name="npword" placeholder="">';
-                                    // echo '</div>';
-                                    // echo ' ';
-                                    // echo '<div class="form-group">';
-                                    // echo '<label for="n-pwd">Confirm New Password :</label>';
-                                    // echo '<p class="error-msg">'.$numero_siete.'</p>';
-                                    // echo '<input type="password" class="form-control" name="cnpword" id="n-pwd" placeholder="">';
-                                    // echo '</div>';
-                                    // echo ' ';
                                     echo '<div class="form-group">';
                                     echo '<label for="AName">Account Name :</label>';
                                     echo '<p class="error-msg">' . $numero_seis . '</p>';
                                     echo '<input type="text" class="form-control" id="AName" name="acctname" placeholder="" value="' . $row['user_acctname'] . '">';
                                     echo '</div>';
                                     echo ' ';
-                                    // if (empty($_SESSION['notactivemsg'])) {
-                                    //   echo '<div class="form-group">';
-                                    //   echo '<label for="telno">Account No :</label>';
-                                    //   echo '<p class="error-msg">'.$numero_siete.'</p>';
-                                    //   echo '<input type="text" class="form-control" id="telno" name="acctnum" placeholder="" value="' . $row['user_acctnum'] . '">';
-                                    //   echo '</div>';
-
-                                    // } else {
                                     echo '<div class="form-group">';
                                     echo '<label for="telno">Account No :</label>';
                                     echo '<p class="error-msg">' . $numero_siete . '</p>';
                                     echo '<input type="text" class="form-control" id="telno" name="acctnum" placeholder="" value="' . $row['user_acctnum'] . '">';
                                     echo '</div>';
-                                    // }
-
+                                    
                                     echo ' ';
                                     echo '<div class="form-group">';
                                     echo '<label for="sel1">Bank Name :</label>';
