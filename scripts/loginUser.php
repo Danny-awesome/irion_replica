@@ -40,6 +40,8 @@ if (isset($_POST['login-submit-btn'])) {
             $_SESSION["loggedin"] = true;
             $_SESSION['id'] = $user['user_id'];
             $_SESSION['username'] = $user['username'];
+            $_SESSION['fname'] = $user['user_firstname'];
+            $_SESSION['lname'] = $user['user_lastname'];
             $_SESSION['email'] = $user['user_email'];
             $_SESSION['verified'] = $user['verified'];
             $_SESSION['block-status'] = $user['block_status'];

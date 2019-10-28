@@ -108,3 +108,52 @@ function sendPasswordResetLink($EMAIL, $TOKEN)
 
     $result = $mailer->send($message);   
 }
+function sendProofImage($FROM, $TO, $receiver, $sender, $path)
+{
+    global $mailer;
+    $message = '';
+    
+    $body = '<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Verify Email</title>
+        <style>
+        p{
+            color:#404040;
+            margin-left:40px;
+        }
+        a{
+            background: #00264d;
+            padding: 10px;
+            border-radius:5px;
+            color:#e6f2ff;
+            text-decoration: none;
+            margin-left: 50px;
+        }
+        a:hover{
+            background:#004080;
+        }
+        </style>
+        </head>
+        <body>
+        <div class="wrapper">
+        <p>
+        Hey '.$receiver.' you have been sent a proof from '.$sender.'. Check the image and verify this transaction.
+        Image Proof From '.$sender.' '.$path.'
+        </p>
+        
+        </div>
+        </body>
+        </html>';;
+        
+        $image = $message->embed(Swift_Image::fromPath($path));
+        $message = (new Swift_Message('VERIFY TRANSACTION'))
+        ->setFrom($FROM)
+        ->setTo($TO)
+        ->setBody($body, 'text/html');
+
+    $result = $mailer->send($message);   
+}
