@@ -80,7 +80,7 @@ include 'userDashSideNav.php';
 
             if (isset($_POST['get_proof'])) {
                 $loadImgQuery = "SELECT * FROM transactions_info_all WHERE trans_confirmed=? AND made_trans_with=? AND trans_type=? LIMIT 1";
-                $stmt = $conn->prepare($loadImgQuery);
+                $stmt = $conn->prepare($loadImgQ\uery);
                 $stmt->bind_param('sss', $status, $downline, $trans_type);
                 $stmt->execute();
                 $result = $stmt->get_result();

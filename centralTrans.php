@@ -15,14 +15,15 @@ include 'userDashSideNav.php';
     <meta name="keywords" content="online,money,finance,growth">
     <meta name="author" content="Irion global">
     <script src="js/script.js"></script>
-   <!-- BOOTSTRAP MIN CSS  -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- BOOTSTRAP MIN CSS  -->
+     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <!-- JQUERY 3.4.1  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="js/jquery-3.4.1.min.js"></script>
     <!-- BOOTSTRAP MIN JS  -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- LOGO  -->
-
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+     <!-- LOGO  -->
+                             
+  
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/userTrans.css">
@@ -88,13 +89,66 @@ if ($history_result = mysqli_query($conn, $history)) {
 
             echo '</div>';
             echo '</div>';
-        }
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
-    }
-}
-?>
+                            }
+                        } 
+                    ?>
+      <div class="row">
+            <div class="col-md-12">
+            <table class="table table-hover overflow-auto">
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                  <th>Username</th>
+                  <th>Tel No</th>
+                  <th>Account Name </th>
+                  <th>Account Number</th>
+                  <th>Bank Name</th>
+                  <th>Check Proof</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+          
+                    <a href="#" data-toggle="modal" data-target="#TripleBedroom-Modal"> BOOK NOW <i class="fa fa-caret-up" aria-hidden="true"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+         </div>
+         <div class="modal" id="TripleBedroom-Modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                    <div class="modal-header">
+                       <h4 class="modal-title">proof</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="vk-dark-our-room-item-img">
+                         <img src="images/default.png" alt="no payment proof yet" class=" img-responsive">
+                      </div>
+                      <input type="button" class="btn load-proof" value="LOAD PROOF">
+                          <input type="button" class="btn check-proof" value="VERIFY USER">
+                   
+                    </div>
 
-        </div>
+                  </div>
+                  
+                  </div>
+                </div>
+                    
+                    </div>
+                </div>
+
+        </div>     
     </body>
