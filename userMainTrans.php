@@ -80,7 +80,7 @@ include 'userDashSideNav.php';
 
             if (isset($_POST['get_proof'])) {
                 $loadImgQuery = "SELECT * FROM transactions_info_all WHERE trans_confirmed=? AND made_trans_with=? AND trans_type=? LIMIT 1";
-                $stmt = $conn->prepare($loadImgQ\uery);
+                $stmt = $conn->prepare($loadImgQuery);
                 $stmt->bind_param('sss', $status, $downline, $trans_type);
                 $stmt->execute();
                 $result = $stmt->get_result();
@@ -157,6 +157,9 @@ include 'userDashSideNav.php';
     }
 }
 ?>
+
+
+<!-- DONT DELETE UPLINE SECTION -->
         <div class="vk-room-list-content">
             <div class="container">
                 <div class="row pl-5 pr-5">
@@ -235,6 +238,7 @@ echo '</div>';
 echo '</div>';
 echo '</form>';
 ?>
+<!-- DONT DELETE UPLINE SECTION -->
                     </div>
                 </div>
             </div>
