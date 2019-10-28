@@ -93,9 +93,11 @@ include 'userDashSideNav.php';
                             // }
                         // } 
                     ?> -->
-      <div class="row">
+   
+   <div class="trans-container">
+            <div class="row">
             <div class="col-md-12">
-            <table class="table table-hover overflow-auto">
+            <table class="table table-hover">
               <thead>
                 <tr>
                   <th>Firstname</th>
@@ -126,9 +128,11 @@ include 'userDashSideNav.php';
             </table>
             </div>
          </div>
+     
+     
+            </div>
         </div>
-      </div>
-      <div class="modal" id="TripleBedroom-Modal">
+        <div class="modal" id="TripleBedroom-Modal">
             <div class="modal-dialog">
               <div class="modal-content">
                     <div class="modal-header">
@@ -147,6 +151,7 @@ include 'userDashSideNav.php';
                   
                   </div>
                 </div>
+           
                     
                     </div>
         
