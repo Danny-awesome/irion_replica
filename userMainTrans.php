@@ -26,23 +26,22 @@ include 'userDashSideNav.php';
         <meta name="keywords" content="online,money,finance,growth">
         <meta name="author" content="Irion global">
         <script src="js/script.js"></script>
-           <!-- BOOTSTRAP MIN CSS  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- BOOTSTRAP MIN CSS  -->
+  <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <!-- JQUERY 3.4.1  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="js/jquery-3.4.1.min.js"></script>
     <!-- BOOTSTRAP MIN JS  -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- LOGO  -->
-  
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+     <!-- LOGO  -->
+                             
         <link rel="stylesheet" href="css/userTrans.css">
         <link rel="icon" href="images/irion-logo1.png">
         <title>Transactions Page</title>
     </head>
 
     <body>
-        <div class="dashboard-wrappers">
-    
-        <div class="row pl-5 pr-5">
+      <div class="dashboard-wrappers">
+      <div class="row pl-5 pr-5">
         
         <div class="col-md-7 pl-5">
           <P><span class="warning-note">PLEASE READ!! </span>When all your downlines have payed you, 
@@ -50,10 +49,68 @@ include 'userDashSideNav.php';
            abide by that, your account will be temporarily blocked until you pay unblocking fee of <span>&#8358;</span>5000 and then your account will be unblocked after 24hours.
 If your account is blocked more than 3 times then you will be permanently blocked from using this platform. Once you are blocked, you will lose your level progress and start all over from the beginning.</P>
         </div>    
-        <div class="col-md-5 pr-5">
+          <div class="col-md-5 pr-5">
               <!--  -->
             </div>
           </div>
+        <div class="trans-container">
+        <div class="row">
+            <div class="col-md-12">
+            <table class="table table-hover overflow-auto">
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Username</th>
+                  <th>Tel No</th>
+                  <th>Account Name </th>
+                  <th>Account Number</th>
+                  <th>Bank Name</th>
+                  <th>Check Proof</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+          
+                    <a href="#" data-toggle="modal" data-target="#TripleBedroom-Modal">Check Proof <i class="fa fa-caret-up" aria-hidden="true"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+         </div>
+        </div>
+      </div>
+      <div class="modal" id="TripleBedroom-Modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                    <div class="modal-header">
+                       <h4 class="modal-title">proof</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="vk-dark-our-room-item-img">
+                         <img src="images/default.png" alt="no payment proof yet" class=" img-responsive">
+                      </div>
+                      <input type="button" class="btn load-proof" value="LOAD PROOF">
+                          <input type="button" class="btn check-proof" value="VERIFY USER">
+                   
+                    </div>
+
+                  </div>
+                  
+                  </div>
+                </div>
+                    
+                    </div>
+                </div>
 
         <!-- <div class="vk-room-list-content">
          <div class="container">
@@ -413,39 +470,6 @@ If your account is blocked more than 3 times then you will be permanently blocke
 
               
             <!-- </div> -->
-        <div class="row">
-            <div class="col-md-12">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Email</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>John</td>
-                  <td>Doe</td>
-                  <td>john@example.com</td>
-                </tr>
-                <tr>
-                  <td>Mary</td>
-                  <td>Moe</td>
-                  <td>mary@example.com</td>
-                </tr>
-                <tr>
-                  <td>July</td>
-                  <td>Dooley</td>
-                  <td>july@example.com</td>
-                </tr>
-              </tbody>
-            </table>
-            </div>
-         </div>
-        </div>
-
-        </div>
     </body>
     <script src="scripts/preview.js"></script>
 </html>

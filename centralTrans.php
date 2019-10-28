@@ -96,14 +96,15 @@
                             }
                         } 
                     ?>
-      <div class="row">
+      
+      <div class="trans-container">
+        <div class="row">
             <div class="col-md-12">
             <table class="table table-hover overflow-auto">
               <thead>
                 <tr>
                   <th>Firstname</th>
                   <th>Lastname</th>
-                  <th>Email</th>
                   <th>Username</th>
                   <th>Tel No</th>
                   <th>Account Name </th>
@@ -117,21 +118,22 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td></td>         
                   <td></td>
                   <td></td>
                   <td></td>
                   <td>
           
-                    <a href="#" data-toggle="modal" data-target="#TripleBedroom-Modal"> BOOK NOW <i class="fa fa-caret-up" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="modal" data-target="#TripleBedroom-Modal"> Check Proof <i class="fa fa-caret-up" aria-hidden="true"></i></a>
                   </td>
                 </tr>
               </tbody>
             </table>
             </div>
          </div>
-         <div class="modal" id="TripleBedroom-Modal">
+        </div>
+      </div>
+      <div class="modal" id="TripleBedroom-Modal">
             <div class="modal-dialog">
               <div class="modal-content">
                     <div class="modal-header">
@@ -152,7 +154,6 @@
                 </div>
                     
                     </div>
-                </div>
-
+        
         </div>     
     </body>
