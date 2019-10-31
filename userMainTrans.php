@@ -1,9 +1,9 @@
 <?php
 require_once "config/dbConnect.php";
 require_once 'scripts/check_session_state.php';
+require_once 'scripts/check_new_entry.php';
 require_once 'scripts/proof_upload.php';
 require_once 'scripts/verify_payment.php';
-require_once 'scripts/check_new_entry.php';
 ?>
 
 <?php
@@ -33,7 +33,7 @@ include 'userDashSideNav.php';
     <!-- BOOTSTRAP MIN JS  -->
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
      <!-- LOGO  -->
-                 
+
 
     <link rel="stylesheet" href="css/userTrans.css">
     <link rel="icon" href="images/irion-logo1.png">
@@ -135,107 +135,137 @@ echo '<td><h6 class="pt-1 pl-2">' . $bank . '</h6></td>';
 echo '</tr>';
 echo '</table>';
 
-echo '<input type="file" name="load_proof" onchange="displayImage(this)" class="btn load-proof" value="LOAD PROOF"  id="load_proof">';
-echo '<input type="submit" class="btn check-proof" value="UPLOAD PROOF" name="upload_proof">';
+$user_gain_validity = true;
+if ($user['user_level'] == 0) {
+    $user_gain_validity = false;
+}
+if ($user['user_acctstatus'] == 'not-active') {
+    $user_gain_validity = false;
+}
+if ($user['verified'] == false) {
+    $user_gain_validity = false;
+}
+
+if ($user_gain_validity == false) {
+    echo '<div class="alert alert-info">';
+    echo 'This user either is not verified, hasn\'t completed his/her profile or still at \'Level 0\'</br>';
+    echo '</div>';
+    echo '<input type="file" name="load_proof" onchange="displayImage(this)" class="btn load-proof" disabled value="LOAD PROOF"  id="load_proof">';
+    echo '<input type="submit" class="btn check-proof" disabled value="UPLOAD PROOF" name="upload_proof">';
+} else {
+    echo '<input type="file" name="load_proof" onchange="displayImage(this)" class="btn load-proof" value="LOAD PROOF"  id="load_proof">';
+    echo '<input type="submit" class="btn check-proof" value="UPLOAD PROOF" name="upload_proof">';
+}
 echo '</div>';
 echo '</div>';
 echo '</form>';
 echo '</div>';
 echo '</div>';
-echo '</div>';     
-echo '</div>';       
-?>     
-               
-   <?php
-            echo '<div class="trans-container">';
-            echo '<div class="row">';
-            echo '<div class="col-md-12">';
-            if(!empty($updateStatus)){
-              echo '<div class="alert '.$alert_class.'">';
-              // echo '<div class="alert '.$alert_class.'">';
-              echo $updateStatus;
-              echo '</div>';
-            }
-            require_once 'config/dbConnect.php';
-            $user = $_SESSION['username'];
-            $history = "SELECT * FROM users WHERE username IN (SELECT downline FROM irion_downlines WHERE user='$user')";
-            $serialnumber = 1;
-            $history_result = "";
-            $trans_status = "";
-            $name = "";
-            $fname = "";
-            $lname = "";
-            $trans_type = 'credit';
-            $trans_proof = '';
-            $trans_date = '';
-            $status = 0;
-            echo '<form method="post" action="userMainTrans.php">';
-            echo '<table class="table table-hover">';
-            echo '<thead>';              
-            echo '<tr>';
-            echo '<th>Name</th>';
-            echo '<th>Tel No</th>';
-            echo '<th>Account Name </th>';
-            echo '<th>Account Number</th>';
-            echo '<th>Bank Name</th>';
-                  echo '<th>View Payment Image</th>';
-                  echo '<th>Verify Transaction</th>';
-                  echo '</tr>';
-                  echo '</thead>';
-            if ($history_result = mysqli_query($conn, $history)) {
-                if (mysqli_num_rows($history_result) > 0) {
-                  while ($row = mysqli_fetch_array($history_result)) {
-                    echo '<tbody>';
-                $downline = $row['username'];
-                $fname = $row['user_firstname'];
-                $lname = $row['user_lastname'];
-                $name = $fname.' '.$lname;
-                
-                $loadImgQuery = "SELECT * FROM transactions_info_all WHERE trans_confirmed=? AND made_trans_with=?";
-                // -- AND made_trans_with=? AND trans_type=?";
-                $stmt = $conn->prepare($loadImgQuery);
-                $stmt->bind_param('bs', $status, $downline);
-                // , $downline, $trans_type);
-                $stmt->execute();
-                $result = $stmt->get_result();
-                $user = $result->fetch_assoc();
-                $trans_proof = $user['proof_destination'];
-                $trans_date = $user['trans_date'];
-                echo '<input type="text" name="downline" value="' . $downline . '" hidden>'; //important. DO NOT DELETE
-                    echo '<input type="text" name="trans_date" value="' . $trans_date . '" hidden>'; //important. DO NOT DELETE
-                    echo '<input type="text" name="trans_proof" value="' . $trans_proof . '" hidden>'; //important. DO NOT DELETE
-                    echo '<tr>';
-                echo '<td>'.$name.'</td>';
-                  echo '<td>'.$row['user_phone'].'</td>';
-                  echo '<td>'.$row['user_acctname'].'</td>';        
-                  echo '<td>'.$row['user_acctnum'].'</td>';
-                  echo '<td>'.$row['user_bank'].'</td>';
-                  echo '<td>';
-                  // echo '<a href="#" data-toggle="modal" data-target="#TripleBedroom-Modal"> Check Proof <i class="fa fa-caret-up" aria-hidden="true"></i></a>';
-                  echo '<a href="'.$trans_proof.'" Check Proof <i class="fa fa-hand-pointer" aria-hidden="true"></i></a>';
-                  echo '</td>';
-                  echo '<td>';
-                  echo '<input type="submit" class="btn check-proof" name="verify_payment" value="VERIFY USER">';
-                  echo '</td>';
-                  echo '</tr>';
-                  
-                  $serialnumber++;
-                }
-                echo '</tbody>';
-                echo '</table>';
-                echo '</form>';
-                }
-              }
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
-        ?>
-        <!-- end of table -->
-                    
-    
+echo '</div>';
+echo '</div>';
+?>
 
-    
-      
+   <?php
+echo '<div class="trans-container">';
+echo '<div class="row">';
+echo '<div class="col-md-12">';
+if (!empty($updateStatus)) {
+    echo '<div class="alert ' . $alert_class . '">';
+    echo $updateStatus;
+    echo '</div>';
+}
+if (!empty($msg)) {
+    echo '<div class="alert alert-info">';
+    echo $msg;
+    echo '</div>';
+}
+if (!empty($increase)) {
+    echo '<div class="alert alert-info">';
+    echo $increase;
+    echo '</div>';
+}
+require_once 'config/dbConnect.php';
+$user = $_SESSION['username'];
+$history = "SELECT * FROM users WHERE username IN (SELECT downline FROM irion_downlines WHERE user='$user')";
+$serialnumber = 1;
+$history_result = "";
+$trans_status = "";
+$name = "";
+$fname = "";
+$lname = "";
+$trans_type = 'credit';
+$trans_proof = '';
+$trans_date = '';
+$status = 0;
+echo '<form method="post" action="userMainTrans.php">';
+echo '<table class="table table-hover">';
+echo '<thead>';
+echo '<tr>';
+echo '<th>Name</th>';
+echo '<th>Tel No</th>';
+echo '<th>Account Name </th>';
+echo '<th>Account Number</th>';
+echo '<th>Bank Name</th>';
+echo '<th>View Payment Image</th>';
+echo '<th>Verify Transaction</th>';
+echo '</tr>';
+echo '</thead>';
+if ($history_result = mysqli_query($conn, $history)) {
+    if (mysqli_num_rows($history_result) > 0) {
+        while ($row = mysqli_fetch_array($history_result)) {
+            echo '<tbody>';
+            $downline = $row['username'];
+            $fname = $row['user_firstname'];
+            $lname = $row['user_lastname'];
+            $name = $fname . ' ' . $lname;
+
+            $loadImgQuery = "SELECT * FROM transactions_info_all WHERE trans_confirmed=? AND made_trans_with=?";
+            // -- AND made_trans_with=? AND trans_type=?";
+            $stmt = $conn->prepare($loadImgQuery);
+            $stmt->bind_param('bs', $status, $downline);
+            // , $downline, $trans_type);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+            $trans_proof = $user['proof_destination'];
+            $trans_date = $user['trans_date'];
+            $amount = $user['amount'];
+            echo '<input type="text" name="downline" value="' . $downline . '" hidden>'; //important. DO NOT DELETE
+            echo '<input type="text" name="trans_date" value="' . $trans_date . '" hidden>'; //important. DO NOT DELETE
+            echo '<input type="text" name="trans_proof" value="' . $trans_proof . '" hidden>'; //important. DO NOT DELETE
+            echo '<input type="text" name="amount" value="' . $amount . '" hidden>'; //important. DO NOT DELETE
+            echo '<tr>';
+            echo '<td>' . $name . '</td>';
+            echo '<td>' . $row['user_phone'] . '</td>';
+            echo '<td>' . $row['user_acctname'] . '</td>';
+            echo '<td>' . $row['user_acctnum'] . '</td>';
+            echo '<td>' . $row['user_bank'] . '</td>';
+            echo '<td>';
+            // echo '<a href="#" data-toggle="modal" data-target="#TripleBedroom-Modal"> Check Proof <i class="fa fa-caret-up" aria-hidden="true"></i></a>';
+            echo '<a href="' . $trans_proof . '" Check Proof <i class="fa fa-hand-pointer" aria-hidden="true"></i></a>';
+            echo '</td>';
+            echo '<td>';
+            echo '<input type="submit" class="btn check-proof" name="verify_payment" value="VERIFY USER">';
+            echo '</td>';
+            echo '</tr>';
+
+            $serialnumber++;
+        }
+        echo '</tbody>';
+        echo '</table>';
+        echo '</form>';
+    }
+}
+echo '</div>';
+echo '</div>';
+echo '</div>';
+?>
+        <!-- end of table -->   
+
+
+
+
+
 </body>
 <script src="scripts/preview.js"></script>
 
