@@ -45,7 +45,7 @@ require_once 'scripts/check_new_entry.php';
                 <div class="history-table mt-5">
                     <?php 
                         $error["no-data-found"] = "";
-                        echo '<table class="table table-bordered table-sm table-hover">';
+                        echo '<table class="table table-bordered table-sm table-hover trans-container">';
                         echo '<thead>';
                         echo '<tr>';
                         echo  '<th>S/N</th>';
