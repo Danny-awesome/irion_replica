@@ -34,7 +34,7 @@ include 'userDashSideNav.php';
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <!-- LOGO  -->
-    <link rel="stylesheet" href="css/userTrans.css">
+    <!-- <link rel="stylesheet" href="css/userTrans.css"> -->
     <link rel="stylesheet" href="css/dashboard.css">
     <title>My Dashboard</title>
 </head>
@@ -160,7 +160,7 @@ if ($stmt = $conn->prepare($query)) {
         $bank = $user['user_bank'];
     }
 }
-echo '<table class="user-downline ">';
+echo '<table class="user-downline trans-container">';
 echo '<tr>';
 echo '<td>';
 echo '<h3>Name :</h3>';
