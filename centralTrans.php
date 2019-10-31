@@ -15,6 +15,7 @@ include 'userDashSideNav.php';
         content="This content provides you the ability to grow your money safely online by referal">
     <meta name="keywords" content="online,money,finance,growth">
     <meta name="author" content="Irion global">
+    <link rel="icon" href="images/irion-logo1.png">
     <script src="js/script.js"></script>
      <!-- BOOTSTRAP MIN CSS  -->
      <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">

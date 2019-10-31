@@ -19,6 +19,7 @@ include 'userDashSideNav.php';
         content="This content provides you the ability to grow your money safely online by referal">
     <meta name="keywords" content="online,money,finance,growth">
     <meta name="author" content="Irion global">
+    <link rel="icon" href="images/irion-logo1.png">
     <script src="js/script.js"></script>
     <!-- BOOTSTRAP MIN CSS  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -32,7 +33,6 @@ include 'userDashSideNav.php';
     </script>
     <!-- LOGO  -->
 
-    <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
     <title>Central Dashboard</title>
 </head>
@@ -100,7 +100,7 @@ include 'userDashSideNav.php';
                     }   
                 }
               echo '<div class="col-md-6">';
-                echo '<div class="card animated slideInLeft">';
+                echo '<div class="card ">';
                   echo '<h6 id="reg-level">Level '.$level.'</h6>';
                 echo '</div>';
                 ?>
@@ -109,11 +109,12 @@ include 'userDashSideNav.php';
         </div>
             <div class="col-md-9 m-4">
                 <div class="central-table mt-5">
+                    <div class="trans-container">
                     <?php 
                     echo '<div class="alert alert-success">';
                         echo '<h4>DOWNLINES</h4>';
                     echo '</div>';
-                        echo '<table class="table table-bordered table-sm table-hover">';
+                        echo '<table class="table table-bordered table-sm table-hover trans-container">';
                         echo '<thead>';
                         echo '<tr>';
                         echo  '<th>S/N</th>';
@@ -158,6 +159,7 @@ include 'userDashSideNav.php';
                             }
                         } 
                         ?>
+                    </div>
                 </div>
             </div>
         

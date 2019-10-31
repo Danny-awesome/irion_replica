@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Website Stylesheet -->
     <link rel="stylesheet" href="css/header.css">
+    <link rel="icon" href="images/irion-logo1.png">
     <!--Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <!-- Font CDN -->

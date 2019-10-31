@@ -33,10 +33,9 @@ include 'userDashSideNav.php';
     <!-- BOOTSTRAP MIN JS  -->
     <script src="css/bootstrap/js/bootstrap.min.js"></script>
      <!-- LOGO  -->
-
+     <link rel="icon" href="images/irion-logo1.png">
 
     <link rel="stylesheet" href="css/userTrans.css">
-    <link rel="icon" href="images/irion-logo1.png">
     <title>Transactions Page</title>
 </head>
 

@@ -21,6 +21,7 @@ include 'userDashSideNav.php';
         content="This content provides you the ability to grow your money safely online by referal">
     <meta name="keywords" content="online,money,finance,growth">
     <meta name="author" content="Irion global">
+    <link rel="icon" href="images/irion-logo1.png">
     <script src="js/script.js"></script>
     <!-- BOOTSTRAP MIN CSS  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -33,8 +34,7 @@ include 'userDashSideNav.php';
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <!-- LOGO  -->
-
-    <link rel="icon" href="images/irion-logo1.png">
+    <link rel="stylesheet" href="css/userTrans.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <title>My Dashboard</title>
 </head>
@@ -213,7 +213,7 @@ echo '</table>';
 echo '<div class="alert alert-success">';
 echo '<h4>DOWNLINES</h4>';
 echo '</div>';
-echo '<table class="table table-bordered table-sm table-hover">';
+echo '<table class="table table-bordered table-sm table-hover trans-container">';
 echo '<thead>';
 echo '<tr>';
 echo '<th>S/N</th>';

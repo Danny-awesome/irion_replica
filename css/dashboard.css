@@ -216,3 +216,6 @@ ol li{
 .wrapper-row{
   padding: 30px 15px;
 }
+.trans-container{
+  overflow: auto;
+}

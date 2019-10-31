@@ -19,6 +19,7 @@ require_once 'scripts/check_new_entry.php';
         content="This content provides you the ability to grow your money safely online by referal">
     <meta name="keywords" content="online,money,finance,growth">
     <meta name="author" content="Irion global">
+    <link rel="icon" href="images/irion-logo1.png">
     <!-- BOOTSTRAP MIN CSS  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

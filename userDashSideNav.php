@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/sideNav.css">
     <!--Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
+    <link rel="icon" href="images/irion-logo1.png">
     <!-- Font CDN -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <!-- Font Awesome CDN -->

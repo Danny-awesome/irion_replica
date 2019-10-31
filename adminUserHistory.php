@@ -14,9 +14,11 @@
         <meta name="description" content="This content provides you the ability to grow your money safely online by referal">
         <meta name="keywords"  content="online,money,finance,growth">
         <meta name="author" content="Irion global"> 
+        <link rel="icon" href="images/irion-logo1.png">
         <script src="js/script.js"></script>
         <link rel="stylesheet" href="css/dashboard.css">
         <link rel="stylesheet" href="css/adminDashboard.css">
+
    <!-- BOOTSTRAP MIN CSS  -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- JQUERY 3.4.1  -->
