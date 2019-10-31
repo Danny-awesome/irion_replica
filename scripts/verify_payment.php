@@ -14,10 +14,10 @@ if(isset($_POST['verify_payment'])){
     
     $confirm_trans = 1;
     
-    $query = "UPDATE transactions_info_all SET trans_confirmed='$confirm_trans' WHERE  user='$user' AND trans_date = '$trans_date' AND proof_destination='$trans_proof'";
+    $query = "UPDATE transactions_info_all SET trans_confirmed='$confirm_trans' WHERE  user='$user' AND  trans_date = '$trans_date' AND proof_destination='$trans_proof'";
     $update_trans_status = mysqli_query($conn, $query);
     if ($update_trans_status){  
-        $query2 = "UPDATE transactions_info_all SET trans_confirmed='$confirm_trans' WHERE  user='$downline' AND trans_date = '$trans_date'  AND proof_destination='$trans_proof'";
+        $query2 = "UPDATE transactions_info_all SET trans_confirmed='$confirm_trans' WHERE  made_trans_with ='$user' AND trans_date = '$trans_date'  AND proof_destination='$trans_proof'";
         $update_trans_status = mysqli_query($conn, $query2);
         if ($update_trans_status) {
             $updateStatus = 'Payment verified';

@@ -20,15 +20,15 @@ $trans_confirmed = 0;
 if(isset($_POST['upload_proof'])){
     $upline = $_POST['upline'];
     $user = $_SESSION['username'];
+    $Image = $_FILES['load_proof']['name'];
 
 if(!empty($upline)){
-    if($_FILES['load_proof']['size'] == 0){
+    if($Image ==''){
         $image_upload_msg = "No image selected";
         $alert_class = "alert-danger";
     }else{
         $allowTypes = array('jpg','png','jpeg');
         if(!in_array($fileType, $allowTypes)){
-            $Image = $_FILES['load_proof']['name'];
             $proofImage = time().'_'.$Image;
             $target_destination = 'uploads/proofimages/'.$proofImage;
 
