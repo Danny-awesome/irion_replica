@@ -2,6 +2,7 @@
 require_once "config/dbConnect.php";
 require_once 'scripts/check_session_state.php'; 
 require_once 'scripts/check_new_entry.php';
+require_once 'scripts/transaction_due.php';
 ?>
 <!-- header page  -->
 <?php include 'userDashHeader.php' ?>
@@ -40,6 +41,14 @@ require_once 'scripts/check_new_entry.php';
 
 <body>
     <div class="dashboard-wrappers">
+    <?php
+        if(empty($_SESSION['you_are_blocked'])){
+            echo '<div class="alert '.$alert_class.'">';
+                echo $_SESSION['you_are_blocked'];
+            echo '</div>';
+        }
+        
+        ?>
         <div class="row">
             <div class="col-md-9 m-4">
                 <div class="history-table mt-5">

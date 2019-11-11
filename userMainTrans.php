@@ -2,6 +2,7 @@
 require_once "config/dbConnect.php";
 require_once 'scripts/check_session_state.php';
 require_once 'scripts/check_new_entry.php';
+require_once 'scripts/transaction_due.php';
 require_once 'scripts/proof_upload.php';
 require_once 'scripts/verify_payment.php';
 ?>
@@ -41,7 +42,14 @@ include 'userDashSideNav.php';
 
 <body>
     <div class="dashboard-wrappers">
-
+    <?php
+        if(empty($_SESSION['you_are_blocked'])){
+            echo '<div class="alert '.$alert_class.'">';
+                echo $_SESSION['you_are_blocked'];
+            echo '</div>';
+        }
+        
+        ?>
         <div class="row pl-5 pr-5">
 
             <div class="col-md-7 pl-5">
@@ -135,19 +143,23 @@ echo '</tr>';
 echo '</table>';
 
 $user_gain_validity = true;
+$user_gain_inform = '';
 if ($user['user_level'] == 0) {
     $user_gain_validity = false;
+    $user_gain_inform = 'User is still at level 0 and cannot receive payment';
 }
 if ($user['user_acctstatus'] == 'not-active') {
     $user_gain_validity = false;
+    $user_gain_inform = 'User is yet to complete his/her profile';
 }
 if ($user['verified'] == false) {
     $user_gain_validity = false;
+    $user_gain_inform = 'User is yet to verify his account';
 }
 
 if ($user_gain_validity == false) {
     echo '<div class="alert alert-info">';
-    echo 'This user either is not verified, hasn\'t completed his/her profile or still at \'Level 0\'</br>';
+    echo $user_gain_inform.'</br>';
     echo '</div>';
     echo '<input type="file" name="load_proof" onchange="displayImage(this)" class="btn load-proof" disabled value="LOAD PROOF"  id="load_proof">';
     echo '<input type="submit" class="btn check-proof" disabled value="UPLOAD PROOF" name="upload_proof">';
@@ -173,14 +185,19 @@ if (!empty($updateStatus)) {
     echo $updateStatus;
     echo '</div>';
 }
+if (!empty($increase)) {
+    echo '<div class="alert alert-info">';
+    echo $increase;
+    echo '</div>';
+}
 if (!empty($msg)) {
     echo '<div class="alert alert-info">';
     echo $msg;
     echo '</div>';
 }
-if (!empty($increase)) {
+if (!empty($due_msg)) {
     echo '<div class="alert alert-info">';
-    echo $increase;
+    echo $due_msg;
     echo '</div>';
 }
 require_once 'config/dbConnect.php';
@@ -261,7 +278,7 @@ echo '</div>';
 ?>
         <!-- end of table -->   
 
-
+</div>
 
 
 

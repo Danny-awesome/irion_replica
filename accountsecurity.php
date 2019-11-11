@@ -1,4 +1,6 @@
-<?php require_once 'scripts/check_session_state.php';?>
+<?php require_once 'scripts/check_session_state.php';
+require_once 'scripts/transaction_due.php';
+?>
 <?php require_once 'scripts/update_profile.php';?>
 <!-- header page  -->
 <?php include 'userDashHeader.php'?>
@@ -32,6 +34,14 @@
 
 <body>
     <div class="dashboard-wrappers">
+    <?php
+        if(empty($_SESSION['you_are_blocked'])){
+            echo '<div class="alert '.$alert_class.'">';
+                echo $_SESSION['you_are_blocked'];
+            echo '</div>';
+        }
+        
+        ?>
         <div class="mt-5 row">
             <div class="col-md-6 offset-md-2 mr-3 pd-container">
                 <form id="personal-details" method="post" action="accountsecurity.php">

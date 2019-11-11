@@ -2,6 +2,8 @@
 require_once 'config/dbConnect.php';
 require_once 'scripts/check_session_state.php';
 require_once 'scripts/check_new_entry.php';
+require_once 'scripts/transaction_due.php';
+
 
 include 'userDashHeader.php';
 // sidebar page
@@ -42,6 +44,14 @@ include 'userDashSideNav.php';
 <body>
     <div class="dashboard-wrappers">
         <!-- wrapper row  -->
+        <?php
+        if(empty($_SESSION['you_are_blocked'])){
+            echo '<div class="alert '.$alert_class.'">';
+                echo $_SESSION['you_are_blocked'];
+            echo '</div>';
+        }
+        
+        ?>
         <div class="row wrapper-row">
             <!-- left row with small boxes -->
             <div class="col-md-8">
@@ -69,6 +79,7 @@ if ($stmt = $conn->prepare($query)) {
         $trans_partner = $user['made_trans_with'];
     }
 }
+// echo $me;
 echo "<h6>Last Received <span class='fa fa-arrow-down'></span> </h6>";
 echo "<p><span>&#8358;</span>$trans_amount:00</p>";
 echo "<h5>Payed by : <span class=''>$trans_partner</span></h5>";

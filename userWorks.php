@@ -1,4 +1,6 @@
 <?php
+require_once 'scripts/check_session_state.php';
+require_once 'scripts/transaction_due.php';
   include 'userDashHeader.php';
   // sidebar page
 include 'userDashSideNav.php';
@@ -28,6 +30,14 @@ include 'userDashSideNav.php';
 
     <body>
         <div class="dashboard-wrappers">
+        <?php
+        if(empty($_SESSION['you_are_blocked'])){
+            echo '<div class="alert '.$alert_class.'">';
+                echo $_SESSION['you_are_blocked'];
+            echo '</div>';
+        }
+        
+        ?>
         <div class="col-md-12 works-title">
         <h2 class="text-center">How Does Irion Work?</h2>
     

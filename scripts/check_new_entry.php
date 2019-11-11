@@ -3,7 +3,7 @@
 $_SESSION['notactivemsg'] = '';
 
 $email = $_SESSION['email'];
-$checkActiveUser = "SELECT * FROM users WHERE user_email=? LIMIT 1";
+$checkActiveUser = "SELECT * FROM users WHERE user_email=?";
 $stmt = $conn->prepare($checkActiveUser);
 $stmt->bind_param('s', $email);
 $stmt->execute();
