@@ -56,7 +56,7 @@ include 'userDashSideNav.php';
             <div class="col-md-5 pr-5">
                <!-- important note to users  -->
                <button type="button" class="btn btn-info btn-lg ml-4" 
-               data-toggle="modal" data-target="#myModal">Open Modal</button>
+               data-toggle="modal" data-target="#myModal">Please Read</button>
 
                
 <!-- Modal -->
