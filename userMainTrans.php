@@ -42,77 +42,8 @@ include 'userDashSideNav.php';
 
 <body>
     <div class="dashboard-wrappers">
-    
-        <div class="row pl-5 pr-5">
-
-            <div class="col-md-7 pl-5">
-                <P><span class="warning-note">PLEASE READ!! </span>When all your downlines have payed you,
-                    you are expected to pay your upgrade fee to your upline before 48 hours runs out. If you do not
-                    abide by that, your account will be temporarily blocked until you pay unblocking fee of
-                    <span>&#8358;</span>5000 and then your account will be unblocked after 24hours.
-                    If your account is blocked more than 3 times then you will be permanently blocked from using this
-                    platform. Once you are blocked, you will lose your level progress and start all over from the
-                    beginning.</P>
-            <?php
-                if(!empty($_SESSION['you_are_blocked'])){
-                    echo '<div class="alert '.$alert_class.'">';
-                        echo $_SESSION['you_are_blocked'];
-                    echo '</div>';
-                }   
-            ?>
-            </div>
-            <div class="col-md-5 pr-5">
-               <!-- important note to users  -->
-               <button type="button" class="btn btn-info btn-lg ml-4" 
-               data-toggle="modal" data-target="#myModal">Please Read</button>
-
-               
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title text-center">How does irion work ?</h4>
-      </div>
-      <div class="modal-body ml-5">
-        <h6 class="text-center">Detailed Explanation</h6>
-        
-        <p class="ml-5"><b>Your downlines will be with you through out the journey so you do not need to find extra four downlines again.</b>
-        Register with <span>&#8358;</span>5000 to your upline, call your upline to verify your payment.
-        After verification,you are taken to level 1. Once level 1 is activated,you give your username to 4 of your
-        desired downlines to register under you,you then receive payment of <span>&#8358;</span>5000 from each of 
-        them which amounts <span>&#8358;</span>20,000. After all your downlines have been verified You are
-         expected to pay <span>&#8358;</span>10,000 to
-        your upline before 48hours runs out else you will blocked from using the platform and will have to pay an unblocing fee
-        to unblock your account and also, you lose your level progress. check out the remaining on our <a href="https://theirioncycle.com.ng/userWorks.php" target="_blank">how it works page</a></p>
-        <h6 class="text-center">RULES!!</h6>
-        <ul>
-            <li>1. USER SHOULD NOT SEND VERIFICATION REQUEST ON HALF PAYMENT</li>
-            <li>2. USER SHOULD NOT CONFIRM HALF PAYMENT (because if you confirm half payment,
-             the system is not affiliated with bank transactions and so will take it that you were Paid in full)</li>
-            <li>3. USER WILL BE BLOCKED AND WILL LOOSE HIS DOWNLINES IF HE FAILS TO MAKE PAYMENT ON REQUIRED DURATION</li>
-            <li>4. USER WILL BE DELETED FROM THE PLATFORM IF HE'S BLOCKED THE THIRD TIME.</li>
-            
-        </ul>
-        <p>
-
-
-
-      </div>
-      <div class="modal-footer pb-5">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-            </div>
-        </div>
-
-
-         <div class="vk-room-list-content">
+ 
+        <div class="vk-room-list-content">
             <div class="container">
                 <div class="row pl-5 pr-5">
                     <div class="item pb-4">

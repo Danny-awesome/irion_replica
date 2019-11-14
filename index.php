@@ -59,9 +59,9 @@
             <li class="nav-item">
               <a class="nav-link" href="aboutus.php"> About Irion</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link"  href="howItWorks.php">How It Works</a>
-            </li>    
+            </li>     -->
             <li class="nav-item">
               <a class="nav-link" href="contactus.php">Contact Us</a>
             </li>   

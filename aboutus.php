@@ -41,9 +41,9 @@
             <li class="nav-item">
               <a class="nav-link" href="aboutus.php"> About Irion</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link"  href="howItWorks.php">How It Works</a>
-            </li>    
+            </li>     -->
             <li class="nav-item">
               <a class="nav-link" href="contactus.php">Contact Us</a>
             </li>   
@@ -138,7 +138,8 @@
               </div>
               <div class="card_container text-center ">
                   <h4><b>Refer To Earn</b></h4> 
-                  <p> We cant stress this enough. In other to grow, you have to refer to earn or the system provides downlines for you.
+                  <p> We cant stress this enough. In other to grow, you have to refer to earn.
+                   <!-- or the system provides downlines for you. -->
                  
                 </p> 
                 </div>  
