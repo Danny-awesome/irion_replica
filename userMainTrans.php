@@ -42,14 +42,7 @@ include 'userDashSideNav.php';
 
 <body>
     <div class="dashboard-wrappers">
-    <?php
-        if(empty($_SESSION['you_are_blocked'])){
-            echo '<div class="alert '.$alert_class.'">';
-                echo $_SESSION['you_are_blocked'];
-            echo '</div>';
-        }
-        
-        ?>
+    
         <div class="row pl-5 pr-5">
 
             <div class="col-md-7 pl-5">
@@ -60,6 +53,13 @@ include 'userDashSideNav.php';
                     If your account is blocked more than 3 times then you will be permanently blocked from using this
                     platform. Once you are blocked, you will lose your level progress and start all over from the
                     beginning.</P>
+            <?php
+                if(!empty($_SESSION['you_are_blocked'])){
+                    echo '<div class="alert '.$alert_class.'">';
+                        echo $_SESSION['you_are_blocked'];
+                    echo '</div>';
+                }   
+            ?>
             </div>
             <div class="col-md-5 pr-5">
                <!-- important note to users  -->
@@ -82,7 +82,7 @@ include 'userDashSideNav.php';
         <p class="ml-5"><b>Your downlines will be with you through out the journey so you do not need to find extra four downlines again.</b>
         Register with <span>&#8358;</span>5000 to your upline, call your upline to verify your payment.
         After verification,you are taken to level 1. Once level 1 is activated,you give your username to 4 of your
-        desired downlines to register under you,you then recieve payment of <span>&#8358;</span>5000 from each of 
+        desired downlines to register under you,you then receive payment of <span>&#8358;</span>5000 from each of 
         them which amounts <span>&#8358;</span>20,000. After all your downlines have been verified You are
          expected to pay <span>&#8358;</span>10,000 to
         your upline before 48hours runs out else you will blocked from using the platform and will have to pay an unblocing fee

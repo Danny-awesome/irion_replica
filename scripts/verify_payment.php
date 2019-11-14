@@ -366,6 +366,7 @@ if (isset($_POST['verify_payment'])) {
                                 $routeUpline = "UPDATE irion_uplines SET upline ='$PLATFORM' WHERE upline='$upline' ";
                                 $route_ = mysqli_query($conn, $routeUpline);
                                 if($route_){
+                                    
                                     echo 'success';
                                 }
                             }
@@ -439,7 +440,7 @@ if (isset($_POST['verify_payment'])) {
                 } else if ($user_level == 7 and $total == 60000) {
                     $new_level = 8;
                     $update_amount = "UPDATE users SET user_level='$new_level', total_gained=total_gained-$total WHERE username='$downline'";
-                    if ($update_update_gained_statustrans_status) {
+                    if ($update_gained_status) {
                         $plusup = "You are now level" . $new_level;
                     }
                 } else if ($user_level == 8 and $total == 70000) {
@@ -449,7 +450,10 @@ if (isset($_POST['verify_payment'])) {
                         $plusup = "You are now level" . $new_level;
                     }
                 } else if ($user_level == 9 and $total == 70000) {
-                    
+                    $update_amount = "UPDATE users SET total_gained=total_gained-$total WHERE username='$downline'";
+                    if ($update_gained_status) {
+                        echo 'success';
+                    }
                 }
 
                 $updateStatus = 'Payment verified';

@@ -45,7 +45,7 @@ include 'userDashSideNav.php';
     <div class="dashboard-wrappers">
         <!-- wrapper row  -->
         <?php
-        if(empty($_SESSION['you_are_blocked'])){
+        if(!empty($_SESSION['you_are_blocked'])){
             echo '<div class="alert '.$alert_class.'">';
                 echo $_SESSION['you_are_blocked'];
             echo '</div>';

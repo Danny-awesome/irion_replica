@@ -1,4 +1,5 @@
 <?php
+require_once 'config/dbConnect.php';
 require_once 'scripts/check_session_state.php';
 require_once 'scripts/transaction_due.php';
   include 'userDashHeader.php';
@@ -31,7 +32,7 @@ include 'userDashSideNav.php';
     <body>
         <div class="dashboard-wrappers">
         <?php
-        if(empty($_SESSION['you_are_blocked'])){
+        if(!empty($_SESSION['you_are_blocked'])){
             echo '<div class="alert '.$alert_class.'">';
                 echo $_SESSION['you_are_blocked'];
             echo '</div>';

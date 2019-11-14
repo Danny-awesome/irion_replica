@@ -11,10 +11,10 @@ require_once 'scripts/transaction_due.php';
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
         content="This content provides you the ability to grow your money safely online by referal">
@@ -41,16 +41,17 @@ require_once 'scripts/transaction_due.php';
 
 <body>
     <div class="dashboard-wrappers">
-    <?php
-        if(empty($_SESSION['you_are_blocked'])){
+        
+        <div class="row">
+            <div class="col-md-9 m-4">
+        <?php
+        if(!empty($_SESSION['you_are_blocked'])){
             echo '<div class="alert '.$alert_class.'">';
                 echo $_SESSION['you_are_blocked'];
             echo '</div>';
         }
+    ?>
         
-        ?>
-        <div class="row">
-            <div class="col-md-9 m-4">
                 <div class="history-table mt-5">
                     <?php 
                         $error["no-data-found"] = "";
