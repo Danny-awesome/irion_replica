@@ -2,6 +2,8 @@
 require_once 'config/dbConnect.php';
 require_once 'scripts/check_session_state.php';
 require_once 'scripts/transaction_due.php';
+require_once 'scripts/help_display.php';
+
   include 'userDashHeader.php';
   // sidebar page
 include 'userDashSideNav.php';
@@ -31,14 +33,28 @@ include 'userDashSideNav.php';
 
     <body>
         <div class="dashboard-wrappers">
+        <?php
+        if(!empty($_SESSION['you_are_blocked'])){
+            echo '<div class="alert '.$alert_class.'">';
+                echo $_SESSION['you_are_blocked'];
+            echo '</div>';
+        }
+        ?>
             <!-- HOW IT WORKS FOR A CERTAIN LEVEL  -->
+            
             <div class="row">
               <div class="col-md-12">
-                  <h5 class="text-center pt-4">HOW IT WORKS: <span style="color:red">LEVEL ONE </span></h5>     
-                  <ul class="pl-4">
-                    <li>Regiter with a valid email.</li>
+                  <?php
+                  echo '<h5 class="text-center pt-4">HOW IT WORKS: <span style="color:red">LEVEL '.$levelInText.' </span></h5>';     
+                  echo '<ul class="pl-4">';
+                     echo '<li> '.$msg_one.' </li>';
+                     echo '<li> '.$msg_two.' </li>';
+                     echo '<li> '.$msg_three.' </li>';
+                  ?>
+                 
+                    <!-- <li>Regiter with a valid email.</li>
                     <li>Pay a sum of <span>&#8358;</span>5,000 to your upline to buy a slot on the site.</li>
-                    <li>Refer 4 people to register and set up their account and recieve <span>&#8358;</span>20,000.</li>
+                    <li>Refer 4 people to register and set up their account and recieve <span>&#8358;</span>20,000.</li> -->
                   </ul>         
                   <h6 class="text-center">If you love to acquire a higher slot, <button class="btn btn-primary mt-2">
                   <a class="text-white"href="userMainTrans.php">Click Here</a></button></h6>
@@ -49,11 +65,12 @@ include 'userDashSideNav.php';
               <div class="col-md-12 pl-5 pr-5">
                 <h5 class="text-center pt-4">RULES</h5>
                   <ul class="">
-                    <li> USER SHOULD NOT SEND VERIFICATION REQUEST ON HALF PAYMENT.</li>
-                    <li> USER SHOULD NOT CONFIRM HALF PAYMENT (because if you confirm half payment,
-                    the system is not affiliated with bank transactions and so will take it that you were Paid in full).</li>
-                    <li> USER WILL BE BLOCKED AND WILL LOOSE HIS DOWNLINES IF HE FAILS TO MAKE PAYMENT ON REQUIRED DURATION.</li>
-                
+                  <?php
+                    echo '<li> USER SHOULD NOT SEND VERIFICATION REQUEST ON HALF PAYMENT.</li>';
+                    echo '<li> USER SHOULD NOT CONFIRM HALF PAYMENT (because if you confirm half payment,';
+                    echo 'the system is not affiliated with bank transactions and so will take it that you were Paid in full).</li>';
+                    echo '<li> USER WILL BE BLOCKED AND WILL LOOSE HIS DOWNLINES IF HE FAILS TO MAKE PAYMENT ON REQUIRED DURATION.</li>';
+                    ?>
                 </ul>
               </div>
             </div>

@@ -25,17 +25,17 @@
                     <a class="nav-link" href="adminControls.php"><i class="fas fa-ban"></i><span>CONTROLS / BLOCKING</span></a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="adminUserHistory.php"><i class="fa fa-history"></i><span>USER HISTORY</span></a>
+                    <a class="nav-link" href="adminProfile.php"><i class="fas fa-info-circle"></i><span>PROFILE</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="adminsecurity.php"><i class="fas fa-lock"></i><span>SECURITY</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="userWorks.php"><i class="fas fa-info-circle"></i><span>HOW IT WORKS</span></a>
+                    <a class="nav-link" href="adminUserHistory.php"><i class="fa fa-history"></i><span>USERS ACCOUNT STATUS</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="adminSlot1.php"><i class="fa fa-hands-helping"></i><span>CENTRAL ACCOUNT</span></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="modal" data-target="#myLogout" href="#"><i class="fas fa-sign-out-alt"></i><span>LOGOUT</span></a>

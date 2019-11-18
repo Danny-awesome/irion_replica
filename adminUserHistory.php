@@ -59,7 +59,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td><input type="button" class="btn btn-danger" value="block"></td>
+                                <td><input type="button" class="btn btn-success" value="unblock"></td>
                             </tr>
                             <tr>
                                 <td></td>
