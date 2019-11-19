@@ -111,12 +111,12 @@ if(isset($_POST['security_reset_btn'])){
     $user_count = $result->num_rows;
     $stmt ->close();
 
-    if(password_verify($pword, $user['user_password'])){
+    if(!password_verify($pword, $user['user_password'])){
         $numero_nueve = "old password isn't valid";
     }
     if (empty($numero_nueve) && empty($numero_diez) && empty($numero_once) ){
         $npword = password_hash($npword, PASSWORD_DEFAULT); 
-        $passwordupdate = "UPDATE users SET user_password='$npword'";
+        $passwordupdate = "UPDATE users SET user_password='$npword' WHERE user_id='$uid' ";
         $security_check_result = mysqli_query($conn, $passwordupdate);
         
         if ($security_check_result){    

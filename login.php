@@ -62,6 +62,7 @@ require_once 'scripts/loginUser.php';
               <div class="dropdown-content">
                 <a href="login.php">LOGIN</a>
                 <a href="signup.php">SIGN UP</a>
+                <a href="loginsuperuser.php">ADMIN LOGIN</a>
               </div>
             </div>
           </ul>

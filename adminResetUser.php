@@ -3,7 +3,6 @@
     require_once 'scripts/check_admin_session_state.php';
     require_once 'scripts/admin_unblock_reset_user.php';
 ?>
-
 <!-- ADMIN HEADER  -->
 <?php include 'adminDashHeader.php' ?>
 <!-- ADMIN SIDE NAVIGATION  -->
@@ -28,11 +27,11 @@
    <!-- BOOTSTRAP MIN CSS  -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- JQUERY 3.4.1  -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- BOOTSTRAP MIN JS  -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- LOGO  -->
-  <title>Users History </title>
+  <title>Reset User Account </title>
     </head>
     <body>
         <div class="dashboard-wrappers">
@@ -47,36 +46,34 @@
                     ?>
                 <?php
                     echo '<div class="history-table">';
-                    echo '<table class="table table-bordered table-sm table-hover">';
-                    echo '<thead>';
+                        echo '<table class="table table-bordered table-sm table-hover">';
+                            echo '<thead>';
+
+                            $acct_type = 'common';
+                            $level = 9;
+                            $userDetails = "SELECT * FROM users WHERE acct_type='$acct_type' AND user_level='$level' ORDER BY user_lastname" ;
+                            $history_result = "";
                     
-                    $acct_type = 'common';
-                    $level = 9;
-                    $userDetails = "SELECT * FROM users WHERE acct_type='$acct_type'  ORDER BY user_lastname" ;
-                    $history_result = "";
-                    $user = '';
-                    $userid = '';
-                    echo '<tr>';
-                    echo '<th>SURNAME</th>';
-                    echo '<th>FIRST NAME</th>';
-                    echo '<th>USERNAME</th>';
-                    echo '<th>TELEPHONE</th>';
-                    echo '<th>ACCOUNT NAME</th>';
-                    echo '<th>ACCOUNT NO</th>';
-                    echo '<th>BANK NAME</th>';
-                    echo '<th>ACTIVE</th>'; //<!-- true or false -->
-                    echo '<th>WARNINGS</th>'; //<!--NUMBER OF TIMES HE/SHE HAS BEEN BLOCKED -->
-                    echo '<th></th>';
-                    echo '</tr>';
-                    echo '</thead>';
-                    
-                    if ($history_result = mysqli_query($conn, $userDetails)) {
-                        if (mysqli_num_rows($history_result) > 0) {
-                            
-                            echo '<tbody>';
-                            while ($row = mysqli_fetch_array($history_result)) {
-                                echo '<form method="post" action="adminUserHistory.php">';
+                            echo '<tr>';
+                            echo '<th>SURNAME</th>';
+                            echo '<th>FIRST NAME</th>';
+                            echo '<th>USERNAME</th>';
+                            echo '<th>TELEPHONE</th>';
+                            echo '<th>ACCOUNT NAME</th>';
+                            echo '<th>ACCOUNT NO</th>';
+                            echo '<th>BANK NAME</th>';
+                            echo '<th>LEVEL</th>';
+                            echo '<th></th>';
+                            echo '</tr>';
+                        echo '</thead>';
+
+                        if ($history_result = mysqli_query($conn, $userDetails)) {
+                            if (mysqli_num_rows($history_result) > 0) {
+
+                                echo '<tbody>';
                                 
+                                while ($row = mysqli_fetch_array($history_result)) {
+                                    echo '<form method="post" action="adminResetUser.php">';
                                     $user = $row['username'];
                                     echo '<tr>';
                                     echo '<td>'.$row['user_lastname'].'</td>';
@@ -85,22 +82,17 @@
                                     echo '<td>'.$row['user_phone'].'</td>';
                                     echo '<td>'.$row['user_acctname'].'</td>';
                                     echo '<td>'.$row['user_acctnum'].'</td>';   
-                                    echo '<td>'.$row['user_bank'].'</td>';
+                                    echo '<td>'.$row['user_bank'].'</td>';  
+                                    echo '<td>'.$row['user_level'].'</td>';  
                                     echo '<input type="text" name="subscriber" value="'.$user.'" hidden>';
-                                    if($row['block_status'] == 0){
-                                        echo '<td>TRUE</td>';
-                                    }else {
-                                        echo '<td>FALSE</td>';
-                                    }
-                                    echo '<td>'.$row['count_block_times'].'</td>';
-                                    echo '<td><input type="submit" class="btn btn-success" name="unblock" value="UNBLOCK"></td>';
+                                    echo '<td><input type="submit" class="btn btn-success" name="reset" value="RESET"></td>';
                                     echo '</tr>';
-                                    echo '</form>';      
+                                    echo '</form>';
                                 }
                                 echo '</tbody>';
                             }
                         }
-                        echo '</table>';  
+                        echo '</table>';        
                     echo '</div>';
                     ?>
                 </div>

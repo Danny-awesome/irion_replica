@@ -16,8 +16,8 @@ $level=0;
 $total_gained=0;
 $block_count = 1;
 $downline = 0;
-$tt1 = 0;
-$tt2 = 0;
+$tt1 = 'debit';
+$tt2 = 'credit';
 $currentDateTime = date('Y-m-d H:i:s');
 $currentLevel = $user['user_level'];
 

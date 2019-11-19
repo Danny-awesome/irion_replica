@@ -1,3 +1,7 @@
+<?php
+    require_once 'config/dbConnect.php';
+    require_once 'scripts/check_admin_session_state.php';
+?>
 <!-- ADMIN HEADER  -->
 <?php include 'adminDashHeader.php' ?>
 <!-- ADMIN SIDE NAVIGATION  -->
@@ -33,51 +37,63 @@
 <!-- DASHBOARD WRAPPER  -->
     <div class="dashboard-wrappers">
         <div class="row p-3">
-            <div class="col-md-3 mt-3">
-                <div class="admin-card">
-                    <h6>Total Site Visits In Last 7 days</h6>
-                    <h5 class="text-center pt-2">1</h5>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="admin-card">
-                    <h6>New Users in the last 7 days</h6>
-                    <h5 class="text-center pt-2">1</h5>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="admin-card">
-                    <h6>Innactive Accounts in the last 7 days</h6>
-                    <h5 class="text-center pt-2">1</h5>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="admin-card">
-                    <h6>Number Of Closed Accounts</h6>
-                    <h5 class="text-center pt-2">1</h5>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row p-3">
-            <div class="col-md-3 mt-3">
-                <div class="admin-card">
-                    <h6>Total Site Visits today</h6>
-                    <h5 class="text-center pt-2">1</h5>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="admin-card">
-                    <h6>New Users today</h6>
-                    <h5 class="text-center pt-2">1</h5>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="admin-card">
-                    <h6>Blocked Accounts in the last 7 days</h6>
-                    <h5 class="text-center pt-2">1</h5>
-                </div>
-            </div>
+            <?php
+                echo '<div class="col-md-3 mt-3">';
+                    echo '<div class="admin-card">';
+                        echo '<h6>Total Site Visits In Last 7 days</h6>';
+                        echo '<h5 class="text-center pt-2">1</h5>';
+                    echo '</div>';
+                echo '</div>';
+            ?>
+            <?php
+                echo '<div class="col-md-3 mt-3">';
+                    echo '<div class="admin-card">';
+                        echo '<h6>New Users in the last 7 days</h6>';
+                        echo '<h5 class="text-center pt-2">1</h5>';
+                    echo '</div>';
+                echo '</div>';
+            ?>
+            <?php
+                echo '<div class="col-md-3 mt-3">';
+                    echo '<div class="admin-card">';
+                        echo '<h6>Inactive Accounts in the last 7 days</h6>';
+                        echo '<h5 class="text-center pt-2">1</h5>';
+                    echo '</div>';
+                echo '</div>';
+            ?>
+            <?php
+                echo '<div class="col-md-3 mt-3">';
+                    echo '<div class="admin-card">';
+                        echo '<h6>Number Of Closed Accounts</h6>';
+                        echo '<h5 class="text-center pt-2">1</h5>';
+                    echo '</div>';
+                echo '</div>';
+            ?>
+            <?php
+                echo '<div class="col-md-3 mt-3">';
+                    echo '<div class="admin-card">';
+                        echo '<h6>Total Site Visits today</h6>';
+                        echo '<h5 class="text-center pt-2">1</h5>';
+                    echo '</div>';
+                echo '</div>';
+            ?>
+            <?php
+                echo '<div class="col-md-3 mt-3">';
+                    echo '<div class="admin-card">';
+                        echo '<h6>New Users today</h6>';
+                        echo '<h5 class="text-center pt-2">1</h5>';
+                    echo '</div>';
+                echo '</div>';
+            ?>
+            <?php
+                echo '<div class="col-md-3 mt-3">';
+                    echo '<div class="admin-card">';
+                        echo '<h6>Blocked Accounts in the last 7 days</h6>';
+                        echo '<h5 class="text-center pt-2">1</h5>';
+                    echo '</div>';
+                echo '</div>';
+            ?>
+            
           
         </div>
     </div>   

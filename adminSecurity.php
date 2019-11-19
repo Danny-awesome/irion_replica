@@ -1,3 +1,9 @@
+<?php 
+require_once 'config/dbConnect.php';
+require_once 'scripts/check_admin_session_state.php';
+require_once 'scripts/admin_profile_update.php';
+?>
+
 <!-- ADMIN HEADER  -->
 <?php include 'adminDashHeader.php' ?>
 <!-- ADMIN SIDE NAVIGATION  -->
@@ -20,14 +26,15 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
     <link rel="icon" href="images/irion-logo1.png">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/adminDashboard.css">
-    <title>Update Password</title>
+    <title>Update Admin Password</title>
 </head>
 <body>
     <div class="dashboard-wrappers">
         <div class="mt-5 row">
             <div class="col-md-6 offset-md-2 mr-3 pd-container">
-                <form id="personal-details" method="post" action="accountsecurity.php">
+                <form id="personal-details" method="post" action="adminSecurity.php">
                     <?php
                         if (!empty($update_confirmed)) {
                             echo '<div class="alert alert-success">';
